@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE18 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE18</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+       class="icon-navigation icon-navigation--default"
+       compoment="icon-navigation"
+       imgPath="../../image/"
+       >
+   </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25210</h3>
+                <div class="img">
+                    <img src="Pin_AE18_25210.png" alt="product AE18 MAX25210">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td> <td>IN</td>      <td>Regulator Input. Bypass IN to GND with a 1μF (min) low-ESR ceramic capacitor.</td></tr>
+                        <tr><td>2</td> <td>EN</td>      <td>Active-High Enable Input. Force ENABLE high (or connect to IN) to turn the regulator on. Pull ENABLE low (or leave unconnected) to place the device in a low-power shutdown mode. ENABLE is internally pulled down to GND through a 0.25μA current sink.</td></tr>
+                        <tr><td>3</td> <td>SET</td>     <td>Feedback Network Selector. Connect SET to GND when operating the MAX25210 in fixed output voltage mode (3.3V or 5V) using the internal feedback network. Connect SET to IN or any voltage higher than 2.4V when an external feedback network (resistive divider) is used, operating the MAX25210 in adjustable output-voltage mode.</td></tr>
+                        <tr><td>4</td> <td>RESET</td>   <td>Active-Low, Open-Drain Reset Output. RESET asserts low when OUT is below the reset threshold, and remains low for the duration of the reset timeout period after the reset conditions end. RESET also asserts low when ENABLE is low and during thermal shutdown. The pull-up voltage on the  RESET pin must be greater than 1.5V. In case the RESET pin is not used, it should be connected to ground.</td></tr>
+                        <tr><td>5</td> <td>TIMEOUT</td> <td>Reset-Timeout-Period Adjust Input. Internal capacitance produces a 60μs default delay when TIMEOUT is left unconnected. Connect a capacitor from TIMEOUT to GND to set a longer timeout period than default.</td></tr>
+                        <tr><td>6</td> <td>SETOV</td>   <td>Regulated Output-Voltage Selector. Connect SETOV to OUT for a 5V fixed output, or connect SETOV to GND for a 3.3V fixed output. SETOV becomes the feedback path when using an external resistive divider for an adjustable output. If SETOV pin driven externally, 1kΩ resistor in series is required.</td></tr>
+                        <tr><td>7</td> <td>GND</td>     <td>Ground</td></tr>
+                        <tr><td>8</td> <td>OUT</td>     <td>Regulator Output. Bypass OUT to GND with a minimum of 2.2μF. Use a low-ESR, ceramic capacitor (X7R, X5R) for optimal performance. The SETOV input controls the output voltage when in fixed +3.3V or fixed +5V output-voltage mode. Using an external resistive divider between OUT and SETOV sets adjustable output voltage from +0.6V to +11V.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN_H to GND</td>    <td>-0.3V to +42V</td></tr>
+                        <tr><td>ENABLE to GND</td>  <td>-0.3V to +42V</td></tr>
+                        <tr><td>OUT to GND</td>     <td>-0.3V to +12V</td></tr>
+                        <tr><td>SET to GND</td>     <td>-0.3V to +42V</td></tr>
+                        <tr><td>RESET to GND</td>   <td>-0.3V to +42V</td></tr>
+                        <tr><td>SETOV to GND</td>   <td>-0.3V to +6V</td></tr>
+                        <tr><td>Timeout to GND</td> <td>-0.3V to +6V</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> (TA = +70°C)
+                             TDFN (Multilayer board) <br> 
+                             (TDFN (derate 24.4mW/°C above +70°C))</td>             <td>1951mW</td></tr>
+                        <tr><td>Maximum Current (all pins except IN and OUT)</td>   <td>50mA</td></tr>
+                        <tr><td>Operating Junction Temperature</td>                 <td>-40°C to +150°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering 10s)</td>               <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

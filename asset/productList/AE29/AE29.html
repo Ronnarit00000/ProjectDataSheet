@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE29 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE29</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+    <!-- conpoment navigation -->
+    <section 
+        class="navigation navigation--default navigation--product-page" 
+        compoment="navigation"
+        homePath="../../../"   
+        imgPath="../../image/" 
+        linkHrefPath="../"
+        location="product-page"
+        state = 'hide'
+        >
+    </section> 
+
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25203</h3>
+                <div class="img">
+                    <img src="Pin_AE29.png" alt="product AE29">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>  <td>BST1</td>       <td>Boost Flying Capacitor Connection for High-Side Gate Voltage. Connect a high-voltage diode  between DRV and BST1. Connect a ceramic capacitor between BST1 and LX1. See the High-Side  Gate-Driver Supply (BST) section.</td></tr>
+                        <tr><td>2</td>  <td>EN</td>         <td>High-Voltage Tolerant, Active-High Digital Enable Input for Controller. Driving EN low disables the  boost controller. EN also has a very accurate threshold of ±3% for both rising and falling voltages.  A resistor-divider can be used to control the turn ON and OFF of the boost controller in hardware  by using a resistor-divider. When EN is low, the MAX25203 is powered off, including BIAS and I2C  interface. Bring EN high to enable the MAX25203 and power up into the default state. </td></tr>
+                        <tr><td>3</td>  <td>CS1N</td>       <td>egative Current-Sense Input for Phase 1. Connect CS1N to the negative side of the current-sense element. See the Current Limiting and Current-Sense Inputs (SUP and CS) section. </td></tr>
+                        <tr><td>4</td>  <td>CS1P</td>       <td>Positive Current-Sense Input for Phase 1. Connect CS1P to the positive side of the current-sense element. See the Current Limiting and Current-Sense Inputs (SUP and CS) section.</td></tr>
+                        <tr><td>5</td>  <td>SUP</td>        <td>Supply Input. Connect SUP to the main battery.</td></tr>
+                        <tr><td>6</td>  <td>OUTS</td>       <td>True Shutdown PFET's Source Connection.</td></tr>
+                        <tr><td>7</td>  <td>PGATE</td>      <td>External p-Channel MOSFET Gate Connection. Connect PGATE to the gate of the external pchannel output disconnect switch. Connect PGATE to GND if not used. </td></tr>
+                        <tr><td>8</td>  <td>OUT</td>        <td>Output Voltage Sense for Internal Feedback Divider. Connect OUT to the boost output.</td></tr>
+                        <tr><td>9</td>  <td>FB</td>         <td>Boost Converter Feedback Input. Connect FB to BIAS to use the I2C programmed output voltage or PWM voltage control. For external feedback, connect FB to the center tap of a resistor-divider between the boost regulator output. FB regulates to 1V (typ). See the Setting and Controlling the Output Voltage section. </td></tr>
+                        <tr><td>10</td> <td>BIAS</td>       <td>5V Internal Linear Regulator Output. Bypass BIAS to GND with a low-ESR ceramic capacitor of 1µF minimum value. BIAS provides the power to the internal circuitry and external loads. See the Fixed 5V Linear Regulator (BIAS) section.</td></tr>
+                        <tr><td>11</td> <td>GND</td>        <td>Ground.</td></tr>
+                        <tr><td>12</td> <td>NC</td>         <td>Leave this pin unconnected.</td></tr>
+                        <tr><td>13</td> <td>COMP</td>       <td>Boost Controller Error Amplifier Output. Connect an RC network to COMP to compensate the boost converter.</td></tr>
+                        <tr><td>14</td> <td>SS</td>         <td>Soft-Start. Connect a capacitor from SS to GND to set the soft-start time. See the Soft-Start section.</td></tr>
+                        <tr><td>15</td> <td>PGOOD/IRQ</td>  <td>Open-Drain Power-Good Output or Interrupt Request. This pin is configured as either a powergood (PGOOD) output or interrupt request (IRQ) output (see the Ordering Information table). To obtain a logic signal, pull up PGOOD/IRQ with an external resistor connected to a positive voltage lower than 5.5V.<br><br> PGOOD pulls low when OUT is more than 93% (typ) below the normal regulation point. PGOOD is low during soft-start and in shutdown. PGOOD becomes high impedance when OUT is in regulation.<br><br> IRQ pulls low when OUT is more than 93% (typ) below the normal regulation point and when a fault is reported in the FAULT register. IRQ is low during shutdown, and remains low after startup until the FAULT register has been read. IRQ becomes high impedance after reading the FAULT_STAT register when OUT is in regulation. If there is a persistent fault, IRQ pulls low again after reading FAULT, otherwise IRQ remains high until a fault occurs. </td></tr>
+                        <tr><td>16</td> <td>FOSC</td>       <td>Frequency Setting Input. Connect a resistor to FOSC to set the switching frequency of the DC-DC converters.</td></tr>
+                        <tr><td>17</td> <td>SYNCOUT</td>    <td>Synchronization Clock Output. SYNCOUT outputs a clock that is 90° out-of-phase with the internal oscillator or the external FSYNC input. For the quad-phase configuration, connect SYNCOUT of the main controller to FSYNC of the subordinate. </td></tr>
+                        <tr><td>18</td> <td>FSYNC</td>      <td>External Clock Synchronization Input. To synchronize with an external clock, connect the clock to FSYNC. See the Oscillator Frequency/External Synchronization section. When not using external synchronization, connect FSYNC to BIAS for forced-PWM operation with the internal clock, or connect FSYNC to GND for skip-mode operation.</td></tr>
+                        <tr><td>19</td> <td>SDA</td>        <td>I2C Data Input/Output.</td></tr>
+                        <tr><td>20</td> <td>SCL</td>        <td>I2C Clock Input/Output</td></tr>
+                        <tr><td>21</td> <td>PWM</td>        <td>PWM Positioning Control Input. Controls the output voltage, allowing it to track a digital duty cycle (PWM) signal. Connect PWM to GND when using an external resistor-divider to set the output voltage or if PWM is not used.</td></tr>
+                        <tr><td>22</td> <td>CS2P</td>       <td>Positive Current-Sense Input for Phase 2. Connect CS2P to the positive side of the current-sense element. See the Current Limiting and Current-Sense Inputs (SUP and CS) section.</td></tr>
+                        <tr><td>23</td> <td>CS2N</td>       <td>Negative Current-Sense Input for Phase 2. Connect CS2N to the negative side of the currentsense element. See the Current Limiting and Current-Sense Inputs (SUP and CS) section.</td></tr>
+                        <tr><td>24</td> <td>BST2</td>       <td>Boost Flying Capacitor Connection for High-Side Gate Voltage. Connect a high-voltage diode between DRV and BST2. Connect a ceramic capacitor between BST2 and LX2. See the High-Side Gate-Driver Supply (BST) section.</td></tr>
+                        <tr><td>25</td> <td>DH2</td>        <td>High-Side MOSFET Gate Driver Output. The DH2 output voltage swings from VLX2 to VBST2.</td></tr>
+                        <tr><td>26</td> <td>LX2</td>        <td>Inductor Connection for Phase 2. Connect LX2 to the switched side of the inductor. LX2 serves as the lower supply rail for the DH2 high-side gate driver.</td></tr>
+                        <tr><td>27</td> <td>DL2</td>        <td>Low-Side n-Channel MOSFET Gate Driver Output for Phase 2.</td></tr>
+                        <tr><td>28</td> <td>PGND</td>       <td>Power Ground</td></tr>
+                        <tr><td>29</td> <td>DRV</td>        <td>6.5V to 10V Preset Low-Dropout Voltage-Regulator Output. Bypass DRV to GND with a 4.7μF or greater ceramic capacitor. This voltage is used as the gate drive voltage for external MOSFETs. See the Ordering Information table for the factory-set DRV voltage.</td></tr>
+                        <tr><td>30</td> <td>DL1</td>        <td>Low-Side n-Channel MOSFET Gate Driver Output for Phase 1.</td></tr>
+                        <tr><td>31</td> <td>LX1</td>        <td>Inductor Connection for Phase 1. Connect LX1 to the switched side of the inductor. LX1 serves as the lower supply rail for the DH1 high-side gate driver.</td></tr>
+                        <tr><td>32</td> <td>DH1</td>        <td>High-Side MOSFET Gate Driver Output. The DH1 output voltage swings from VLX1 to VBST1.</td></tr>
+                        <tr><td>EP</td> <td>EP</td>         <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to GND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, CS_P, EN to GND</td>   <td>-0.3V to 42V</td></tr>
+                        <tr><td>OUT, OUTS, LX_ to GND</td>  <td>-0.3V to 70V</td></tr>
+                        <tr><td>PGATE to OUTS</td>          <td>-0.3V to 6V</td></tr>
+                        <tr><td>CS_P to CS_N</td>           <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>BIAS, FOSC, PWM, SDA, SCL,<br>
+                             PGOOD, SS, FB to GND</td> <td>-0.3V to 6V</td></tr>
+                        <tr><td>SYNCOUT, FSYNC, COMP to GND</td>     <td>-0.3V to BIAS + 0.3V</td></tr>
+                        <tr><td>BST_ to LX_</td>            <td>-0.3V to BST_ + 0.3V</td></tr>
+                        <tr><td>DRV to GND</td>             <td>-0.3V to 12V</td></tr>
+                        <tr><td>DL_ to PGND</td>            <td>-0.3V to DRV + 0.3V</td></tr>
+                        <tr><td>PGND to GND</td>            <td>-0.3V to 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation TQFN<br>
+                            (derate 34.5mW/°C above +70°C)</td>                     <td>2758.6mW</td></tr>
+                        <tr><td>Junction-to-Case Thermal Resistance (θJC)</td>      <td>1.7°C/W</td></tr>
+                        <tr><td>Junction-to-Ambient Thermal Resistance (θJA)</td>   <td>29°C/W</td></tr>
+                        <tr><td>Operating Temperature Range</td>                    <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature </td>                          <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>                 <td>+260°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>              <td>+300°C</td></tr>
+                        <tr><td>ESD Rating Human Body Model</td>                    <td>2.5kV</td></tr>
+                        <tr><td>ESD Rating Charged Device Model</td>                <td>1000V</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

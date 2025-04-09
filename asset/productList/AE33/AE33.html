@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE33 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE33</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25308</h3>
+                <div class="img">
+                    <img src="Pin_AE33_25308.png" alt="product AE33 25308">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td> <td>RESET1</td>  <td>Active-Low RESET for Output 1. RESET1 becomes high impedance when OUT1 is in regulation. Actively pulled down if OUT1 is outside the regulation window. To obtain a logic signal, connect a pullup resistor from this pin to a supply.</td></tr>
+                        <tr><td>2</td> <td>GND</td>     <td>Regulator Ground. Bring IN_ and OUT_ bypass capacitor GND connections to this pin.</td></tr>
+                        <tr><td>3</td> <td>RESET3</td>  <td>Active-Low RESET for Output 3. RESET3 becomes high impedance when OUT3 is in regulation. Actively pulled down if OUT3 is outside the regulation window. To obtain a logic signal, connect a pullup resistor from this pin to a supply.</td></tr>
+                        <tr><td>4</td> <td>RESET2</td>  <td>Active-Low RESET for Output 2. RESET2 becomes high impedance when OUT2 is in regulation. Actively pulled down if OUT2 is outside the regulation window. To obtain a logic signal, connect a pullup resistor from this pin to a supply.</td></tr>
+                        <tr><td>5</td> <td>IN2</td>     <td>Regulator Supply Input. Connect to a voltage between 1.7V and 5.5V, and bypass with a 1μF capacitor from IN2 to GND.</td></tr>
+                        <tr><td>6</td> <td>OUT2</td>    <td>Channel 2 Output. Sources maximum up to 300mA at output regulation voltage. Bypass with 2.2μF low ESR capacitor from OUT2 to GND.</td></tr>
+                        <tr><td>7</td> <td>BYP2</td>    <td>Bypass Capacitor Input 2. Connect 1nF to 100nF capacitor between OUT2 and BYP2 to reduce output noise and set the regulator soft-start rate.</td></tr>
+                        <tr><td>8</td> <td>EN2</td>     <td>Enable Input for Channel 2. Connect this pin to a logic signal to enable (VEN2 high) or disable (VEN2 low) the regulator output. Connect to IN_ with 10kΩ pullup resistor to keep the output enabled whenever a valid supply voltage is present.</td></tr>
+                        <tr><td>9</td> <td>IN3</td>     <td>Regulator Supply Input. Connect to a voltage between 1.7V and 5.5V and bypass with a 1μF capacitor from IN3 to GND.</td></tr>
+                        <tr><td>10</td> <td>OUT3</td>   <td>Channel 3 Output. Sources maximum up to 300mA at output regulation voltage. Bypass with 2.2μF low ESR capacitor from OUT3 to GND.</td></tr>
+                        <tr><td>11</td> <td>BYP3</td>   <td>Bypass Capacitor Input 3. Connect 1nF to 100nF capacitor between OUT3 and BYP3 to reduce output noise and set the regulator soft-start rate.</td></tr>
+                        <tr><td>12</td> <td>IN1</td>    <td>Regulator Supply Input. Connect to a voltage between 1.7V and 5.5V, and bypass with a 4.7μF capacitor from IN1 to GND.</td></tr>
+                        <tr><td>13</td> <td>EN1</td>    <td>Enable Input for Channel 1. Connect this pin to a logic signal to enable (VEN1 high) or disable (VEN1 low) the regulator output. Connect to IN_ with a 10kΩ pullup resistor to keep the output enabled whenever a valid supply voltage is present</td></tr>
+                        <tr><td>14</td> <td>OUT1</td>   <td>Channel 1 Output. Sources up to 600mA at output regulation voltage. Bypass with 4.7μF low ESR capacitor from OUT1 to GND.</td></tr>
+                        <tr><td>15</td> <td>BYP1</td>   <td>Bypass Capacitor Input 1. Connect 1nF to 100nF capacitor between OUT1 and BYP1 to reduce output noise and set the regulator soft-start rate.</td></tr>
+                        <tr><td>16</td> <td>EN3</td>    <td>Enable Input for Channel 3. Connect this pin to a logic signal to enable (VEN3 high) or disable (VEN3 low) the regulator output. Connect to IN_ with a10kΩ pull up resistor to keep the output enabled whenever a valid supply voltage is present.</td></tr>
+                        <tr><td>EP</td> <td>EP</td>     <td>Exposed Pad. Connect the exposed pad to a ground plane with low thermal resistance to ambient to provide best heat sinking.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN1, IN2, IN3, EN1, EN2, EN3 to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>OUT1 to GND</td>                            <td>-0.3V to IN1 + 0.3V</td></tr>
+                        <tr><td>OUT2 to GND</td>                            <td>-0.3V to IN2 + 0.3V</td></tr>
+                        <tr><td>OUT3 to GND</td>                            <td>-0.3V to IN3 + 0.3V</td></tr>
+                        <tr><td>BYP1, BYP2, BYP3 to GND</td>                <td>-0.3V to +6V</td></tr>
+                        <tr><td>RESET1, RESET2, RESET3 to GND</td>          <td>-0.3V to +6V</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>          <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation TQFN <br>
+                            (derate 21.52mW/°C above 70°C)</td>                 <td>1721.69mW</td></tr>
+                        <tr><td>Operating Junction Temperature</td>             <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (Soldering, 10 seconds)</td>   <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25307</h3>
+                <div class="img">
+                    <img src="Pin_AE33_25307.png" alt="product AE33 25308">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>  <td>RESET1</td>     <td>Active-Low RESET for Output 1. RESET1 becomes high impedance when OUT1 is in regulation. Actively pulled down if OUT1 is outside the regulation window. To obtain a logic signal, connect a pullup resistor from this pin to a supply.</td></tr>
+                        <tr><td>2</td>  <td>GND</td>        <td>Regulator Ground. Bring IN_ and OUT_ bypass capacitor GND connections to this pin.</td></tr>
+                        <tr><td>3</td>  <td>GND</td>        <td>Connect to Ground</td></tr>
+                        <tr><td>4</td>  <td>RESET2</td>     <td>Active-Low RESET for Output 2. RESET2 becomes high impedance when OUT2 is in regulation. Actively pulled down if OUT2 is outside the regulation window. To obtain a logic signal, connect a pullup resistor from this pin to a supply.</td></tr>
+                        <tr><td>5</td>  <td>IN2</td>        <td>Regulator Supply Input. Connect to a voltage between 1.7V and 5.5V, and bypass with a 1μF capacitor from IN2 to GND.</td></tr>
+                        <tr><td>6</td>  <td>OUT2</td>       <td>Channel 2 Output. Sources maximum up to 300mA at output regulation voltage. Bypass with 2.2μF low ESR capacitor from OUT2 to GND.</td></tr>
+                        <tr><td>7</td>  <td>BYP2</td>       <td>Bypass Capacitor Input 2. Connect 1nF to 100nF capacitor between OUT2 and BYP2 to reduce output noise and set the regulator soft-start rate.</td></tr>
+                        <tr><td>8</td>  <td>EN2</td>        <td>Enable Input for Channel 2. Connect this pin to a logic signal to enable (VEN2 high) or disable (VEN2 low) the regulator output. Connect to IN_ with 10kΩ pullup resistor to keep the output enabled whenever a valid supply voltage is present.</td></tr>
+                        <tr><td>9</td>  <td>GND</td>        <td>Connect to Ground</td></tr>
+                        <tr><td>10</td> <td>GND</td>        <td>Connect to Ground</td></tr>
+                        <tr><td>11</td> <td>GND</td>        <td>Connect to Ground</td></tr>
+                        <tr><td>12</td> <td>IN1</td>        <td>Regulator Supply Input. Connect to a voltage between 1.7V and 5.5V, and bypass with a 4.7μF capacitor from IN1 to GND.</td></tr>
+                        <tr><td>13</td> <td>EN1</td>        <td>Enable Input for Channel 1. Connect this pin to a logic signal to enable (VEN1 high) or disable (VEN1 low) the regulator output. Connect to IN_ with a 10kΩ pullup resistor to keep the output enabled whenever a valid supply voltage is present</td></tr>
+                        <tr><td>14</td> <td>OUT1</td>       <td>Channel 1 Output. Sources up to 600mA at output regulation voltage. Bypass with 4.7μF low ESR capacitor from OUT1 to GND.</td></tr>
+                        <tr><td>15</td> <td>BYP1</td>       <td>Bypass Capacitor Input 1. Connect 1nF to 100nF capacitor between OUT1 and BYP1 to reduce output noise and set the regulator soft-start rate.</td></tr>
+                        <tr><td>16</td> <td>GND</td>        <td>Connect to Ground</td></tr>
+                        <tr><td>EP</td> <td>EP</td>         <td>Exposed Pad. Connect the exposed pad to a ground plane with low thermal resistance to ambient to provide best heat sinking.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN1, IN2, IN3, EN1, EN2, EN3 to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>OUT1 to GND</td>                            <td>-0.3V to IN1 + 0.3V</td></tr>
+                        <tr><td>OUT2 to GND</td>                            <td>-0.3V to IN2 + 0.3V</td></tr>
+                        <tr><td>OUT3 to GND</td>                            <td>-0.3V to IN3 + 0.3V</td></tr>
+                        <tr><td>BYP1, BYP2, BYP3 to GND</td>                <td>-0.3V to +6V</td></tr>
+                        <tr><td>RESET1, RESET2, RESET3 to GND</td>          <td>-0.3V to +6V</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>          <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation TQFN <br>
+                            (derate 21.52mW/°C above 70°C)</td>                 <td>1721.69mW</td></tr>
+                        <tr><td>Operating Junction Temperature</td>             <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (Soldering, 10 seconds)</td>   <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>         
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

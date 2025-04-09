@@ -1,0 +1,42 @@
+@import url(../asstracs/variables.css);
+@font-face {
+    font-family: 'Roboto';
+    src:
+    url(./../../../font/Roboto-VariableFont_wdth\,wght.ttf) 
+    url(./../../../font/Roboto-Italic-VariableFont_wdth\,wght.ttf);
+}
+
+body{
+    line-height: 1.5;
+    font-family: var(--ff-base);
+    font-size: var(--fs-step-0);
+    background-color: var(--bg-body);
+}
+
+h1{
+    font-size: var(--fs-step-4);
+}
+
+h2{
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: var(--fs-step-3);
+}
+
+h3{
+    letter-spacing: 0.05em;
+    font-weight: 800;
+    font-size: var(--fs-step-1);
+}
+
+p,
+ul li,
+thead th,
+tbody td{
+    font-size: var(--fs-step--1);
+}
+
+thead th{
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}

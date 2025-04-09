@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE26 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE26</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+    <!-- conpoment navigation -->
+    <section 
+        class="navigation navigation--default navigation--product-page" 
+        compoment="navigation"
+        homePath="../../../"   
+        imgPath="../../image/" 
+        linkHrefPath="../"
+        location="product-page"
+        state = 'hide'
+        >
+    </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25014</h3>
+                <div class="img">
+                    <img src="Pin_AE26_25014.png" alt="product AE26">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>  <td>IN</td>     <td>Bias Supply Input. Connect a 2.5V to 36V supply to IN. Bypass IN to GND with a 2.2µF ceramic capacitor.</td></tr>
+                        <tr><td>2</td>  <td>EN</td>     <td>Enable Input. Connect EN to ground to shut down the device. Connect EN to logic-high or IN for normal operation. EN has an internal clamp at 3V; when EN is above this voltage, an input current of (VEN - 3V)/1.2MΩ will flow.</td></tr>
+                        <tr><td>3</td>  <td>OUT1</td>   <td>LED String Cathode Connection 1. OUT1 is the open-drain output of the linear current sink, which controls the current through the LED string connected to OUT1. OUT1 sinks up to 150mA.</td></tr>
+                        <tr><td>4</td>  <td>OUT3</td>   <td>LED String Cathode Connection 3. OUT3 is the open-drain output of the linear current sink, which controls the current through the LED string connected to OUT3. OUT3 sinks up to 150mA.</td></tr>
+                        <tr><td>5</td>  <td>NGATE</td>  <td>Gate Connection for External Series nMOSFET driven by the internal charge pump.</td></tr>
+                        <tr><td>6</td>  <td>FLTB</td>   <td>Open-Drain Fault Output. FLTB asserts low when any diagnostic bit that is not masked is asserted. See the Fault Protection section for more details. Connect a pullup resistor from FLTB to VCC or to a logic supply of maximum 5V.</td></tr>
+                        <tr><td>7</td>  <td>SCL</td>    <td>I2C Clock Input. Connect a pullup resistor from SCL to the logic supply.</td></tr>
+                        <tr><td>8</td>  <td>SDA</td>    <td>I2C Data I/O Pin. Connect a pullup resistor from SDA to the logic supply.</td></tr>
+                        <tr><td>9</td>  <td>LEDGND</td> <td>LED Ground. LEDGND is the return-path connection for the linear current sinks. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>10</td> <td>RT</td>     <td>Oscillator-Timing Resistor Connection. Connect a timing resistor (RRT) from RT to GND to program the switching frequency. Also connect a 100pF capacitor from RT to GND. To synchronize the switching frequency with an external clock, apply an AC-coupled external clock at RT. When the oscillator is synchronized with the external clock, spread spectrum is disabled.</td></tr>
+                        <tr><td>11</td> <td>GND</td>    <td>Signal Ground. GND is the current return-path connection for the low-noise analog signals. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>12</td> <td>IREF</td>   <td>LED Current-Reference Input. Connect a resistor (RIREF = 40.2kΩ) from IREF to GND to set the reference current. Place the resistor as close as possible to the pin using the shortest possible trace.</td></tr>
+                        <tr><td>13</td> <td>DIM</td>    <td>PWM Dimming Input. Apply a PWM signal to DIM for LED dimming control unless I2C dimming is used. Connect DIM to VCC if dimming control is not used (100% brightness). Connect DIM to GND if dimming will be controlled through I2C.</td></tr>
+                        <tr><td>14</td> <td>FSEN</td>   <td>Fail-Safe Enable Pin. When FSEN is taken high the boost converter is enabled and the outputs OUT1–OUT4 are enabled at 100% duty cycle, independently of all register settings. Connect a resistor from FSEN to GND to set the LED current when FSEN is active and the device I2C address (see FSEN Pin Function). If the FSEN function is not needed connect the pin directly to GND.</td></tr>
+                        <tr><td>15</td> <td>OUT4</td>   <td>LED String Cathode Connection 4. OUT4 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT4. OUT4 sinks up to 150mA.</td></tr>
+                        <tr><td>16</td> <td>OUT2</td>   <td>LED String Cathode Connection 2. OUT2 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT2. OUT2 sinks up to 150mA.</td></tr>
+                        <tr><td>17</td> <td>COMP</td>   <td>Switching-Converter Compensation Input. Connect the compensation network from COMP to GND for current-mode control (see the Feedback Compensation section).</td></tr>
+                        <tr><td>18</td> <td>CS</td>     <td>Current-Sense Input for the Switching Regulator. A sense resistor connected from the source of the external power MOSFET to PGND sets the switching current limit. A resistor connected between the source of the power MOSFET and CS sets the slope-compensation ramp rate (see the Slope Compensation and Current-Sense Resistor section).</td></tr>
+                        <tr><td>19</td> <td>BSTMON</td> <td>Overvoltage Threshold-Adjust Input. Connect a resistor-divider from the switching converter output to BSTMON and GND. The OVP comparator reference is internally set to 1.23V.</td></tr>
+                        <tr><td>20</td> <td>PGND</td>   <td>Power Ground. PGND is the switching current-return-path connection. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>21</td> <td>NDRV</td>   <td>Switching nMOSFET Gate-Driver Output. Connect NDRV to the gate of the external switchingpower nMOSFET using a 10Ω to 22Ω resistor. This decreases the slew rate of the gate driver and reduces switching noise.</td></tr>
+                        <tr><td>22</td> <td>VCC</td>    <td>5V Regulator Output. Bypass VCC to GND with a 1μF (min) ceramic capacitor as close as possible to the device.</td></tr>
+                        <tr><td>23</td> <td>BOOST</td>  <td>Connect to the Output of the Boost Converter. This pin serves as the input to the VCC regulator when IN drops below 5.8V.</td></tr>
+                        <tr><td>24</td> <td>IN</td>     <td>Bias Supply Input. Connect a 2.5V to 36V supply to IN. Bypass IN to GND with a 2.2µF ceramic capacitor.</td></tr>
+                        <tr><td>-</td>  <td>EP</td>     <td>Exposed Pad. Connect EP to a large-area contiguous copper ground plane for effective power dissipation. Do not use as the main IC ground connection. EP must be connected to GND.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN,EN to GND</td>                       <td>-0.3V to +40V</td></tr>
+                        <tr><td>OUT_,NGATE,BSTMON,BOOST to GND</td>     <td>-0.3V to +52V</td></tr>
+                        <tr><td>PGND,LEDGND, to GND</td>                <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>VCC to GND when EN High</td>            <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>VCC to GND when EN Low</td>             <td>-0.3V to minimun of +6V <br>and (VIN + 0.3V)</td></tr>
+                        <tr><td>FLTB,SCL,SDA,DIM to GND</td>            <td>-0.3V to +6V</td></tr>
+                        <tr><td>FSEN,CS,RT,COMMP,NDRV,IREF to GND</td>  <td>-0.3V to VCC + 0.3V</td></tr>
+                        <tr><td>NDRV Peak Current(< 100ns) </td>        <td>-5A to +5A</td></tr>
+                        <tr><td>NDRV Continuous Current</td>            <td>-100mA to +100mA</td></tr>
+                        <tr><td>OUT_ Continuous Current</td>            <td>-150mA to +150mA</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            ( TA = +70°C )</td>                                     <td>2.857W</td></tr>
+                        <tr><td>Junction to Ambient Thermal Resistance(θJA)</td>    <td>36°C/W</td></tr>
+                        <tr><td>Package Thermal Resistance (θJC)</td>               <td>3°C/W</td></tr>
+                        <tr><td>Operating Temperature</td>                          <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>-40°C to +125°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature Range</td>                         <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25024</h3>
+                <div class="img">
+                    <img src="Pin_AE26_25014.png" alt="product AE26">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>  <td>IN</td>     <td>Bias Supply Input. Connect a 2.5V to 36V supply to IN. Bypass IN to GND with a 2.2µF ceramic capacitor.</td></tr>
+                        <tr><td>2</td>  <td>EN</td>     <td>Enable Input. Connect EN to ground to shut down the device. Connect EN to logic-high or IN for normal operation. EN has an internal clamp at 3V; when EN is above this voltage, an input current of (VEN - 3V)/1.2MΩ will flow.</td></tr>
+                        <tr><td>3</td>  <td>OUT1</td>   <td>LED String Cathode Connection 1. OUT1 is the open-drain output of the linear current sink, which controls the current through the LED string connected to OUT1. OUT1 sinks up to 150mA.</td></tr>
+                        <tr><td>4</td>  <td>OUT3</td>   <td>LED String Cathode Connection 3. OUT3 is the open-drain output of the linear current sink, which controls the current through the LED string connected to OUT3. OUT3 sinks up to 150mA.</td></tr>
+                        <tr><td>5</td>  <td>NGATE</td>  <td>Gate Connection for External Series nMOSFET driven by the internal charge pump.</td></tr>
+                        <tr><td>6</td>  <td>FLTB</td>   <td>Open-Drain Fault Output. FLTB asserts low when any diagnostic bit that is not masked is asserted. See the Fault Protection section for more details. Connect a pullup resistor from FLTB to VCC or to a logic supply of maximum 5V.</td></tr>
+                        <tr><td>7</td>  <td>SCL</td>    <td>I2C Clock Input. Connect a pullup resistor from SCL to the logic supply.</td></tr>
+                        <tr><td>8</td>  <td>SDA</td>    <td>I2C Data I/O Pin. Connect a pullup resistor from SDA to the logic supply.</td></tr>
+                        <tr><td>9</td>  <td>LEDGND</td> <td>LED Ground. LEDGND is the return-path connection for the linear current sinks. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>10</td> <td>RT</td>     <td>Oscillator-Timing Resistor Connection. Connect a timing resistor (RRT) from RT to GND to program the switching frequency. Also connect a 100pF capacitor from RT to GND. To synchronize the switching frequency with an external clock, apply an AC-coupled external clock at RT. When the oscillator is synchronized with the external clock, spread spectrum is disabled.</td></tr>
+                        <tr><td>11</td> <td>GND</td>    <td>Signal Ground. GND is the current return-path connection for the low-noise analog signals. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>12</td> <td>IREF</td>   <td>LED Current-Reference Input. Connect a resistor (RIREF = 40.2kΩ) from IREF to GND to set the reference current. Place the resistor as close as possible to the pin using the shortest possible trace.</td></tr>
+                        <tr><td>13</td> <td>DIM</td>    <td>PWM Dimming Input. Apply a PWM signal to DIM for LED dimming control unless I2C dimming is used. Connect DIM to VCC if dimming control is not used (100% brightness). Connect DIM to GND if dimming will be controlled through I2C.</td></tr>
+                        <tr><td>14</td> <td>FSEN</td>   <td>Fail-Safe Enable Pin. When FSEN is taken high the boost converter is enabled and the outputs OUT1–OUT4 are enabled at 100% duty cycle, independently of all register settings. Connect a resistor from FSEN to GND to set the LED current when FSEN is active and the device I2C address (see FSEN Pin Function). If the FSEN function is not needed connect the pin directly to GND.</td></tr>
+                        <tr><td>15</td> <td>OUT4</td>   <td>LED String Cathode Connection 4. OUT4 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT4. OUT4 sinks up to 150mA.</td></tr>
+                        <tr><td>16</td> <td>OUT2</td>   <td>LED String Cathode Connection 2. OUT2 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT2. OUT2 sinks up to 150mA.</td></tr>
+                        <tr><td>17</td> <td>COMP</td>   <td>Switching-Converter Compensation Input. Connect the compensation network from COMP to GND for current-mode control (see the Feedback Compensation section).</td></tr>
+                        <tr><td>18</td> <td>CS</td>     <td>Current-Sense Input for the Switching Regulator. A sense resistor connected from the source of the external power MOSFET to PGND sets the switching current limit. A resistor connected between the source of the power MOSFET and CS sets the slope-compensation ramp rate (see the Slope Compensation and Current-Sense Resistor section).</td></tr>
+                        <tr><td>19</td> <td>BSTMON</td> <td>Overvoltage Threshold-Adjust Input. Connect a resistor-divider from the switching converter output to BSTMON and GND. The OVP comparator reference is internally set to 1.23V.</td></tr>
+                        <tr><td>20</td> <td>PGND</td>   <td>Power Ground. PGND is the switching current-return-path connection. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>21</td> <td>NDRV</td>   <td>Switching nMOSFET Gate-Driver Output. Connect NDRV to the gate of the external switchingpower nMOSFET using a 10Ω to 22Ω resistor. This decreases the slew rate of the gate driver and reduces switching noise.</td></tr>
+                        <tr><td>22</td> <td>VCC</td>    <td>5V Regulator Output. Bypass VCC to GND with a 1μF (min) ceramic capacitor as close as possible to the device.</td></tr>
+                        <tr><td>23</td> <td>BOOST</td>  <td>Connect to the Output of the Boost Converter. This pin serves as the input to the VCC regulator when IN drops below 5.8V.</td></tr>
+                        <tr><td>24</td> <td>IN</td>     <td>Bias Supply Input. Connect a 2.5V to 36V supply to IN. Bypass IN to GND with a 2.2µF ceramic capacitor.</td></tr>
+                        <tr><td>-</td>  <td>EP</td>     <td>Exposed Pad. Connect EP to a large-area contiguous copper ground plane for effective power dissipation. Do not use as the main IC ground connection. EP must be connected to GND.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN,EN to GND</td>                       <td>-0.3V to +40V</td></tr>
+                        <tr><td>OUT_,NGATE,BSTMON,BOOST to GND</td>     <td>-0.3V to +52V</td></tr>
+                        <tr><td>PGND,LEDGND, to GND</td>                <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>VCC to GND when EN High</td>            <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>VCC to GND when EN Low</td>             <td>-0.3V to minimun of +6V <br>and (VIN + 0.3V)</td></tr>
+                        <tr><td>FLTB,SCL,SDA,DIM to GND</td>            <td>-0.3V to +6V</td></tr>
+                        <tr><td>FSEN,CS,RT,COMMP,NDRV,IREF to GND</td>  <td>-0.3V to VCC + 0.3V</td></tr>
+                        <tr><td>NDRV Peak Current(< 100ns) </td>        <td>-5A to +5A</td></tr>
+                        <tr><td>NDRV Continuous Current</td>            <td>-100mA to +100mA</td></tr>
+                        <tr><td>OUT_ Continuous Current</td>            <td>-150mA to +150mA</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            ( TA = +70°C )</td>                                     <td>2.857W</td></tr>
+                        <tr><td>Junction to Ambient Thermal Resistance(θJA)</td>    <td>36°C/W</td></tr>
+                        <tr><td>Package Thermal Resistance (θJC)</td>               <td>3°C/W</td></tr>
+                        <tr><td>Operating Temperature</td>                          <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>-40°C to +125°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature Range</td>                         <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

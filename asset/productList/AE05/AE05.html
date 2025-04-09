@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE05 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE05</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25200</h3>
+                <div class="img">
+                    <img src="Pin_AE05_25200.png" alt="product AE05 MAX25200">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>cs</td>         <td>Negative Current-Sense Input for Boost Controller. Connect CS to the negative side of the currentsense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>2</td>          <td>SUP</td>        <td>Supply Input and Positive Current-Sense Input for Boost Controller. Connect SUP to the positive terminal of the current-sense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>3</td>          <td>OUT</td>        <td>Input for the BIAS LDO. Connect OUT to the boost output when the output voltage is set at 24V or below. For VOUT greater than 24V, connect OUT to the input supply.</td></tr>
+                        <tr><td>4</td>          <td>FB</td>         <td>Boost Converter Feedback Input. To set the output voltage between 3.5V and 60V, connect FB to the center tap of a resistive divider between the boost regulator output. FB regulates to 1V (typ). To use the factory set fixed output voltage on applicable parts (see Ordering Information), connect FB to BIAS and connect OUT to the output. For more information see Setting the Output Voltage.</td></tr>
+                        <tr><td>5</td>          <td>COMP</td>       <td>Boost Controller Error Amplifier Output. Connect a RC network to COMP to compensate boost converter.</td></tr>
+                        <tr><td>6</td>          <td>SS</td>         <td>Programmable soft start. Connect a capacitor from SS to GND to set the soft-start time. To select the value see Typical Operating Characteristics.</td></tr>
+                        <tr><td>7</td>          <td>PGOOD</td>      <td>Open Drain Power-Good Output for Buck Controller One. PGOOD goes low if OUT drops below 92.5% (typ falling) of the normal regulation point. PGOOD asserts low during soft-start and in shutdown. PGOOD becomes high impedance when OUT is in regulation. To obtain a logic signal, pull up PGOOD with an external resistor connected to a positive voltage lower than 5.5V.</td></tr>
+                        <tr><td>8</td>          <td>MODE/FSYNC</td> <td>External Clock Synchronization Input. To use the internal oscillator connect MODE/FSYNC high for forced-PWM or low for skip-mode operation. To synchronize with an external clock, connect the clock to MODE/FSYNC. See Switching Frequency/External Synchronization section.</td></tr>
+                        <tr><td>9</td>          <td>FOSC</td>       <td>Frequency Setting Input. Connect a resistor to FOSC to set the switching frequency of the DC-DC converters.</td></tr>
+                        <tr><td>10,15</td>      <td>BIAS</td>       <td>5V Internal Linear Regulator Output. Bypass BIAS to GND with a low-ESR ceramic capacitor of 1µF minimum value. BIAS provides the power to the internal circuitry and external loads. See Fixed 5V Linear Regulator (BIAS) section.</td></tr>
+                        <tr><td>11,13</td>      <td>GND</td>        <td>Ground</td></tr>
+                        <tr><td>12</td>         <td>DL</td>         <td>Low-side N-Channel MOSFET Gate Driver Output.</td></tr>
+                        <tr><td>14</td>         <td>NC</td>         <td>Do not connect</td></tr>
+                        <tr><td>16</td>         <td>EN</td>         <td>High-Voltage Tolerant, Active High Digital Enable Input for Controller.</td></tr>
+                        <tr><td>EP</td>         <td>EP</td>         <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to GND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP,EN to GND</td>                      <td>-0.3V to 42V</td></tr>
+                        <tr><td>OUT,FB to GND</td>                      <td>-0.3V to 65V</td></tr>
+                        <tr><td>SUP to CS</td>                          <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>BIAS, MODE/FSYNC, PGOOD, SS to GND</td> <td>-0.3V to 6V</td></tr>
+                        <tr><td>DL, FOSC, COMP to GND</td>              <td>-0.3V to BIAS + 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation TQFN<br>
+                            (derate 28.8mW/°C* above +70°C)</td>                    <td>1666mW</td></tr>
+                        <tr><td>Junction-to-Case Thermal Resistance (θJC)</td>      <td>5°C/W</td></tr>
+                        <tr><td>Junction-to-Ambient Thermal Resistance (θJA)</td>   <td>44.5°C/W</td></tr>
+                        <tr><td>Operating Temperature Range</td>                    <td>-40°C to +125°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>                 <td>+260°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>              <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25201</h3>
+                <div class="img">
+                    <img src="Pin_AE05_25201.png" alt="product AE05 MAX25201">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th>    <th>NAME</th>   <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>CS</td>             <td>Negative Current-Sense Input for Boost Controller. Connect CS to the negative side of the currentsense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>2</td>      <td>SUP</td>            <td>Supply Input and Positive Current-Sense Input for Boost Controller. Connect SUP to the positive terminal of the current-sense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>3</td>      <td>OUT</td>            <td>Input for the BIAS LDO. Connect OUT to the boost output when the output voltage is set at 24V or below. For VOUT greater than 24V, connect OUT to the input supply.</td></tr>
+                        <tr><td>4</td>      <td>FB</td>             <td>Boost Converter Feedback Input. To set the output voltage between 3.5V and 60V, connect FB to the center tap of a resistive divider between the boost regulator output. FB regulates to 1V (typ). To use the factory set fixed output voltage on applicable parts (see Ordering Information), connect FB to BIAS and connect OUT to the output. For more information see Setting the Output Voltage.</td></tr>
+                        <tr><td>5</td>      <td>COMP</td>           <td>Boost Controller Error Amplifier Output. Connect a RC network to COMP to compensate boost converter.</td></tr>
+                        <tr><td>6</td>      <td>SS</td>             <td>Programmable Soft-Start. Connect a capacitor from SS to GND to set the soft-start time. To select the value, see the Typical Operating Characteristics section.</td></tr>
+                        <tr><td>7</td>      <td>PGOOD</td>          <td>Open-Drain, Power-Good Output for Buck Controller One. PGOOD goes low if OUT drops below 92.5% (typ falling) of the normal regulation point. PGOOD asserts low during soft-start and in shutdown. PGOOD becomes high impedance when OUT is in regulation. To obtain a logic signal, pull up PGOOD with an external resistor connected to a positive voltage lower than 5.5V.</td></tr>
+                        <tr><td>8</td>      <td>MODE/FSYNC</td>     <td>External Clock Synchronization Input. To use the internal oscillator connect MODE/FSYNC high for forced-PWM or low for skip-mode operation. To synchronize with an external clock, connect the clock to MODE/FSYNC. See the Light-Load Efficiency Skip Mode and Forced-PWM Mode sections.</td></tr>
+                        <tr><td>9</td>      <td>FOSC</td>           <td>Frequency Setting Input. Connect a resistor to FOSC to set the switching frequency of the DC-DC converters.</td></tr>
+                        <tr><td>10</td>     <td>BIAS</td>           <td>5V Internal Linear Regulator Output. Bypass BIAS to GND with a low-ESR ceramic capacitor of 1µF minimum value. BIAS provides the power to the internal circuitry and external loads. See the Fixed 5V Linear Regulator (BIAS) section.</td></tr>
+                        <tr><td>11</td>     <td>GND</td>            <td>Ground.</td></tr>           
+                        <tr><td>12</td>     <td>DL</td>             <td>Low-Side N-Channel MOSFET Gate Driver Output.</td></tr>
+                        <tr><td>13</td>     <td>LX</td>             <td>Inductor Connection for Boost Controller. Connect LX to the switched side of the inductor. LX serves as the lower supply rail for the DH high-side gate driver.</td></tr>
+                        <tr><td>14</td>     <td>DH</td>             <td>High-Side MOSFET Gate Driver Output for Boost Controller. DH output voltage swings from VLX to VBST.</td></tr>
+                        <tr><td>15</td>     <td>BST</td>            <td>Boost Flying Capacitor Connection for High-Side Gate Voltage of Boost Controller. Connect a high-voltage diode between BIAS and BST. Connect a ceramic capacitor between BST and LX. See the High-Side Gate-Driver Supply (BST) section.</td></tr>
+                        <tr><td>16</td>     <td>EN</td>             <td>High-Voltage Tolerant, Active-High Digital Enable Input for Controller</td></tr>
+                        <tr><td>-</td>      <td>EP</td>             <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to GND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, EN to GND</td>                     <td>-0.3V to +42V</td></tr>
+                        <tr><td>OUT, FB, LX to GND</td>                 <td>-0.3V to +65V</td></tr>
+                        <tr><td>SUP to CS</td>                          <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BIAS, MODE/FSYNC, PGOOD, SS to GND</td> <td>-0.3V to +6V</td></tr>
+                        <tr><td>DL, FOSC, COMP to GND</td>              <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>BST to LX</td>                          <td>-0.3V to +6V</td></tr>
+                        <tr><td>DH to LX</td>                           <td>-0.3V to BST+0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation</td></tr>
+                        <tr><td>+4°C TQFN (derate 24.4mW/°C above +70°C)</td>   <td>1951.2mW</td></tr>
+                        <tr><td>+5°C TQFN (derate 28.8mW/°C above +70°C)</td>   <td>1666mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>          <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page3" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25202M</h3>
+                <div class="img">
+                    <img src="Pin_AE05_25202M.png" alt="product AE05 MAX25202M">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th>    <th>NAME</th>   <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>CS</td>             <td>Negative Current-Sense Input for Boost Controller. Connect CS to the negative side of the currentsense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>2</td>      <td>SUP</td>            <td>Supply Input and Positive Current-Sense Input for Boost Controller. Connect SUP to the positive terminal of the current-sense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>3</td>      <td>OUT</td>            <td>Input for the BIAS LDO. Connect OUT to the boost output when the output voltage is set at 24V or below. For VOUT greater than 24V, connect OUT to the input supply.</td></tr>
+                        <tr><td>4</td>      <td>FB</td>             <td>Boost Converter Feedback Input. To set the output voltage between 3.5V and 60V, connect FB to the center tap of a resistive divider between the boost regulator output. FB regulates to 1V (typ). To use the factory set fixed output voltage on applicable parts (see Ordering Information), connect FB to BIAS and connect OUT to the output. For more information see Setting the Output Voltage.</td></tr>
+                        <tr><td>5</td>      <td>COMP</td>           <td>Boost Controller Error Amplifier Output. Connect a RC network to COMP to compensate boost converter.</td></tr>
+                        <tr><td>6</td>      <td>SS</td>             <td>Programmable Soft-Start. Connect a capacitor from SS to GND to set the soft-start time. To select the value, see the Typical Operating Characteristics section.</td></tr>
+                        <tr><td>7</td>      <td>PGOOD</td>          <td>Open-Drain, Power-Good Output for Buck Controller One. PGOOD goes low if OUT drops below 92.5% (typ falling) of the normal regulation point. PGOOD asserts low during soft-start and in shutdown. PGOOD becomes high impedance when OUT is in regulation. To obtain a logic signal, pull up PGOOD with an external resistor connected to a positive voltage lower than 5.5V.</td></tr>
+                        <tr><td>8</td>      <td>FSYNCIN</td>        <td>Synchronization Input. Connect to an external clock for synchronization. Connect to ground for internal frequency setting. When an external signal is connected, the spread spectrum is disabled. </td></tr>
+                        <tr><td>9</td>      <td>FSYNCOUT</td>       <td>Clock Synchronization Output. Connect FSYNCOUT to FSYNCINS of the MAX25202S.</td></tr>
+                        <tr><td>10</td>     <td>BIAS</td>           <td>5V Internal Linear Regulator Output. Bypass BIAS to GND with a low-ESR ceramic capacitor of 1µF minimum value. BIAS provides the power to the internal circuitry and external loads. See the Fixed 5V Linear Regulator (BIAS) section.</td></tr>
+                        <tr><td>11</td>     <td>GND</td>            <td>Ground.</td></tr>           
+                        <tr><td>12</td>     <td>DL</td>             <td>Low-Side N-Channel MOSFET Gate Driver Output.</td></tr>
+                        <tr><td>13</td>     <td>LX</td>             <td>Inductor Connection for Boost Controller. Connect LX to the switched side of the inductor. LX serves as the lower supply rail for the DH high-side gate driver.</td></tr>
+                        <tr><td>14</td>     <td>DH</td>             <td>High-Side MOSFET Gate Driver Output for Boost Controller. DH output voltage swings from VLX to VBST.</td></tr>
+                        <tr><td>15</td>     <td>BST</td>            <td>Boost Flying Capacitor Connection for High-Side Gate Voltage of Boost Controller. Connect a high-voltage diode between BIAS and BST. Connect a ceramic capacitor between BST and LX. See the High-Side Gate-Driver Supply (BST) section.</td></tr>
+                        <tr><td>16</td>     <td>EN</td>             <td>High-Voltage Tolerant, Active-High Digital Enable Input for Controller</td></tr>
+                        <tr><td>-</td>      <td>EP</td>             <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to GND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, EN to GND</td>                     <td>-0.3V to +42V</td></tr>
+                        <tr><td>OUT, FB, LX to GND</td>                 <td>-0.3V to +65V</td></tr>
+                        <tr><td>SUP to CS</td>                          <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BIAS, MODE/FSYNC, PGOOD, SS to GND</td> <td>-0.3V to +6V</td></tr>
+                        <tr><td>DL, FOSC, COMP to GND</td>              <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>BST to LX</td>                          <td>-0.3V to +6V</td></tr>
+                        <tr><td>DH to LX</td>                           <td>-0.3V to BST+0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation</td></tr>
+                        <tr><td>+4°C TQFN (derate 24.4mW/°C above +70°C)</td>   <td>1951.2mW</td></tr>
+                        <tr><td>+5°C TQFN (derate 28.8mW/°C above +70°C)</td>   <td>1666mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>          <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page4" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25202S</h3>
+                <div class="img">
+                    <img src="Pin_AE05_25202S.png" alt="product AE05 MAX25202S">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th>    <th>NAME</th>   <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>CS</td>             <td>Negative Current-Sense Input for Boost Controller. Connect CS to the negative side of the currentsense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>2</td>      <td>SUP</td>            <td>Supply Input and Positive Current-Sense Input for Boost Controller. Connect SUP to the positive terminal of the current-sense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>3</td>      <td>OUT</td>            <td>Input for the BIAS LDO. Connect OUT to the boost output when the output voltage is set at 24V or below. For VOUT greater than 24V, connect OUT to the input supply.</td></tr>
+                        <tr><td>4</td>      <td>FB</td>             <td>Boost Converter Feedback Input. To set the output voltage between 3.5V and 60V, connect FB to the center tap of a resistive divider between the boost regulator output. FB regulates to 1V (typ). To use the factory set fixed output voltage on applicable parts (see Ordering Information), connect FB to BIAS and connect OUT to the output. For more information see Setting the Output Voltage.</td></tr>
+                        <tr><td>5</td>      <td>COMP</td>           <td>Boost Controller Error Amplifier Output. Connect a RC network to COMP to compensate boost converter.</td></tr>
+                        <tr><td>6</td>      <td>SS</td>             <td>Programmable Soft-Start. Connect a capacitor from SS to GND to set the soft-start time. To select the value, see the Typical Operating Characteristics section.</td></tr>
+                        <tr><td>7,9</td>    <td>NC</td>             <td>Do Not Connect</td></tr>
+                        <tr><td>8</td>      <td>FSYNCINS</td>       <td>Target Input Synchronization. For dual-phase operation, connect FSYNCINS of the MAX25202S to FSYNCOUT of the MAX25202M.</td></tr>
+                        <tr><td>10</td>     <td>BIAS</td>           <td>5V Internal Linear Regulator Output. Bypass BIAS to GND with a low-ESR ceramic capacitor of 1µF minimum value. BIAS provides the power to the internal circuitry and external loads. See the Fixed 5V Linear Regulator (BIAS) section.</td></tr>
+                        <tr><td>11</td>     <td>GND</td>            <td>Ground.</td></tr>           
+                        <tr><td>12</td>     <td>DL</td>             <td>Low-Side N-Channel MOSFET Gate Driver Output.</td></tr>
+                        <tr><td>13</td>     <td>LX</td>             <td>Inductor Connection for Boost Controller. Connect LX to the switched side of the inductor. LX serves as the lower supply rail for the DH high-side gate driver.</td></tr>
+                        <tr><td>14</td>     <td>DH</td>             <td>High-Side MOSFET Gate Driver Output for Boost Controller. DH output voltage swings from VLX to VBST.</td></tr>
+                        <tr><td>15</td>     <td>BST</td>            <td>Boost Flying Capacitor Connection for High-Side Gate Voltage of Boost Controller. Connect a high-voltage diode between BIAS and BST. Connect a ceramic capacitor between BST and LX. See the High-Side Gate-Driver Supply (BST) section.</td></tr>
+                        <tr><td>16</td>     <td>EN</td>             <td>High-Voltage Tolerant, Active-High Digital Enable Input for Controller</td></tr>
+                        <tr><td>-</td>      <td>EP</td>             <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to GND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, EN to GND</td>                     <td>-0.3V to +42V</td></tr>
+                        <tr><td>OUT, FB, LX to GND</td>                 <td>-0.3V to +65V</td></tr>
+                        <tr><td>SUP to CS</td>                          <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BIAS, MODE/FSYNC, PGOOD, SS to GND</td> <td>-0.3V to +6V</td></tr>
+                        <tr><td>DL, FOSC, COMP to GND</td>              <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>BST to LX</td>                          <td>-0.3V to +6V</td></tr>
+                        <tr><td>DH to LX</td>                           <td>-0.3V to BST+0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation</td></tr>
+                        <tr><td>+4°C TQFN (derate 24.4mW/°C above +70°C)</td>   <td>1951.2mW</td></tr>
+                        <tr><td>+5°C TQFN (derate 28.8mW/°C above +70°C)</td>   <td>1666mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>          <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+        
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

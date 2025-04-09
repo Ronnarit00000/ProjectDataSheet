@@ -1,0 +1,19 @@
+@import url(../asstracs/variables.css);
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 
+    
+        [full-width-start]var(--full-size)
+            [popout-start]var(--popout-size)
+                [content-start] calc(var(--content-size) * 0.5)
+                    [center-point]
+                calc(var(--content-size) * 0.5)[content-end]
+            var(--popout-size)[popout-end]
+        var(--full-size)[full-width-end]
+    ;
+}
+
+.grid-container > * {
+    grid-column: content;
+}

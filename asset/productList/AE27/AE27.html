@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE27 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE27</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25206/MAX25208</h3>
+                <div class="img">
+                    <img src="Pin_AE27_25206&8.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>  <td>SPS</td>         <td>Spread Spectrum Enable Pin. Pull to logic high for spread spectrum enabled. Pull to ground to disable spread spectrum.</td></tr>
+                        <tr><td>2</td>  <td>SYNCOUT</td>     <td>Clock Output. SYNCOUT outputs 180 degrees out of phase relative to the internal oscillator.</td></tr>
+                        <tr><td>3</td>  <td>FSYNC</td>       <td>External Clock Synchronization Input. Connect FSYNC to AGND to enable skip mode of operation (MAX25206/MAX25208 only). Connect to BIAS or an external clock to enable forced-PWM mode of operation. Tie FSYNC high for MAX25207. If external clock synchronization is required for MAX25207, contact factory for review. See Switching Frequency/External Synchronization section for additional information.</td></tr>
+                        <tr><td>4</td>  <td>FOSC</td>        <td>Frequency Setting Input. Connect a resistor to FOSC to set the switching frequency of the DC-DC controller.</td></tr>
+                        <tr><td>5</td>  <td>PGOOD</td>       <td>Open-Drain Power-Good Output for Buck Controller. PGOOD asserts low during soft-start and in shutdown. PGOOD becomes high impedance when OUT is in regulation. Actively pulled down if OUT is outside the regulation window. For MAX25207, PGOOD is always high impedance in bypass mode. To obtain a logic signal, pull up PGOOD with an external resistor connected to a positive voltage lower than 5.5V.</td></tr>
+                        <tr><td>6</td>  <td>COMP</td>        <td>Buck Controller Error Amplifier Output. Connect an RC network between COMP and AGND to compensate the buck controller.</td></tr>
+                        <tr><td>7</td>  <td>AGND</td>        <td>Analog Ground for Controller</td></tr>
+                        <tr><td>8</td>  <td>FB</td>          <td>Feedback Input for Buck Controller. Connect FB to BIAS for the fixed output or to a resistor divider between OUT and GND to adjust the output voltage between 0.7V and 20V. In adjustable mode, FB regulates to 0.7V (typ).</td></tr>
+                        <tr><td>9</td>  <td>OUT</td>         <td>Output Sense and Negative Current-Sense Input for Buck Controller. When using the internal preset 5V feedback-divider (FB = BIAS), the controller uses OUT to sense the output voltage. Connect OUT to the negative terminal of the current-sense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>10</td> <td>CS</td>          <td>Positive Current-Sense Input for Buck Controller. Connect CS to the positive terminal of the current-sense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>11</td> <td>NC</td>          <td>No Connect</td></tr>
+                        <tr><td>12</td> <td>NC</td>          <td>No Connect</td></tr>
+                        <tr><td>13</td> <td>BIAS</td>        <td>5V Internal Linear Regulator Output. Bypass BIAS to GND with a low-ESR ceramic capacitor of 2.2µF minimum value. BIAS provides the power to the internal circuitry and gate drivers. See Fixed 5V Linear Regulator (BIAS) and BIAS Switchover sections.</td></tr>
+                        <tr><td>14</td> <td>PGND</td>        <td>Power Ground for Controller</td></tr>
+                        <tr><td>15</td> <td>DL</td>          <td>Low-Side Gate Driver Output. DL output voltage swings from VPGND to VBIAS.</td></tr>
+                        <tr><td>16</td> <td>LX</td>          <td>Inductor Connection. Connect LX to the switched side of the inductor.</td></tr>
+                        <tr><td>17</td> <td>DH</td>          <td>High-Side Gate Driver Output</td></tr>
+                        <tr><td>18</td> <td>BST</td>         <td>Bootstrap capacitor connection. Connect a ceramic capacitor between BST and LX. See High-Side Gate-Driver Supply (BST) section.</td></tr>
+                        <tr><td>19</td> <td>SUP</td>         <td>Supply Input for IC. Bypass to ground with a 2.2μF or larger capacitor near the IC. Connect to buck power stage input voltage (VIN). Power stage needs additional input capacitors (CIN).</td></tr>
+                        <tr><td>20</td> <td>EN</td>          <td>High-Voltage Tolerant, Active-High Digital Enable Input for Controller.</td></tr>
+                        <tr><td>EP</td> <td>-</td>           <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to PGND, AGND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>  
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, EN, LX to PGND (MAX25206, MAX25207)</td>   <td>-0.3V to 65V</td></tr>
+                        <tr><td>SUP, EN, LX to PGND (MAX25208)</td>             <td>-0.3V to 75V</td></tr>
+                        <tr><td>OUT to AGND</td>                                <td>-0.3V to 22V</td></tr>
+                        <tr><td>CS to OUT</td>                                  <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>SYNCOUT, SPS, FOSC,<br> 
+                            COMP, FB, ENBK to AGND</td>                         <td>-0.3V to BIAS + 0.3V</td></tr>
+                        <tr><td>BIAS to AGND</td>                               <td>-0.3V to 6V</td></tr>
+                        <tr><td>PGOOD, FSYNC to AGND</td>                       <td>-0.3V to 6V</td></tr>
+                        <tr><td>DL to PGND</td>                                 <td>-0.3V to BIAS + 0.3V</td></tr>
+                        <tr><td>BST to LX</td>                                  <td>-0.3V to 6V</td></tr>
+                        <tr><td>DH to LX</td>                                   <td>-0.3V to BST+0.3V</td></tr>
+                        <tr><td>PGND to AGND</td>                               <td>-0.3V to 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation TQFN<br>
+                            (derate 28mW/°C above +70°C)</td>               <td>2260mW</td></tr>
+                        <tr><td>Operating Junction Temperature</td>         <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>         <td>+260°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25207</h3>
+                <div class="img">
+                    <img src="Pin_AE27_25207.png" alt="product AE27">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>  <td>SPS</td>         <td>Spread Spectrum Enable Pin. Pull to logic high for spread spectrum enabled. Pull to ground to disable spread spectrum.</td></tr>
+                        <tr><td>2</td>  <td>SYNCOUT</td>     <td>Clock Output. SYNCOUT outputs 180 degrees out of phase relative to the internal oscillator.</td></tr>
+                        <tr><td>3</td>  <td>FSYNC</td>       <td>External Clock Synchronization Input. Connect FSYNC to AGND to enable skip mode of operation (MAX25206/MAX25208 only). Connect to BIAS or an external clock to enable forced-PWM mode of operation. Tie FSYNC high for MAX25207. If external clock synchronization is required for MAX25207, contact factory for review. See Switching Frequency/External Synchronization section for additional information.</td></tr>
+                        <tr><td>4</td>  <td>FOSC</td>        <td>Frequency Setting Input. Connect a resistor to FOSC to set the switching frequency of the DC-DC controller.</td></tr>
+                        <tr><td>5</td>  <td>PGOOD</td>       <td>Open-Drain Power-Good Output for Buck Controller. PGOOD asserts low during soft-start and in shutdown. PGOOD becomes high impedance when OUT is in regulation. Actively pulled down if OUT is outside the regulation window. For MAX25207, PGOOD is always high impedance in bypass mode. To obtain a logic signal, pull up PGOOD with an external resistor connected to a positive voltage lower than 5.5V.</td></tr>
+                        <tr><td>6</td>  <td>COMP</td>        <td>Buck Controller Error Amplifier Output. Connect an RC network between COMP and AGND to compensate the buck controller.</td></tr>
+                        <tr><td>7</td>  <td>AGND</td>        <td>Analog Ground for Controller</td></tr>
+                        <tr><td>8</td>  <td>FB</td>          <td>Feedback Input for Buck Controller. Connect FB to BIAS for the fixed output or to a resistor divider between OUT and GND to adjust the output voltage between 0.7V and 20V. In adjustable mode, FB regulates to 0.7V (typ).</td></tr>
+                        <tr><td>9</td>  <td>OUT</td>         <td>Output Sense and Negative Current-Sense Input for Buck Controller. When using the internal preset 5V feedback-divider (FB = BIAS), the controller uses OUT to sense the output voltage. Connect OUT to the negative terminal of the current-sense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>10</td> <td>CS</td>          <td>Positive Current-Sense Input for Buck Controller. Connect CS to the positive terminal of the current-sense element. See Current Limiting and Current Sense Inputs and Current Sense Measurement sections.</td></tr>
+                        <tr><td>11</td> <td>NC</td>          <td>No Connect</td></tr>
+                        <tr><td>12</td> <td>ENBK</td>        <td>Force Buck Mode Pin. For bypass-enabled part MAX25207, pull to logic high to force buck mode, pull to ground to let the part decide operation mode (buck or bypass) based on supply voltage. Connect to ground for MAX25206/MAX25208.</td></tr>
+                        <tr><td>13</td> <td>BIAS</td>        <td>5V Internal Linear Regulator Output. Bypass BIAS to GND with a low-ESR ceramic capacitor of 2.2µF minimum value. BIAS provides the power to the internal circuitry and gate drivers. See Fixed 5V Linear Regulator (BIAS) and BIAS Switchover sections.</td></tr>
+                        <tr><td>14</td> <td>PGND</td>        <td>Power Ground for Controller</td></tr>
+                        <tr><td>15</td> <td>DL</td>          <td>Low-Side Gate Driver Output. DL output voltage swings from VPGND to VBIAS.</td></tr>
+                        <tr><td>16</td> <td>LX</td>          <td>Inductor Connection. Connect LX to the switched side of the inductor.</td></tr>
+                        <tr><td>17</td> <td>DH</td>          <td>High-Side Gate Driver Output</td></tr>
+                        <tr><td>18</td> <td>BST</td>         <td>Bootstrap capacitor connection. Connect a ceramic capacitor between BST and LX. See High-Side Gate-Driver Supply (BST) section.</td></tr>
+                        <tr><td>19</td> <td>SUP</td>         <td>Supply Input for IC. Bypass to ground with a 2.2μF or larger capacitor near the IC. Connect to buck power stage input voltage (VIN). Power stage needs additional input capacitors (CIN).</td></tr>
+                        <tr><td>20</td> <td>EN</td>          <td>High-Voltage Tolerant, Active-High Digital Enable Input for Controller.</td></tr>
+                        <tr><td>EP</td> <td>-</td>           <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to PGND, AGND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>  
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, EN, LX to PGND (MAX25206, MAX25207)</td>   <td>-0.3V to 65V</td></tr>
+                        <tr><td>SUP, EN, LX to PGND (MAX25208)</td>             <td>-0.3V to 75V</td></tr>
+                        <tr><td>OUT to AGND</td>                                <td>-0.3V to 22V</td></tr>
+                        <tr><td>CS to OUT</td>                                  <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>SYNCOUT, SPS, FOSC,<br> 
+                            COMP, FB, ENBK to AGND</td>                         <td>-0.3V to BIAS + 0.3V</td></tr>
+                        <tr><td>BIAS to AGND</td>                               <td>-0.3V to 6V</td></tr>
+                        <tr><td>PGOOD, FSYNC to AGND</td>                       <td>-0.3V to 6V</td></tr>
+                        <tr><td>DL to PGND</td>                                 <td>-0.3V to BIAS + 0.3V</td></tr>
+                        <tr><td>BST to LX</td>                                  <td>-0.3V to 6V</td></tr>
+                        <tr><td>DH to LX</td>                                   <td>-0.3V to BST+0.3V</td></tr>
+                        <tr><td>PGND to AGND</td>                               <td>-0.3V to 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation TQFN<br>
+                            (derate 28mW/°C above +70°C)</td>               <td>2260mW</td></tr>
+                        <tr><td>Operating Junction Temperature</td>         <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>         <td>+260°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

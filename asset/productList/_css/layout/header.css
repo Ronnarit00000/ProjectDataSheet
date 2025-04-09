@@ -1,0 +1,65 @@
+@import url(../asstracs/variables.css);
+@import url(../asstracs/color.css);
+
+.header--wrapper.header--default{
+    --btn-bg:           #fff;
+    --btn-hover-clr:    #fff;
+    --header-name:      var(--clr-primary-800);
+    --btn-clr:          var(--clr-primary-900);
+    --btn-bd:           var(--clr-primary-900);
+    --btn-hover-bg:     var(--clr-primary-800);
+    --btn-hover-bd:     var(--clr-primary-800);
+
+    --btn-onclick-clr:  #fff;
+    --btn-onclick-bg:   var(--clr-primary-800);
+    --btn-onclick-bd:   var(--clr-primary-1000);
+}
+
+.header--wrapper {
+    position: fixed;
+    width: 100%;    ;
+    background-color: #fff;
+    box-shadow: 0.5rem 0.5rem 2rem 0.5rem hsla(0, 0%, 51%, 0.125);
+}
+
+.header--inner {
+    width: var(--content-size);
+    margin-inline: auto;
+    grid-column: 3 / 5;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    padding-block: 0.5rem;
+}
+
+.header--inner .group-btn{
+    display: grid;
+    gap: 0.35em;
+    grid-auto-flow: column;
+}
+
+.header--inner .btn {
+    width: 2.5rem;
+    height: 100%;
+    font-weight: 900;
+    border-radius: 0.5em;
+    color: var(--btn-clr);
+    border: 0.25rem solid var(--btn-bd);
+    background-color: var(--btn-bg);
+    cursor: pointer;
+}
+
+.header--inner .btn:hover{
+    color: var(--btn-hover-clr);
+    border: 0.25rem solid var(--btn-hover-bd);
+    background-color: var(--btn-hover-bg);    
+}
+
+.header--inner h2{
+    color: var(--header-name);
+}
+
+.header--inner .btn[stateButton = 'click']{
+    color: var(--btn-onclick-clr);
+    border: 0.25rem solid var(--btn-onclick-bd);
+    background-color: var(--btn-onclick-bg);    
+}

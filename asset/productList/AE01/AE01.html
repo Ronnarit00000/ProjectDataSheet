@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE01 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE01</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+    <!-- conpoment navigation -->
+    <section 
+        class="navigation navigation--default navigation--product-page" 
+        compoment="navigation"
+        homePath="../../../"   
+        imgPath="../../image/" 
+        linkHrefPath="../"
+        location="product-page"
+        state = 'hide'
+        >
+    </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20408 / MAX20410 / MAX20408E / MAX20410E</h3>
+                <div class="img">
+                    <img src="Pin_AE01_20404.png" alt="product AE01">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>EN</td>         <td>High-Voltage-Compatible Enable Input. Drive EN high to enable the buckconverter.</td></tr>
+                        <tr><td>2</td>      <td>BST</td>        <td>High-Side Gate Driver Supply. Connect a 0.1μF ceramic capacitor between BST and LX.</td></tr>
+                        <tr><td>3</td>      <td>SUP</td>        <td>IC Supply Input and Internal High-Side Switch Supply Input. Bypass SUP to PGND with 0.1μF and 4.7μF ceramic capacitors as close as possible. Both SUP pins are internally connected.</td></tr>
+                        <tr><td>4, 5</td>   <td>PGND</td>       <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>6</td>      <td>LX</td>         <td>Buck Inductor Connection. Connect an inductor from LX to the buck output. LX is high impedance when the IC is disabled.</td></tr>
+                        <tr><td>7, 8</td>   <td>PGND</td>       <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>9</td>      <td>SUP</td>        <td>IC Supply Input and Internal High-Side Switch Supply Input. Bypass SUP to PGND with 0.1μF and 4.7μF ceramic capacitors as close as possible. Both SUP pins are internally connected.</td></tr>
+                        <tr><td>10</td>     <td>GND</td>        <td>Analog Ground. Connect GND and PGND through start connection to the PCB ground plane.</td></tr>
+                        <tr><td>11</td>     <td>BIAS</td>       <td>1.8V Internal Linear Regulator Output. Connect BIAS to ground with a minimum of 2.2μF ceramic capacitor.</td></tr>
+                        <tr><td>12</td>     <td>FB</td>         <td>Feedback Input. Connect FB to a resistor-divider between OUT and GND to adjust the output voltage between 0.8V and 10V. Connect FB to BIAS for fixed output voltage.</td></tr>
+                        <tr><td>13</td>     <td>OUT</td>        <td>Output Voltage Sense Input. The buck converter uses OUT to sense output voltage when FB is connected to BIAS.</td></tr>
+                        <tr><td>14</td>     <td>VEA</td>        <td>Internal Voltage Loop Error Amplifier Output. Connect VEA of the controller and target together in dual-phase operation. Leave VEA open for single-phase operation.</td></tr>
+                        <tr><td>15</td>     <td>PGOOD</td>      <td>Open-Drain Power-Good Output. The PGOOD is low if the buck output voltage falls below 93% (typ) of regulation voltage. The PGOOD becomes high impedance when the buck output voltage rises above 94% (typ) of its regulation voltage. The PGOOD asserts low during soft-start. Connect PGOOD to BIAS or a positive voltage lower than 5.5V with a pull-up resistor to indicate buck output status.</td></tr>
+                        <tr><td>16</td>     <td>SYNC</td>       <td>External Clock Synchronization Input. Connect SYNC low to enable skip-mode operation. Connect SYNC high for FPWM operation. Connect a valid external clock signal to SYNC to enable external clock synchronization</td></tr>
+                        <tr><td>17</td>     <td>SYNCOUT</td>    <td>180° Out-of-Phase Clock Output. In dual-phase operation, connect SYNCOUT to BIAS to configure the IC as a target, and connect SYNCOUT of the controller to SYNC of the target. Leave SYNCOUT open in single-phase operation.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, EN to PGND</td>                <td>-0.3V to +42V</td></tr>
+                        <tr><td>BST to LX</td>                      <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>BST to PGND</td>                    <td>-0.3V to +44V</td></tr>
+                        <tr><td>LX to PGND</td>                     <td>-0.3V to SUP + 0.3V</td></tr>
+                        <tr><td>SYNC, SYNCOUT, PGOOD to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>FB, VEA to GND</td>                 <td>-0.3V to BIAS + 0.3V</td></tr>
+                        <tr><td>OUT to GND</td>                     <td>-0.3V to +16V</td></tr>
+                        <tr><td>PGND to GND</td>                    <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BIAS to GND</td>                    <td>-0.3V to +2.2V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>LX Continuous RMS Current</td>                  <td>10A</td></tr>
+                        <tr><td>Continuous Power Dissipation<br>
+                             (TA = +70°C, derate 37mW/°C
+                            above +70°C)</td>                                   <td>2963mW</td></tr>
+                        <tr><td>Operating Junction Temperature</td>             <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (Soldering 10s)</td>           <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20408EAFL</h3>
+                <div class="img">
+                    <img src="Pin_AE01_20408L.png" alt="product AE01">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>EN</td>         <td>High-Voltage-Compatible Enable Input. Drive EN high to enable the buckconverter.</td></tr>
+                        <tr><td>2</td>      <td>BST</td>        <td>High-Side Gate Driver Supply. Connect a 0.1μF ceramic capacitor between BST and LX.</td></tr>
+                        <tr><td>3</td>      <td>SUP</td>        <td>IC Supply Input and Internal High-Side Switch Supply Input. Bypass SUP to PGND with 0.1μF and 4.7μF ceramic capacitors as close as possible. Both SUP pins are internally connected.</td></tr>
+                        <tr><td>4</td>      <td>PGND</td>       <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>5</td>      <td>LX</td>         <td>Buck Inductor Connection. Connect an inductor from LX to the buck output. LX is high impedance when the IC is disabled.</td></tr>
+                        <tr><td>6</td>      <td>PGND</td>       <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>7</td>      <td>SUP</td>        <td>IC Supply Input and Internal High-Side Switch Supply Input. Bypass SUP to PGND with 0.1μF and 4.7μF ceramic capacitors as close as possible. Both SUP pins are internally connected.</td></tr>
+                        <tr><td>8</td>      <td>GND</td>        <td>Analog Ground. Connect GND and PGND through start connection to the PCB ground plane.</td></tr>
+                        <tr><td>9</td>      <td>BIAS</td>       <td>1.8V Internal Linear Regulator Output. Connect BIAS to ground with a minimum of 2.2μF ceramic capacitor.</td></tr>
+                        <tr><td>10</td>     <td>FB</td>         <td>Feedback Input. Connect FB to a resistor-divider between OUT and GND to adjust the output voltage between 0.8V and 10V. Connect FB to BIAS for fixed output voltage.</td></tr>
+                        <tr><td>11</td>     <td>OUT</td>        <td>Output Voltage Sense Input. The buck converter uses OUT to sense output voltage when FB is connected to BIAS.</td></tr>
+                        <tr><td>12</td>     <td>VEA</td>        <td>Internal Voltage Loop Error Amplifier Output. Connect VEA of the controller and target together in dual-phase operation. Leave VEA open for single-phase operation.</td></tr>
+                        <tr><td>13</td>     <td>PGOOD</td>      <td>Open-Drain Power-Good Output. The PGOOD is low if the buck output voltage falls below 93% (typ) of regulation voltage. The PGOOD becomes high impedance when the buck output voltage rises above 94% (typ) of its regulation voltage. The PGOOD asserts low during soft-start. Connect PGOOD to BIAS or a positive voltage lower than 5.5V with a pull-up resistor to indicate buck output status.</td></tr>
+                        <tr><td>14</td>     <td>SYNC</td>       <td>External Clock Synchronization Input. Connect SYNC low to enable skip-mode operation. Connect SYNC high for FPWM operation. Connect a valid external clock signal to SYNC to enable external clock synchronization</td></tr>
+                        <tr><td>15</td>     <td>SYNCOUT</td>    <td>180° Out-of-Phase Clock Output. In dual-phase operation, connect SYNCOUT to BIAS to configure the IC as a target, and connect SYNCOUT of the controller to SYNC of the target. Leave SYNCOUT open in single-phase operation.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, EN to PGND</td>                <td>-0.3V to +42V</td></tr>
+                        <tr><td>BST to LX</td>                      <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>BST to PGND</td>                    <td>-0.3V to +44V</td></tr>
+                        <tr><td>LX to PGND</td>                     <td>-0.3V to SUP + 0.3V</td></tr>
+                        <tr><td>SYNC, SYNCOUT, PGOOD to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>FB, VEA to GND</td>                 <td>-0.3V to BIAS + 0.3V</td></tr>
+                        <tr><td>OUT to GND</td>                     <td>-0.3V to +16V</td></tr>
+                        <tr><td>PGND to GND</td>                    <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BIAS to GND</td>                    <td>-0.3V to +2.2V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>LX Continuous RMS Current</td>                  <td>10A</td></tr>
+                        <tr><td>Continuous Power Dissipation<br>
+                                (TA = +70°C, derate 37mW/°C
+                            above +70°C)</td>                                   <td>2963mW</td></tr>
+                        <tr><td>Operating Junction Temperature</td>             <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (Soldering 10s)</td>           <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

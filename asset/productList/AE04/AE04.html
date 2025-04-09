@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE04 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE04</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20004E/MAX20006E/MAX20008E</h3>
+                <div class="img">
+                    <img src="Pin_AE04.png" alt="product ae04 AE04">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th>    <th>NAME</th>   <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>RESET</td>  <td>Open-Drain RESET Output. To obtain a logic signal, pull RESET up with an external resistor.</td></tr>
+                        <tr><td>2</td>      <td>BST</td>    <td>High-Side Driver Supply. Connect a 0.1μF capacitor between LX and BST for proper operation.</td></tr>
+                        <tr><td>3</td>      <td>SUPSW</td>  <td>Supply Input.</td></tr>
+                        <tr><td>4, 5</td>   <td>PGND</td>   <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>6</td>      <td>LX</td>     <td>Inductor Connection. Connect LX to the switched side of the inductor. Connect all LX pins together.</td></tr>
+                        <tr><td>7, 8</td>   <td>PGND</td>   <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>9</td>      <td>SUPSW</td>  <td>Internal High-Side Switch Supply Input. SUPSW provides power to the internal switch. Bypass SUPSW to PGND with 0.1μF and 4.7μF ceramic capacitors. Place the 0.1μF as close to the SUPSW and PGND pins as possible, followed by the 4.7μF capacitor</td></tr>
+                        <tr><td>10</td>     <td>SUP</td>    <td>Voltage Supply Input. SUP powers up the internal linear regulator. SUP is fused directly to SUPSW, so it must be connected directly to SUPSW as close to the IC as possible</td></tr>
+                        <tr><td>11</td>     <td>EN</td>     <td>SUP Voltage-Compatible Enable Input. Drive EN low to disable the devices. Drive EN high to enable the devices</td></tr>
+                        <tr><td>12</td>     <td>SYNC</td>   <td>Synchronization Input. Connect SYNC to GND to enable skip-mode operation under light loads. Connect SYNC to BIAS or an external clock to enable fixed-frequency forced-PWM-mode operation. When driving SYNC externally do not exceed the BIAS voltage. The BIAS pin may transition from 5V to the output voltage after startup to increase efficiency. For MAX20006EAFOD/ VY+, do not ground SYNC pin, as the part only supports FPWM mode.</td></tr>
+                        <tr><td>13</td>     <td>BIAS</td>   <td>Linear Regulator Output. BIAS powers up the internal circuitry. Bypass with a minimum 2.2μF ceramic capacitor to ground.</td></tr>
+                        <tr><td>14</td>     <td>GND</td>    <td>Analog Ground.</td></tr>
+                        <tr><td>15</td>     <td>SSEN</td>   <td>Spread Spectrum Enable Input. Connect to BIAS to enable spread spectrum.</td></tr>
+                        <tr><td>16</td>     <td>FB</td>     <td>Feedback Input. Connect a resistor-divider from OUT to FB to GND to set the output voltage. Connect FB to BIAS to select a 3.3V, 3.9V, or 5V fixed output voltage (P/N dependent).</td></tr>
+                        <tr><td>17</td>     <td>OUT</td>    <td>Switching Regulator Output. OUT also provides power to the internal circuitry when the output voltage of the converter is set between 3V and 5V during standby mode.</td></tr>
+                        <tr><td>EP</td>     <td>SUPSW</td>  <td>Exposed pad on the internal high-side switch supply input. Connect to SUPSW pins 3 and 9 on the PCB</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>EN, SUPSW, SUP to PGND</td>         <td>-0.3V to +40V</td></tr>
+                        <tr><td>LX to PGND</td>                     <td>-0.3V to SUPSW + 0.3V</td></tr>
+                        <tr><td>SYNC, BIAS to GND</td>              <td>-0.3V to +6V</td></tr>
+                        <tr><td>RESET to GND</td>                   <td>-0.3V to +6V</td></tr>
+                        <tr><td>GND to PGND</td>                    <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>SSEN, FB, OUT to GND</td>           <td>-0.3V to BIAS + 0.3V</td></tr>
+                        <tr><td>BST to LX</td>                      <td>-0.3V to +6V</td></tr>
+                        <tr><td>LX continuins RMS Current</td>      <td>8A</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br>
+                            (TA = +70°C) 17-FCQFN<br>
+                            (derate 29.4mW/°C > 70°C)</td>          <td>2553mW</td></tr>
+                        <tr><td>Operating Temperature</td>          <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature Range</td>         <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td> <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP87 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP87</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+    <!-- conpoment navigation -->
+    <section 
+        class="navigation navigation--default navigation--product-page" 
+        compoment="navigation"
+        homePath="../../../"   
+        imgPath="../../image/" 
+        linkHrefPath="../"
+        location="product-page"
+        state = 'hide'
+        >
+    </section> 
+
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20084</h3>
+                <div class="img">
+                    <img src="Pin_AP87.png" alt="product AP87">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>        <td>FB1</td>      <td>Feedback Connection for the OUT1 Output. Connect FB1 to OUT1.</td></tr>
+                        <tr><td>2</td>        <td>PVL</td>      <td>5V Regulator Output. Bypass PVL to GND with a minimum of 1μF ceramic capacitor as close as possible to the device.</td></tr>
+                        <tr><td>3</td>        <td>ADDR</td>     <td>I2C Address Setting. Connect to PVL or GND to set address. See Table 1.</td></tr>
+                        <tr><td>4</td>        <td>VREFLN</td>   <td>Internal Reference. Bypass VREFLN to GND with a 100nF ceramic capacitor.</td></tr>
+                        <tr><td>5</td>        <td>DGND</td>     <td>Digital Ground. Connect DGND directly to the exposed pad of the package.</td></tr>
+                        <tr><td>6</td>        <td>SDA</td>      <td>I2C Data I/O. Connect a pullup resistor from SDA to the logic supply.</td></tr>
+                        <tr><td>7</td>        <td>SCL</td>      <td>I2C Clock Input. Connect a pullup resistor from SCL to the logic supply.</td></tr>
+                        <tr><td>8</td>        <td>FLTB</td>     <td>Open-Drain, Active-Low Fault Output. FLTB asserts low when any diagnostic bit is asserted if it is not masked. Connect a pullup resistor from FLTB to the logic supply.</td></tr>
+                        <tr><td>9</td>        <td>AOUT</td>     <td>Analog Output. AOUT outputs a voltage that represents the load current of the selected output OUT1 or OUT2. An internal multiplexer controlled through I2C sets the selected channel for AOUT. If AOUT is used, place a 100kΩ resistor and a 220pF capacitor from the pin to GND.</td></tr>
+                        <tr><td>10</td>       <td>FB2</td>      <td>Feedback Connection for the OUT2 Output. Connect FB2 to OUT2.</td></tr>
+                        <tr><td>11</td>       <td>GND</td>      <td>Ground. GND is the current return path connection for the low-noise analog signals. Connect GND to the exposed pad of the package.</td></tr>
+                        <tr><td>12</td>       <td>OUT2</td>     <td>Regulator Output 2. Connect a capacitor with a minimum value of 10μF from OUT2 to PGND, placing it as close as possible to the IC. A protection diode can also be used to protect OUT2 from negative voltage transients.</td></tr>
+                        <tr><td>13</td>       <td>EN</td>       <td>Main Enable Input for the MAX20084. When EN is goes high, the internal PVL regulator is enabled and the I2C interface becomes active. In the case of the MAX20084ATEB, LDO1 is also enabled with the default configuration when EN is goes high. EN has an internal pulldown resistor. </td></tr>
+                        <tr><td>14</td>       <td>IN2</td>      <td>Supply Input. Connect IN2 and IN1 together directly at the IC.</td></tr>
+                        <tr><td>15</td>       <td>IN1</td>      <td>Main Supply Input. Connect a 4.5V to 18V supply to IN1. Bypass IN1 to GND with a combination of ceramic capacitor of value 4.7µF and optionally an electrolytic capacitor. See the Short-to-Battery and Reverse-Current Protection section. Connect IN1 and IN2 together directly at the IC.</td></tr>
+                        <tr><td>16</td>       <td>OUT1</td>     <td>Regulator Output 1. Connect a capacitor with a minimum value of 10μF from OUT1 to GND, placing it as close as possible to the IC. A protection diode can also be used to protect OUT1 from negative voltage transients</td></tr>
+                        <tr><td>-</td>        <td>EP</td>       <td>Exposed Pad. Connect EP to a large-area contiguous copper ground plane for effective power dissipation. Do not use as the IC ground connection. EP must be connected to ground.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN1, EN to GND</td>              <td>-0.3V to +40V</td></tr>
+                        <tr><td>IN1 to IN2</td>                  <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>OUT1, OUT2, FB1, FB2 to GND</td> <td>-0.3V to +26V</td></tr>
+                        <tr><td>DGND to GND</td>                 <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>AOUT, VREFLN, ADDR to GND</td>   <td>-0.3V to VPVL + 0.3V</td></tr>
+                        <tr><td>PVL, FLTB, SDA, SCL to GND</td>  <td>-0.3V to +6V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br>
+                             Multilayer Board (TA = +70°C)</td>     <td>+2w</td></tr>
+                        <tr><td>Operating Temperature Range</td>    <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature Range</td>     <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature</td>               <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

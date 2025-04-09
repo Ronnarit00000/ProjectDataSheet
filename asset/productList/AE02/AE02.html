@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE02 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE02</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20404/MAX20405/MAX20406</h3>
+                <div class="img">
+                    <img src="Pin_AE02_204.png" alt="product AE02">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>EN</td>         <td>High-Voltage-Compatible Input for Circuit Activation. If this pin is low, the part is off.</td></tr>
+                        <tr><td>2</td>          <td>BST</td>        <td>High-Side Driver Supply. Connect a 0.1μF capacitor between LX and BST for proper operation.</td></tr>
+                        <tr><td>3,9</td>        <td>SUP</td>        <td>IC Supply Input. Connect a 1μF or larger ceramic capacitor in parallel with a 4.7μF capacitor from SUP to PGND.</td></tr>
+                        <tr><td>4,5,7,8</td>    <td>PGND</td>       <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>6</td>          <td>LX</td>         <td>BUCK Switching Node. High impedance when part is off. Connect LX to the switched side of the appropriate inductor.</td></tr>
+                        <tr><td>10</td>         <td>GND</td>        <td>Analog Ground</td></tr>
+                        <tr><td>11</td>         <td>BIAS</td>       <td>1.8V  Internal BIAS Supply. Connect a minimum of 2μF ceramic capacitor to GND.</td></tr>
+                        <tr><td>12</td>         <td>FB</td>         <td>Feedback Pin. Connect a resistor-divider from OUT to FB to GND for external adjustment of output voltage. Connect to BIAS for internal fixed voltages.</td></tr>
+                        <tr><td>13</td>         <td>OUT</td>        <td>Buck Regulator Output Voltage-Sense Input. Connect OUT to the buck output.</td></tr>
+                        <tr><td>14</td>         <td>VEA</td>        <td>Internal Voltage Loop Error-Amplifier Output. Connect to VEA of the target for dual-phase operation. Leave unconnected for single-phase operation.</td></tr>
+                        <tr><td>15</td>         <td>PGOOD</td>      <td>Open-Drain Reset Output. External pull-up required.</td></tr>
+                        <tr><td>16</td>         <td>SYNC</td>       <td>SYNC. If connected to GND, Skip-mode operation is enabled under light loads. If connected to BIAS, forced-PWM mode is enabled.</td></tr>
+                        <tr><td>17</td>         <td>SYNCOUT</td>    <td>180-Degree Out-of-Phase Clock Output for Multiphase Operation. Leave SYNCOUT open for single-phase operation.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP</td>            <td>-0.3V to +42V</td></tr>
+                        <tr><td>EN</td>             <td>-0.3V to +42V</td></tr>
+                        <tr><td>BST to LX</td>      <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>BST</td>            <td>-0.3V to +44V</td></tr>
+                        <tr><td>LX</td>             <td>-0.3V to SUP+0.3V</td></tr>
+                        <tr><td>SYNCOUT</td>        <td>-0.3V to +6V</td></tr>
+                        <tr><td>SYNC</td>           <td>-0.3V to +6V</td></tr>
+                        <tr><td>VEA</td>            <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>FB</td>             <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>OUT</td>            <td>-0.3V to +16V</td></tr>
+                        <tr><td>PGOOD</td>          <td>-0.3V to +6V</td></tr>
+                        <tr><td>BIAS</td>           <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>PGND to AGND</td>   <td>-0.3V to +0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">ESD Protection</td></tr>
+                        <tr><td>Human Body Model</td>       <td>±2kV</td></tr>
+                        <tr><td>Charged Device Model</td>   <td>±750V</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>LX Continuous RMS Current</td>              <td>6A</td></tr>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (TA = +70°C, derate 
+                            34.48mW/°C above +70°C.)</td>                   <td>2758mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (Soldering 10s)</td>  <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20406E</h3>
+                <div class="img">
+                    <img src="Pin_AE02_206E.png" alt="product AE02">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>EN</td>         <td>High-Voltage-Compatible Input for Circuit Activation. If this pin is low, the part is off.</td></tr>
+                        <tr><td>2</td>          <td>BST</td>        <td>High-Side Driver Supply. Connect a 0.1μF capacitor between LX and BST for proper operation.</td></tr>
+                        <tr><td>3,7</td>        <td>SUP</td>        <td>IC Supply Input. Connect a 1μF or larger ceramic capacitor in parallel with a 4.7μF capacitor from SUP to PGND.</td></tr>
+                        <tr><td>4,6</td>    <td>PGND</td>       <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>5</td>          <td>LX</td>         <td>BUCK Switching Node. High impedance when part is off. Connect LX to the switched side of the appropriate inductor.</td></tr>
+                        <tr><td>8</td>         <td>GND</td>        <td>Analog Ground</td></tr>
+                        <tr><td>9</td>         <td>BIAS</td>       <td>1.8V  Internal BIAS Supply. Connect a minimum of 2μF ceramic capacitor to GND.</td></tr>
+                        <tr><td>10</td>         <td>FB</td>         <td>Feedback Pin. Connect a resistor-divider from OUT to FB to GND for external adjustment of output voltage. Connect to BIAS for internal fixed voltages.</td></tr>
+                        <tr><td>11</td>         <td>OUT</td>        <td>Buck Regulator Output Voltage-Sense Input. Connect OUT to the buck output.</td></tr>
+                        <tr><td>12</td>         <td>VEA</td>        <td>Internal Voltage Loop Error-Amplifier Output. Connect to VEA of the target for dual-phase operation. Leave unconnected for single-phase operation.</td></tr>
+                        <tr><td>13</td>         <td>PGOOD</td>      <td>Open-Drain Reset Output. External pull-up required.</td></tr>
+                        <tr><td>14</td>         <td>SYNC</td>       <td>SYNC. If connected to GND, Skip-mode operation is enabled under light loads. If connected to BIAS, forced-PWM mode is enabled.</td></tr>
+                        <tr><td>15</td>         <td>SYNCOUT</td>    <td>180-Degree Out-of-Phase Clock Output for Multiphase Operation. Leave SYNCOUT open for single-phase operation.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP</td>            <td>-0.3V to +42V</td></tr>
+                        <tr><td>EN</td>             <td>-0.3V to +42V</td></tr>
+                        <tr><td>BST to LX</td>      <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>BST</td>            <td>-0.3V to +44V</td></tr>
+                        <tr><td>LX</td>             <td>-0.3V to SUP+0.3V</td></tr>
+                        <tr><td>SYNCOUT</td>        <td>-0.3V to +6V</td></tr>
+                        <tr><td>SYNC</td>           <td>-0.3V to +6V</td></tr>
+                        <tr><td>VEA</td>            <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>FB</td>             <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>OUT</td>            <td>-0.3V to +16V</td></tr>
+                        <tr><td>PGOOD</td>          <td>-0.3V to +6V</td></tr>
+                        <tr><td>BIAS</td>           <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>PGND to AGND</td>   <td>-0.3V to +0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">ESD Protection</td></tr>
+                        <tr><td>Human Body Model</td>       <td>±2kV</td></tr>
+                        <tr><td>Charged Device Model</td>   <td>±750V</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>LX Continuous RMS Current</td>              <td>6A</td></tr>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (TA = +70°C, derate 
+                            34.48mW/°C above +70°C.)</td>                   <td>2758mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (Soldering 10s)</td>  <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page3" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX26404/MAX26405/MAX26406</h3>
+                <div class="img">
+                    <img src="Pin_AE02_264.png" alt="product AE08_EAFN AE08_EAFN">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>EN</td>         <td>High-Voltage-Compatible Input for Circuit Activation. If this pin is low, the part is off.</td></tr>
+                        <tr><td>2</td>          <td>BST</td>        <td>High-Side Driver Supply. Connect a 0.1μF capacitor between LX and BST for proper operation.</td></tr>
+                        <tr><td>3,9</td>        <td>SUP</td>        <td>IC Supply Input. Connect a 1μF or larger ceramic capacitor in parallel with a 4.7μF cap from SUP to PGND.</td></tr>
+                        <tr><td>4,5,7,8</td>    <td>PGND</td>       <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>6</td>          <td>LX</td>         <td>BUCK Switching Node. High impedance when part is off. Connect LX to the switched side of the appropriate inductor.</td></tr>
+                        <tr><td>10</td>         <td>GND</td>        <td>Analog Ground.</td></tr>
+                        <tr><td>11</td>         <td>BIAS</td>       <td>1.8V Internal BIAS Supply. Connect a minimum of 2μF ceramic capacitor to PGND.</td></tr>
+                        <tr><td>12</td>         <td>FB</td>         <td>Feedback Pin. Connect a resistor-divider from OUT to FB to GND for external adjustment of output voltage. Connect to BIAS for internal fixed voltages.</td></tr>
+                        <tr><td>13</td>         <td>OUT</td>        <td>Buck Regulator Output Voltage-Sense Input. Connect OUT to the buck output.</td></tr>
+                        <tr><td>14</td>         <td>VEA</td>        <td>Internal Voltage Loop Error-Amplifier Output. Connect to VEA of the target for dual-phase operation. Leave unconnected for single-phase operation.</td></tr>
+                        <tr><td>15</td>         <td>PGOOD</td>      <td>Open-Drain Reset Output. External pull-up required.</td></tr>
+                        <tr><td>16</td>         <td>SYNC</td>       <td>SYNC. If connected to GND, skip-mode operation is enabled under light loads. If connected to BIAS, forced-PWM mode is enabled.</td></tr>
+                        <tr><td>17</td>         <td>SYNCOUT</td>    <td>180° Out-of-Phase Clock Output for Multiphase Operation. Leave SYNCOUT open for single-phase operation.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP</td>            <td>-0.3V to +42V</td></tr>
+                        <tr><td>EN</td>             <td>-0.3V to +42V</td></tr>
+                        <tr><td>BST to LX</td>      <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>BST</td>            <td>-0.3V to +44V</td></tr>
+                        <tr><td>LX</td>             <td>-0.3V to SUP+0.3V</td></tr>
+                        <tr><td>SYNCOUT</td>        <td>-0.3V to +6V</td></tr>
+                        <tr><td>SYNC</td>           <td>-0.3V to +6V</td></tr>
+                        <tr><td>VEA</td>            <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>FB</td>             <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>OUT</td>            <td>-0.3V to +16V</td></tr>
+                        <tr><td>PGOOD</td>          <td>-0.3V to +6V</td></tr>
+                        <tr><td>BIAS</td>           <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>PGND to AGND</td>   <td>-0.3V to +0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">ESD Protection</td></tr>
+                        <tr><td>Human Body Model</td>       <td>±2kV</td></tr>
+                        <tr><td>Charged Device Model</td>   <td>±750V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>LX Continuous RMS Current</td>                  <td>6A</td></tr>
+                        <tr><td>Continuous Power Dissipation<br>
+                             (TA = +70°C, derate
+                            34.48mW/°C above +70°C)</td>                        <td>2758mW</td></tr>
+                        <tr><td>Operating Junction Temperature</td>             <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (Soldering 10sec)</td>    <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

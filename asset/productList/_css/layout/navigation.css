@@ -1,0 +1,295 @@
+@import url(../asstracs/variables.css);
+@import url(../asstracs/color.css);
+
+.navigation.navigation--default{
+    --formInput-bg:              #fff;
+    --formInput-clr:             var(--clr-neutral-800);
+    --formInput-clr-placeholder: var(--clr-neutral-600);
+    --formInput-bd-clr:          var(--clr-primary-800);
+    --formButton-bg:             var(--clr-neutral-200);
+    --formButton-hover-bg:       var(--clr-neutral-600);
+
+    --link-bg:                   #fff;
+    --link-clr:                  var(--clr-neutral-600);
+    --link-bd-clr:               var(--clr-primary-800);
+    --link-clr-hover:            var(--clr-primary-900);
+    --link-bg-hover:             var(--clr-primary-200);
+    --linkResult-clr:            var(--clr-neutral-800);
+
+    --homeLink-clr:              hsla(0, 2%, 58%, 0.125);
+    --homeLink-hover-clr:        hsla(0, 0%, 6%, 0.15);
+}
+
+.navigation{
+    padding-block: 3em;
+}
+
+.navigation .form {
+    display: grid;
+    gap: 0.125rem;
+    grid-template-columns: 1fr minmax(1rem, 25rem) 5rem 5rem 5rem 1fr;
+}
+
+.navigation .form input{
+    padding:1em 2em;
+    border-radius: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0.125rem;
+    font-size: var(--fs-step-0);
+    color: var(--formInput-clr);
+    border: 0.25em solid var(--formInput-bd-clr);
+    background-color: var(--formInput-bg);
+}
+
+.navigation .form input::placeholder{
+    text-transform: capitalize;
+    color: var(--formInput-clr-placeholder);
+}
+
+.navigation .form button{
+    margin: 0.35rem 0.35rem;
+    border-radius: 3em;
+    border: none;
+    cursor: pointer;
+    background: var(--formButton-bg);
+}
+
+.navigation .form button:hover{
+    background: var(--formButton-hover-bg);
+}
+
+.navigation .form button img{
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    object-fit: scale-down;
+}
+
+.navigation .form small{
+    margin-block-start: 0.5rem;
+    color: rgb(255, 153, 0);
+}
+
+.navigation.navigation--product-page .form a{
+    background: var(--formButton-bg);
+    margin: 0.35rem 0.35rem;
+    display: grid;
+    place-items: center;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.navigation.navigation--product-page .form a:hover{
+    background: var(--formButton-hover-bg);
+}
+
+.navigation.navigation--product-page .form a img{
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: scale-down;
+}
+
+.navigation .link-wrapper .result{
+    color: var(--linkResult-clr);
+    font-size: var(--fs-step-5);
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.navigation .link-wrapper .auto-fill{
+    display: grid;
+    gap: 1em 1em;
+    align-items: start;
+    align-content: start;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.navigation .link-wrapper .auto-fill a{
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 0.5rem;
+    border: 0.25rem solid var(--link-bd-clr);
+    background: var(--link-bg);
+    display: grid;
+    gap: 0 1rem;
+    grid-template-columns: 3rem 1fr;
+    align-items: center;
+}
+
+.navigation .link-wrapper .auto-fill a:hover{
+    background: var(--link-bg-hover);
+}
+
+.navigation .link-wrapper .auto-fill a span{
+    font-weight: 800;
+    letter-spacing: 0.125rem;
+    color: var(--link-clr);
+    font-size: var(--fs-step-0);
+}
+
+.navigation .link-wrapper .auto-fill a:hover span{
+    color: var(--link-clr-hover);
+}
+
+@media (max-width:649px) {
+    .navigation .form {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 1fr minmax(1rem, 45rem) minmax(1rem, 5rem) 5rem 5rem 1fr;
+    }
+
+    .navigation .form + .link-wrapper{
+        margin-block-start: 1rem;
+    }
+
+}
+
+@media (min-width:650px) {
+    .navigation .form + .link-wrapper{
+        margin-block-start: 2rem;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+
+/*                               product-page                         */
+
+/* ------------------------------------------------------------------ */
+
+.navigation.navigation--product-page {
+    position: fixed;
+    z-index: 3;
+    width: min(100% - 2em * 2, 70rem);
+    margin-block: 6em;
+    inset: 0;
+
+    padding-inline: clamp(2.5rem, -3.3333rem + 6.6667vw, 5rem);
+    margin-block-start: 3.5em;
+    margin-inline: auto;
+    background-color: #fff;
+    border-radius: 1em;
+    border: 0.125em solid #5c5c5c;
+    box-shadow: 1rem 1rem 1rem 200rem hsla(0, 0%, 6%, 0.5);
+    overflow-y: hidden;
+}
+
+.navigation.navigation--product-page .link-wrapper{
+    height: 85%;
+    overflow-y: scroll;
+}
+
+.navigation.navigation--product-page .link-wrapper .auto-fill{
+    padding-inline-end: 1em;
+}
+
+.navigation.navigation--product-page .form small{
+    grid-area: 3 / 2 / 4 / span 4;
+}
+
+.navigation.navigation--product-page .form input{
+    grid-area: 1 / 2 / 2 / span 4;
+}
+
+.navigation.navigation--product-page .form button:nth-of-type(1){
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+@media (max-width: 649px) {
+    .navigation.navigation--product-page { 
+        padding-block-start: 2rem;
+        padding-block-end: 8rem;
+        padding-inline: 1.5rem;
+    }
+
+    .navigation.navigation--product-page .form button:nth-of-type(2){
+        grid-area: 2 / 4 / 2 / 5;
+    }
+    
+    .navigation.navigation--product-page .form a{
+        grid-area:2 / 5 / 2 / 6;
+    }
+
+}
+
+@media (min-width: 650px) {
+    .navigation.navigation--product-page .form input{
+        grid-area: 1 / 2 / 2 / span 2;
+    }
+    
+    .navigation.navigation--product-page .form button:nth-of-type(1){
+        grid-area: 1 / 3 / 2 / 4;
+    }
+    
+    .navigation.navigation--product-page .form button:nth-of-type(2){
+        grid-area: 1 / 4 / 2 / 5;
+    }
+    
+    .navigation.navigation--product-page .form a{
+        grid-area: 1 / 5 / 2 / 6;
+    }
+
+    .navigation.navigation--home-page .form small{
+        grid-area: 2 / 2 / 3 / span 4;
+    }
+    
+    .navigation.navigation--product-page .form small{
+        grid-area: 2 / 2 / 3 / span 4;
+    }    
+
+}
+
+/* ------------------------------------------------------------------ */
+
+/*                               home-page                            */
+
+/* ------------------------------------------------------------------ */
+.navigation.navigation--home-page .form input{
+    grid-area: 1 / 2 / 2 / span 4;
+}
+
+.navigation.navigation--home-page .form button{
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.navigation.navigation--home-page .form small{
+    grid-area: 3 / 2 / 4 / span 4;
+}
+
+/* ------------------------------------------------------------------ */
+
+/*                              control state                         */
+
+/* ------------------------------------------------------------------ */
+
+.navigation.navigation--product-page[state = 'hide']{
+    display: none;
+}
+
+.navigation.navigation--product-page  .form[state='error'] small{
+    display: block;
+}
+
+.navigation.navigation--product-page  .link-wrapper small[show-result='result'][state = "show"]{
+    display: block;
+}
+
+.navigation.navigation--product-page  .link-wrapper a[nav-list][state= 'hide']{
+    display: none;
+}
+
+.navigation.navigation--home-page[state = 'hide']{
+    display: none;
+}
+
+.navigation.navigation--home-page  .form[state='error'] small{
+    display: block;
+}
+
+.navigation.navigation--home-page  .link-wrapper small[show-result='result'][state = "show"]{
+    display: block;
+}
+
+.navigation.navigation--home-page  .link-wrapper a[nav-list][state= 'hide']{
+    display: none;
+}

@@ -1,0 +1,128 @@
+@import url(../asstracs/color.css);
+@import url(../asstracs/variables.css);
+
+.product.product--default{
+    --table-th-clr: #fff;
+    --heading-clr:  var(--clr-primary-800);
+    --table-th-bg:  var(--clr-primary-900);
+    --table-td-bg:  var(--clr-primary-100);
+    --table-hd-clr: var(--clr-primary-300);
+    --table-bd:     var(--clr-primary-300);
+    --image-bd:     var(--clr-primary-300);
+}
+
+.product{
+    margin-block: 3.5em;
+    padding-block: 1em;
+    background-color: #fff;
+    box-shadow: 0.25rem 0.5rem 0.5rem -0.75rem hsla(0, 0%, 33%, 0.6);
+}
+
+.product h2,
+.product h3{
+    color: var(--heading-clr);
+}
+
+.product table th{
+    color: var(--table-hd-clr);
+}
+
+.product{
+    display: grid;
+    gap: 1em;
+}
+
+.product table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product table th,
+.product table td {
+    border: 0.125rem solid var(--table-bd);
+    padding-inline: 0.25rem;
+}
+
+.product table thead tr th{
+    color: var(--table-th-clr);
+    background-color: var(--table-th-bg);
+    text-align: left;
+}
+
+.product table tbody tr:nth-child(2n){
+    background-color: var(--table-td-bg);
+}
+
+.product .image-product{
+    display: grid;
+    gap: 1em;    
+}
+
+.product .image-product .img{
+    padding: 1em;
+    border: 0.125rem solid var(--image-bd);
+}
+
+.product .image-product .img img{
+    max-height: 35rem;
+    object-fit: scale-down;
+}
+
+.product .pin-description{
+    display: grid;
+    gap: 1em;
+}
+
+
+.product .pin-description table thead tr th:nth-child(1),
+.product .pin-description table thead tr th:nth-child(2),
+.product .pin-description table tbody tr td:nth-child(1),
+.product .pin-description table tbody tr td:nth-child(2)  {
+    text-align: center;
+    min-width: 4rem;
+}
+
+.product .ratings{
+    display: grid;
+    gap: 1em;
+}
+
+.product .ratings table tbody tr td:nth-child(2){
+    text-align: right;
+}
+
+@media screen and (max-width: 899px) {
+    .product{
+        padding-inline: 1em;
+    }   
+}
+
+@media screen and (min-width: 900px) {
+    .product{
+        align-items: start;
+        align-content: start;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: max-content;
+        padding-inline: 1em;
+    }
+
+    .product .image-product{
+        grid-area: 1 / 1 / span 2 / 2;   
+    }
+
+    .product .pin-description{
+        grid-area: 3 / 1 / 3 / 3;
+    }
+
+    .product .ratings{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .product .range{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
+
+.product[stateProductList = "hide"]{
+    display: none;
+}

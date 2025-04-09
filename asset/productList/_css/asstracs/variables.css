@@ -1,0 +1,24 @@
+:root{
+    --ff-base: 'Roboto', sans-serif; 
+
+    --fs-step--2: clamp(0.8784rem, 0.8402rem + 0.1909vw, 0.9882rem);
+    --fs-step--1: clamp(0.9372rem, 0.8965rem + 0.2037vw, 1.0544rem);
+    --fs-step-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+    --fs-step-1: clamp(1.067rem, 1.0206rem + 0.232vw, 1.2004rem);
+    --fs-step-2: clamp(1.1385rem, 1.089rem + 0.2475vw, 1.2808rem);
+    --fs-step-3: clamp(1.2148rem, 1.162rem + 0.2641vw, 1.3666rem);
+    --fs-step-4: clamp(1.2962rem, 1.2398rem + 0.2818vw, 1.4582rem);
+    --fs-step-5: clamp(1.383rem, 1.3229rem + 0.3007vw, 1.5559rem);
+  
+    --popout:  85rem;
+    --content: 75rem;
+    --full-width: 1fr;
+    --padding-inline: 1rem;
+
+    --bg-body: #fff;
+
+    --content-size:min(100% - (var(--padding-inline) * 2), var(--content));
+    --popout-size :minmax(0, calc((var(--popout) - var(--content)) * 0.5));
+    --full-size   :minmax(var(--padding-inline),   var(--full-width));
+    
+}

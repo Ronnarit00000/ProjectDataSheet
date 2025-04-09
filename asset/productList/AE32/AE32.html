@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE32 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE32</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25302A</h3>
+                <div class="img">
+                    <img src="Pin_AE32_25302A.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1,2,3,4</td>     <td>IN</td>     <td>Regulator Supply Input. Connect to a voltage between 1.7V and 5.5V and bypass with a 22µF capacitor from IN to GND.</td></tr>
+                        <tr><td>5</td>              <td>GND</td>    <td>Regulator Ground. Connect IN and OUT bypass capacitor GND connections to this pin for best performance.</td></tr>
+                        <tr><td>6</td>              <td>EN</td>     <td>Enable Input. Connect this pin to a logic signal to enable (VEN high) or disable (VEN low) the regulator output. Connect to IN to keep the output enable whenever a valid supply voltage is present.</td></tr>
+                        <tr><td>7</td>              <td>SELA</td>   <td>Output Select Input. Connect to GND, IN, or Hi-Z to select one of three states. The states of the SELA and SELB pins are read when the device is enabled, and are used to select one of nine output voltages.</td></tr>
+                        <tr><td>8</td>              <td>SELB</td>   <td>Output Select Input. Connect to GND, IN, or Hi-Z to select one of three states. The states of the SELA and SELB pins are read when the device is enabled, and are used to select one of nine output voltages.</td></tr>
+                        <tr><td>9</td>              <td>OUTS</td>   <td>Output Voltage Sense Input. Connect to the load at a point where accurate regulation is required to eliminate resistive metal drops.</td></tr>
+                        <tr><td>10</td>             <td>BYP</td>    <td>Bypass Capacitor Input. Connect a capacitor with a value from 0.001μF to 0.1µF between OUT and BYP to reduce output noise and set the regulator soft-start rate.</td></tr>
+                        <tr><td>11,12,13,14</td> <td>OUT</td>    <td>Regulator Output. Sources up to 2A at the output regulation voltage. Bypass with a 22µF (8µF minimum, including voltage derating) low-ESR (< 0.03Ω) capacitor to GND.</td></tr>
+                        <tr><td>EP</td>             <td>EP</td>     <td>Exposed Pad (TDFN Only). Connect the exposed pad to a ground plane with low thermal resistance to ambient to provide best heat sinking.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN, OUT, SELA, SELB, EN to GND</td>             <td>-0.3V to +6V</td></tr>
+                        <tr><td>POK, OUTS, FB, GS to GND</td>                   <td>-0.3V to +6V</td></tr>
+                        <tr><td>BYP</td>                                        <td>-0.3V to +2V</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>              <td>Continuous</td></tr>
+                        <tr><td>Continuous Power Dissipation TDFN<br>
+                             (TA = +70°C, derate 24.4mW/°C above +70°C.)</td>   <td>1951mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>-40°C to +125°C</td></tr>
+                        <tr><td>Maximum Junction Temperature</td>               <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation TDFN<br>
+                            (TA = +70°C, derate 24.4mW/°C above +70°C.)</td>    <td>1951mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>-40°C to +125°C</td></tr>
+                        <tr><td>Maximum Junction Temperature</td>               <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                   </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25302B</h3>
+                <div class="img">
+                    <img src="Pin_AE32_25302B.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1, 2, 3, 4</td>     <td>IN</td>     <td>Regulator Supply Input. Connect to a voltage between 1.7V and 5.5V and bypass with a 22µF capacitor from IN to GND.</td></tr>
+                        <tr><td>5</td>              <td>GND</td>    <td>Regulator Ground. Connect IN and OUT bypass capacitor GND connections to this pin for best performance.</td></tr>
+                        <tr><td>6</td>              <td>EN</td>     <td>Enable Input. Connect this pin to a logic signal to enable (VEN high) or disable (VEN low) the regulator output. Connect to IN to keep the output enable whenever a valid supply voltage is present.</td></tr>
+                        <tr><td>7</td>              <td>GS</td>     <td>Ground Sense. Connect GS to GND.</td></tr>
+                        <tr><td>8</td>              <td>POK</td>    <td>Active-High Power-OK Output. Connect a pull-up resistor from this pin to a supply to create a reset signal that goes high after the regulator output has reached its regulation voltage.</td></tr>
+                        <tr><td>9</td>              <td>FB</td>     <td>Feedback Divider Input. Connect a resistor-divider string from OUT to GND with the midpoint tied to this pin to set the output voltage. In the Typical Application Circuits, VOUT = 0.6V x (1 + R1/R2).</td></tr>
+                        <tr><td>10</td>             <td>BYP</td>    <td>Bypass Capacitor Input. Connect a capacitor with a value from 0.001μF to 0.1µF between OUT and BYP to reduce output noise and set the regulator soft-start rate.</td></tr>
+                        <tr><td>11, 12, 13, 14</td> <td>OUT</td>    <td>Regulator Output. Sources up to 2A at the output regulation voltage. Bypass with a 22µF (8µF minimum, including voltage derating) low-ESR (< 0.03Ω) capacitor to GND.</td></tr>
+                        <tr><td>EP</td>             <td>EP</td>     <td>Exposed Pad (TDFN Only). Connect the exposed pad to a ground plane with low thermal resistance to ambient to provide best heat sinking.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN, OUT, SELA, SELB, EN to GND</td>             <td>-0.3V to +6V</td></tr>
+                        <tr><td>POK, OUTS, FB, GS to GND</td>                   <td>-0.3V to +6V</td></tr>
+                        <tr><td>BYP</td>                                        <td>-0.3V to +2V</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>              <td>Continuous</td></tr>
+                        <tr><td>Continuous Power Dissipation TDFN<br>
+                             (TA = +70°C, derate 24.4mW/°C above +70°C.)</td>   <td>1951mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>-40°C to +125°C</td></tr>
+                        <tr><td>Maximum Junction Temperature</td>               <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation TDFN<br>
+                            (TA = +70°C, derate 24.4mW/°C above +70°C.)</td>    <td>1951mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>-40°C to +125°C</td></tr>
+                        <tr><td>Maximum Junction Temperature</td>               <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                   </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

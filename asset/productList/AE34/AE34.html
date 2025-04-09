@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE34 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE34</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20429</h3>
+                <div class="img">
+                    <img src="Pin_AE34_20429.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>EN2</td>        <td>OUT2 Active-High Enable Input. Drive EN2 HIGH for normal operation. The device enters soft-start on the rising edge enters soft-shutdown on the falling edge.</td></tr>
+                        <tr><td>2</td>          <td>RESET2</td>     <td>OUT2 Active-Low Open Drain RESET Output. External pullup resistor required if used.</td></tr>
+                        <tr><td>3</td>          <td>PV2</td>        <td>OUT2 Power Input Supply. Connect a 10μF or larger ceramic capacitor from PV2 to PGND2.</td></tr>
+                        <tr><td>4</td>          <td>LX2</td>        <td>OUT2 Inductor Connection. Connect LX2 to the switched side of the inductor.</td></tr>
+                        <tr><td>5,6</td>        <td>PGND2</td>      <td>OUT2 Power Ground</td></tr>
+                        <tr><td>7</td>          <td>PGND</td>       <td>Power Ground</td></tr>
+                        <tr><td>8,9</td>        <td>PGND1</td>      <td>OUT1 Power Ground</td></tr>
+                        <tr><td>10</td>         <td>LX1</td>        <td>OUT1 Inductor Connection. Connect LX1 to the switched side of the inductor.</td></tr>
+                        <tr><td>11</td>         <td>PV1</td>        <td>OUT1 Power Input Supply. Connect a 10μF or larger ceramic capacitor from PV1 to PGND1.</td></tr>
+                        <tr><td>12</td>         <td>RESET1</td>     <td>OUT1 Active-Low Open Drain RESET Output. External pullup resistor required if used.</td></tr>
+                        <tr><td>13</td>         <td>EN1</td>        <td>OUT1 Active-High Enable Input. Drive EN1 HIGH for normal operation. The device enters soft-start on the rising edge enters soft-shutdown on the falling edge.</td></tr>
+                        <tr><td>14</td>         <td>OUT1</td>       <td>OUT1 Feedback Input. Connect to the output capacitor of Output 1.</td></tr>
+                        <tr><td>15</td>         <td>SYNC</td>       <td>SYNC Input. Connect SYNC to GND or leave unconnected to enable skip-mode operation under light loads. Connect SYNC to PV or an external clock to enable fixed-frequency FPWM operation.</td></tr>
+                        <tr><td>16</td>         <td>VDD</td>        <td>Internal Analog Supply. Connect a 2.2μF capacitor between this pin and GND</td></tr>
+                        <tr><td>17</td>         <td>GND</td>        <td>Analog Ground</td></tr>
+                        <tr><td>18</td>         <td>OUT2</td>       <td>OUT2 Feedback Input. Connect to the output capacitor of Output 2.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>PV1, PV2 to GND </td>                               <td>0.3V to 6V</td></tr>
+                        <tr><td>VDD to GND</td>                                     <td>-0.3V to 6V</td></tr>
+                        <tr><td>OUT1, OUT2 to GND</td>                              <td>-0.3V to VDD+0.3V</td></tr>
+                        <tr><td>LX1, LX2 to GND.</td>                               <td>-0.3 to PV_ + 0.3</td></tr>
+                        <tr><td>EN1, EN2, RESET1, RESET2 to GND</td>                <td>0.3V to 6V</td></tr>
+                        <tr><td>SYNC to GND</td>                                    <td>-0.3V to VDD+0.3V</td></tr>
+                        <tr><td>PGND_ to GND </td>                                  <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>LX Continuous RMS Current (95000hr lifespan)</td>   <td>4A</td></tr>
+                        <tr><td>LX Continuous RMS Current (15000hr lifespan)</td>   <td>6A</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>                  <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation <br>
+                            (4-Layer Board) <br>
+                            (T A = +70°C, derate 51.8 mW/°C above +70°C. )</td>     <td>to 4145mW</td></tr>
+                        <tr><td>Ambient Operating Temperature</td>                  <td>-40°C to +125°C</td></tr>
+                        <tr><td>Operating Junction Temperature</td>                 <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature Range.</td>                        <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

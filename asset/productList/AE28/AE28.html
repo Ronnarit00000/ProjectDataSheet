@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE28 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE28</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25510/MAX25511</h3>
+                <div class="img">
+                    <img src="Pin_AE28_25510&11.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1,2</td>      <td>DRAIN</td>    <td>Drain Connection of Internal Switching Power nMOSFET. Connect to the external inductor and rectifier diode.</td></tr>
+                        <tr><td>3</td>        <td>IN</td>       <td>Input Voltage. Connect to protected battery. Bypass IN with a minimum of 2.2μF in parallel with 0.1μF placed close to the pin.</td></tr>
+                        <tr><td>4</td>        <td>NGATE</td>    <td>Gate Connection for External Series nMOSFET. Driven by the internal charge pump.</td></tr>
+                        <tr><td>5</td>        <td>BSTMON</td>   <td>Boost Voltage Monitoring Input. Connect a resistor-divider from the boost converter output to GND with its midpoint connected to the BSTMON pin in order to set the maximum boost output voltage.</td></tr>
+                        <tr><td>6</td>        <td>RT</td>       <td>Oscillator Timing Resistor Connection. Connect a timing resistor (RT) to GND to program the switching frequency. Apply an AC-coupled external clock at RT to synchronize the switching frequency with an external clock.</td></tr>
+                        <tr><td>7</td>        <td>COMP</td>     <td>Switching Converter Compensation Input. Connect the compensation network from COMP to GND for current-mode control</td></tr>
+                        <tr><td>8</td>        <td>RSDT</td>     <td>LED Short-Detection Threshold-Adjust Input. Connect a resistive divider from V18 to RSDT and GND to program the LED short-detection threshold. Connect RSDT directly to V18 to disable LED short detection.</td></tr>
+                        <tr><td>9</td>        <td>V18</td>      <td>Output of Internal 1.8V Regulator. Connect 1μF and 0.1μF capacitors from V18 to GND with the 0.1μF capacitor placed closest to the pin.</td></tr>
+                        <tr><td>10</td>       <td>GND</td>      <td>Signal GND. GND is the current return path connection for the low-noise analog signals. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>11</td>       <td>OUT1</td>     <td>LED String Cathode Connection 1. OUT1 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT1. OUT1 sinks up to 120mA.</td></tr>
+                        <tr><td>12</td>       <td>OUT2</td>     <td>LED String Cathode Connection 2. OUT2 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT2. OUT2 sinks up to 120mA. If OUT2 is unused, connect a 10kΩ resistor from OUT2 to LEDGND.</td></tr>
+                        <tr><td>13</td>       <td>ISET</td>     <td>LED Current-Adjust Input. Connect a resistor (RISET) from ISET to GND to set the current through each LED string (ILED), according to the formula ILED = 1500/RISET. Place the resistor close to the pin to avoid parasitic capacitance.</td></tr>
+                        <tr><td>14</td>       <td>TEMP</td>     <td>Temperature Sensor Input. To implement LED current reduction at high temperatures connect an NTC temperature sensor to GND with resistors from the NTC to TEMP and to V18. If unused, connect TEMP to V18</td></tr>
+                        <tr><td>15</td>       <td>LEDGND</td>   <td>LED Ground. LEDGND is the return path connection for the linear current sinks. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>16</td>       <td>FLTB</td>     <td>Open-Drain Fault Output. FLTB asserts low when a fault is detected. Connect a pull-up resistor from FLTB to a logic supply of 5V or lower.</td></tr>
+                        <tr><td>17</td>       <td>DIM</td>      <td>Digital PWM Dimming Input. Apply a PWM signal to DIM for LED dimming control. Connect DIM to a logic supply of 5V or lower if dimming control is not used.</td></tr>
+                        <tr><td>18</td>       <td>ADIM</td>     <td>Analog Dimming Input. Apply a PWM signal to ADIM to set the level of analog dimming. Connect ADIM to GND if analog dimming is not used.</td></tr>
+                        <tr><td>19</td>       <td>SET</td>      <td>Option Setting Input. Connect a resistor to this pin to select phase/shifting on/off, spread spectrum on/off, and slow/fast soft/start timing. Total of eight options.</td></tr>
+                        <tr><td>20</td>       <td>OUT3</td>     <td>LED String Cathode Connection 3. OUT3 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT3. OUT3 sinks up to 120mA. If OUT3 is unused, connect a 10kΩ resistor from OUT3 to LEDGND.</td></tr>
+                        <tr><td>21</td>       <td>OUT4</td>     <td>LED String Cathode Connection 4. OUT4 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT4. OUT4 sinks up to 120mA. If OUT4 is unused, connect a 10kΩ resistor from OUT4 to LEDGND.</td></tr>
+                        <tr><td>22,23</td>    <td>PGND</td>     <td>Power Ground. PGND is the DRAIN current return path connection. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>24</td>       <td>EN</td>       <td>Enable Input. Connect EN to logic-high for normal operation. When EN is taken low, the device is disabled after a delay of tEN_OFF. Do not leave the EN input open.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN, EN to GND</td>              <td>-0.3V to +40V</td></tr>
+                        <tr><td>NGATE to IN</td>                <td>+6V</td></tr>
+                        <tr><td>NGATE to GND</td>               <td>-0.3V to +42V</td></tr>
+                        <tr><td>OUT_ to LEDGND</td>             <td>-0.3V to +40V</td></tr>
+                        <tr><td>DRAIN to PGND</td>              <td>-0.3V to +40V</td></tr>
+                        <tr><td>V18, BSTMON to GND</td>         <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>FLTB, DIM, ADIM to GND</td>     <td>-0.3V to +6V</td></tr>
+                        <tr><td>RT, COMP, ISET,<br>
+                             TEMP, RSDT, SET to GND</td>        <td>-0.3V to V18 + 0.3V</td></tr>
+                        <tr><td>PGND to GND</td>                <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>LEDGND to GND</td>              <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>DRAIN Current</td>              <td>±4.5A</td></tr>
+                        <tr><td>OUT_ Continuous Current</td>    <td>±150mA</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (Multilayer Board) (TA = +70°C,<br>
+                            derate 24.2mW/°C above +70°C.)</td>         <td>1938mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>        <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>               <td>-40°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>     <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25512</h3>
+                <div class="img">
+                    <img src="Pin_AE28_25512.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1,2</td>      <td>DRAIN</td>    <td>Drain Connection of Internal Switching Power nMOSFET. Connect to the external inductor and rectifier diode.</td></tr>
+                        <tr><td>3</td>        <td>IN</td>       <td>Input Voltage. Connect to protected battery. Bypass IN with a minimum of 2.2μF in parallel with 0.1μF placed close to the pin.</td></tr>
+                        <tr><td>4</td>        <td>NGATE</td>    <td>Gate Connection for External Series nMOSFET. Driven by the internal charge pump.</td></tr>
+                        <tr><td>5</td>        <td>BSTMON</td>   <td>Boost Voltage Monitoring Input. Connect a resistor-divider from the boost converter output to GND with its midpoint connected to the BSTMON pin in order to set the maximum boost output voltage.</td></tr>
+                        <tr><td>6</td>        <td>RT</td>       <td>Oscillator Timing Resistor Connection. Connect a timing resistor (RT) to GND to program the switching frequency. Apply an AC-coupled external clock at RT to synchronize the switching frequency with an external clock.</td></tr>
+                        <tr><td>7</td>        <td>COMP</td>     <td>Switching Converter Compensation Input. Connect the compensation network from COMP to GND for current-mode control</td></tr>
+                        <tr><td>8</td>        <td>RSDT</td>     <td>LED Short-Detection Threshold-Adjust Input. Connect a resistive divider from V18 to RSDT and GND to program the LED short-detection threshold. Connect RSDT directly to V18 to disable LED short detection.</td></tr>
+                        <tr><td>9</td>        <td>V18</td>      <td>Output of Internal 1.8V Regulator. Connect 1μF and 0.1μF capacitors from V18 to GND with the 0.1μF capacitor placed closest to the pin.</td></tr>
+                        <tr><td>10</td>       <td>GND</td>      <td>Signal GND. GND is the current return path connection for the low-noise analog signals. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>11</td>       <td>OUT1</td>     <td>LED String Cathode Connection 1. OUT1 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT1. OUT1 sinks up to 120mA.</td></tr>
+                        <tr><td>12</td>       <td>OUT2</td>     <td>LED String Cathode Connection 2. OUT2 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT2. OUT2 sinks up to 120mA. If OUT2 is unused, connect a 10kΩ resistor from OUT2 to LEDGND.</td></tr>
+                        <tr><td>13</td>       <td>ISET</td>     <td>LED Current-Adjust Input. Connect a resistor (RISET) from ISET to GND to set the current through each LED string (ILED), according to the formula ILED = 1500/RISET. Place the resistor close to the pin to avoid parasitic capacitance.</td></tr>
+                        <tr><td>14</td>       <td>TEMP</td>     <td>Temperature Sensor Input. To implement LED current reduction at high temperatures connect an NTC temperature sensor to GND with resistors from the NTC to TEMP and to V18. If unused, connect TEMP to V18</td></tr>
+                        <tr><td>15</td>       <td>LEDGND</td>   <td>LED Ground. LEDGND is the return path connection for the linear current sinks. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>16</td>       <td>FLTB</td>     <td>Open-Drain Fault Output. FLTB asserts low when a fault is detected. Connect a pull-up resistor from FLTB to a logic supply of 5V or lower.</td></tr>
+                        <tr><td>17</td>       <td>DIM</td>      <td>Digital PWM Dimming Input. Apply a PWM signal to DIM for LED dimming control. Connect DIM to a logic supply of 5V or lower if dimming control is not used.</td></tr>
+                        <tr><td>18</td>       <td>SDA</td>      <td>Bidirectional I2C Data Pin. Connect a pull-up resistor from this node to the logic supply voltage.</td></tr>
+                        <tr><td>19</td>       <td>SCL</td>      <td>I2C Clock Input Pin. Connect a pull-up resistor from this node to the logic supply voltage.</td></tr>
+                        <tr><td>20</td>       <td>OUT3</td>     <td>LED String Cathode Connection 3. OUT3 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT3. OUT3 sinks up to 120mA. If OUT3 is unused, connect a 10kΩ resistor from OUT3 to LEDGND.</td></tr>
+                        <tr><td>21</td>       <td>OUT4</td>     <td>LED String Cathode Connection 4. OUT4 is the open-drain output of the linear current sink that controls the current through the LED string connected to OUT4. OUT4 sinks up to 120mA. If OUT4 is unused, connect a 10kΩ resistor from OUT4 to LEDGND.</td></tr>
+                        <tr><td>22,23</td>    <td>PGND</td>     <td>Power Ground. PGND is the DRAIN current return path connection. Connect GND, LEDGND, and PGND at a single point.</td></tr>
+                        <tr><td>24</td>       <td>EN</td>       <td>Enable Input. Connect EN to logic-high for normal operation. When EN is taken low, the device is disabled after a delay of tEN_OFF. Do not leave the EN input open.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN, EN to GND</td>              <td>-0.3V to +40V</td></tr>
+                        <tr><td>NGATE to IN</td>                <td>+6V</td></tr>
+                        <tr><td>NGATE to GND</td>               <td>-0.3V to +42V</td></tr>
+                        <tr><td>OUT_ to LEDGND</td>             <td>-0.3V to +40V</td></tr>
+                        <tr><td>DRAIN to PGND</td>              <td>-0.3V to +40V</td></tr>
+                        <tr><td>V18, BSTMON to GND</td>         <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>FLTB, DIM, ADIM to GND</td>     <td>-0.3V to +6V</td></tr>
+                        <tr><td>RT, COMP, ISET,<br>
+                                TEMP, RSDT, SET to GND</td>        <td>-0.3V to V18 + 0.3V</td></tr>
+                        <tr><td>PGND to GND</td>                <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>LEDGND to GND</td>              <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>DRAIN Current</td>              <td>±4.5A</td></tr>
+                        <tr><td>OUT_ Continuous Current</td>    <td>±150mA</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (Multilayer Board) (TA = +70°C,<br>
+                            derate 24.2mW/°C above +70°C.)</td>         <td>1938mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>        <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>               <td>-40°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>     <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

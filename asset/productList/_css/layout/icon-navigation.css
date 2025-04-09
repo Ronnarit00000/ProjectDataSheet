@@ -1,0 +1,39 @@
+@import url(../asstracs/variables.css);
+@import url(../asstracs/color.css);
+
+.icon-navigation.icon-navigation--default{
+    --icon-bg: #fff;
+    --icon-bd:          var(--clr-primary-800);
+    --icon-hover-bg:    var(--clr-primary-800);
+}
+
+.icon-navigation{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: grid;
+    gap: 1em;
+}
+
+.icon-navigation button,
+.icon-navigation a{
+    background-color: var(--icon-bg);
+    border: 0.25rem solid var(--icon-bd);
+    border-radius: 3em;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.icon-navigation button:hover,
+.icon-navigation a:hover{
+    background-color: var(--icon-hover-bg);
+}
+
+.icon-navigation button img,
+.icon-navigation a img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}

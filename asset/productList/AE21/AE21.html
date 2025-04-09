@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE21 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE21</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+    <!-- conpoment navigation -->
+    <section 
+        class="navigation navigation--default navigation--product-page" 
+        compoment="navigation"
+        homePath="../../../"   
+        imgPath="../../image/" 
+        linkHrefPath="../"
+        location="product-page"
+        state = 'hide'
+        >
+    </section> 
+
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX16926</h3>
+                <div class="img">
+                    <img src="Pin_AE21_16926.png" alt="product AE21 MAX16926">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>WDI</td>        <td>Watchdog Input. WDI is the reset input for the watchdog counter, which is cleared whenever there is a positive-going transition on WDI. The watchdog timer is active when one or both of the WAKE and START inputs is high. When the watchdog times out, PG1 asserts low. The watchdog can be disabled using appropriate resistor values on the RT pin</td></tr>
+                        <tr><td>2</td>      <td>PGOOD</td>      <td>Sequence Error Output (Open-Drain). When low, this pin indicates that the power-on sequence was not completed successfully or that one of the regulators (V5, V33, or LDO2) is out of regulation.</td></tr>
+                        <tr><td>3</td>      <td>PGB</td>        <td>Open-Drain Power-Good Output for High-Voltage Buck Converter.</td></tr>
+                        <tr><td>4</td>      <td>PG1</td>        <td>Open-Drain Power-Good Output for High-Voltage Linear Regulator.</td></tr>
+                        <tr><td>5</td>      <td>FIN</td>        <td>Active-Low Fault-In Input. When FIN goes low, the PGATE output is disabled. If unused, connect FIN to GND.</td></tr>
+                        <tr><td>6</td>      <td>START</td>      <td>Active-High Sequence Start Pin. When START is taken high, the power-on sequence is initiated. When START goes low, the power-off sequence is executed.</td></tr>
+                        <tr><td>7</td>      <td>WAKE</td>       <td>Wake Input. When WAKE is high, the watchdog timer is enabled. When WAKE is low, the watchdog timer is off. When both WAKE and START are low, the IC is in low-quiescent-current mode.</td></tr>
+                        <tr><td>8</td>      <td>BIAS</td>       <td>Output of Internal Bias Regulator for the High-Voltage Buck. Connect a ceramic capacitor of value 1μF between BIAS and GND.</td></tr>
+                        <tr><td>9</td>      <td>PGATE</td>      <td>Current-sink drive output for external PMOS switch that supplies power to the display backlight section or to other battery-connected loads.</td></tr>
+                        <tr><td>10</td>     <td>LDO1</td>       <td>Output of High-Voltage 3.3V Regulator. LDO1 is always active when the BATT voltage is above the undervoltage lockout level. The input to this regulator is BATT. Connect a bypass capacitor of at least 44μF from LDO1 to GND.</td></tr>
+                        <tr><td>11</td>     <td>BATT</td>       <td>Battery Supply Input. Bypass BATT to GND with a ceramic capacitor of value 10μF.</td></tr>
+                        <tr><td>12</td>     <td>LX</td>         <td>Switching Node of High-Voltage Buck Converter. Connect the buck inductor and rectifying diode to this pin, placing them as close as possible to the IC</td></tr>
+                        <tr><td>13</td>     <td>BSTB</td>       <td>Boost Capacitor Connection for High-Voltage Buck. Connect a 0.1μF capacitor from BSTB to LX.</td></tr>
+                        <tr><td>14</td>     <td>GND</td>        <td>Ground Connection.</td></tr>
+                        <tr><td>15</td>     <td>V5</td>         <td>3.3V Output of High-Voltage Buck Converter. Place the output filter capacitors at this pin. V5 is also the feedback point for the converter.</td></tr>
+                        <tr><td>16</td>     <td>LXC</td>        <td>Switching node of low-voltage buck converter. Connect the buck inductor to this pin, placing it as close as possible to the IC.</td></tr>
+                        <tr><td>17</td>     <td>PGND</td>       <td>Power Ground Connection.</td></tr>
+                        <tr><td>18</td>     <td>RT</td>         <td>Frequency-Set Pin. Connect a resistor from RT to GND to set the switching frequency of the converters.</td></tr>
+                        <tr><td>19</td>     <td>V33</td>        <td>1.8V Output of Low-Voltage Buck Converter. Place the output filter capacitors at this pin. V33 is also the feedback point for the converter. To use the low-voltage converter as a switch, connect V33 to GND.</td></tr>
+                        <tr><td>20</td>     <td>LDO2</td>       <td>Output of Low-Voltage Linear Regulator. The input to this regulator is V5. Connect a bypass capacitor of at least 22μF from LDO2 to GND.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>BATT, PGATE to GND</td>                     <td>-0.3V to 40V</td></tr>
+                        <tr><td>LXC, V33, LDO2 to GND</td>                  <td>-0.3V to V5 + 0.3V</td></tr>
+                        <tr><td>START, WAKE to GND</td>                     <td>-0.3V to +6V</td></tr>
+                        <tr><td>RT, WDI, FIN to GND</td>                    <td>-0.3V to BIAS + 0.3V</td></tr>
+                        <tr><td>PGB, PGOOD, PG1, BIAS, V5, LDO1 to GND</td> <td>-0.3V to +6V</td></tr>
+                        <tr><td>PGND to GND</td>                            <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>LX, LXC Short-Circuit Duration</td>         <td>Continuous</td></tr>
+                        <tr><td>BSTB to LX</td>                             <td>-0.3V to +6V</td></tr>
+                        <tr><td>LX to GND</td>                              <td> -0.3V to VBATT + 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (Single-Layer Board)<br>
+                            (TA = +70°C, derate 20.8mW/°C above +70°C.)</td>    <td>1667mW</td></tr>
+                        <tr><td>Continuous Power Dissipation<br>
+                            (Multilayer Board)<br>
+                            (TA = +70°C,derate 30.3mW/°C above +70°C.)</td>     <td>mW to 2424mW</td></tr>
+                        <tr><td>Operating Temperature Range </td>               <td>-40°C to 105°C</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-40°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>

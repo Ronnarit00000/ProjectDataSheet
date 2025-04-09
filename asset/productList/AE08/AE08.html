@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE08 Data-sheet</title>
+    <link rel="stylesheet" href="../_css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE08</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section>  
+
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25239AFF/MAX25240AFF</h3>
+                <div class="img">
+                    <img src="Pin_AE08_AFF.png" alt="product AE08_AFF AE08_AFF">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th>    <th>NAME</th>   <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>       <td>BST1</td>        <td>Bootstrap Capacitor Connection for Switching Node LX1. Connect a 0.1μF ceramic capacitor between LX1 and BST1.</td></tr>
+                        <tr><td>2,3</td>     <td>SUP</td>         <td>Power Supply of the Buck-Boost Converter and Internal VCC LDO Regulator. Bypass SUP to PGND1 with a 4.7μF or larger ceramic capacitor.</td></tr>
+                        <tr><td>4</td>       <td>NC</td>          <td>Not connected</td></tr>
+                        <tr><td>5,6</td>     <td>PGND1</td>       <td>Power Ground Connection for Buck Low-Side FET LS1. Connect PGND1 and PGND2 together to power ground.</td></tr>
+                        <tr><td>7</td>       <td>LX1</td>         <td>Buck-Boost Converter Switching Node 1. Connect LX1 to one side of the power inductor.</td></tr>
+                        <tr><td>8</td>       <td>LX2</td>         <td>Buck-Boost Converter Switching Node 2. Connect LX2 to the other side of the power inductor.</td></tr>
+                        <tr><td>9,10</td>    <td>PGND2</td>       <td>Power Ground Connection for Boost Low-Side FET LS2. Connect PGND1 and PGND2 together to power ground</td></tr>
+                        <tr><td>11</td>      <td>NC</td>          <td>Not Connected</td></tr>
+                        <tr><td>12, 13</td>  <td>OUT</td>         <td>Buck-Boost Converter Output</td></tr>
+                        <tr><td>14</td>      <td>BST2</td>        <td>Bootstrap Capacitor Connection for Switching Node LX2. Connect a 0.1μF ceramic capacitor between LX2 and BST2</td></tr>
+                        <tr><td>15</td>      <td>EN</td>          <td>High-Voltage-Tolerant Enable Input. Drive EN high to enable buck-boost converter.</td></tr>
+                        <tr><td>16</td>      <td>FB</td>          <td>Feedback Input. Connect FB to a resistor-divider between OUT and AGND to set the desired output voltage in the range of 3V to 20V. Connect FB to VCC for the fixed output voltage option.</td></tr>
+                        <tr><td>17</td>      <td>COMP</td>        <td>Error Amplifier Output. Connect an RC compensation network between COMP and AGND to stabilize the control loop.</td></tr>
+                        <tr><td>18</td>      <td>SPS</td>         <td>Spread-Spectrum (SPS) Function Enable Input. Connect SPS high to enable SPS function and low to disable SPS function</td></tr>
+                        <tr><td>19</td>      <td>SYNC</td>        <td>External Clock Synchronization and Skip/PWM Mode Control Input. Connect SYNC to AGND to enable skip mode. Connect SYNC to VCC to enable PWM mode. Connect SYNC to a valid external clock to synchronize the buck-boost converter switching frequency to external clock.</td></tr>
+                        <tr><td>20</td>      <td>PGOOD</td>       <td>Open-Drain Power-Good Indicator. Pull up PGOOD with an external resistor to VCC or a positive voltage lower than 5.5V to correctly indicate the OUT voltage status. PGOOD asserts low when the OUT voltage falls below 93% (typ) of its regulation voltage. PGOOD becomes high impedance when the OUT voltage rises above 94% (typ) of its regulation voltage. PGOOD is also low during soft-start and in shutdown</td></tr>
+                        <tr><td>21</td>      <td>VCC</td>         <td>Internal 1.8V Regulator Output. Bypass VCC to ground with a minimum 4.7μF ceramic capacitor.</td></tr>
+                        <tr><td>22</td>      <td>AGND</td>        <td>Analog Ground. Connect AGND, PGND1, and PGND2 together at a single point in a star- ground connection.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, EN to AGND</td>            <td>-0.3V to +42V</td></tr>
+                        <tr><td>LX1 to PGND1</td>               <td>-0.3V to VSUP +0.3V</td></tr>
+                        <tr><td>LX2 to PGND2</td>               <td>-0.3V to VOUT +0.3V</td></tr>
+                        <tr><td>OUT to AGND</td>                <td>-0.3V to +28V</td></tr>
+                        <tr><td>BST1 to LX1, BST2 to LX2</td>   <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>BST1 to PGND1</td>              <td>-0.3V to +44V</td></tr>
+                        <tr><td>BST2 to PGND2</td>              <td>-0.3V to +30V</td></tr>
+                        <tr><td>VCC, SPS to AGND</td>           <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>COMP, FB to AGND</td>           <td>-0.3V to VVCC +0.3V</td></tr>
+                        <tr><td>PGND_ to AGND</td>              <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>SYNC, PGOOD to AGND</td>        <td>-0.3V to +6V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">ESD Protection</td></tr>
+                        <tr><td>Human Body Model</td>   <td>±2kV</td></tr>
+                        <tr><td>Machine Model</td>      <td>±100V</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (TA = +70°C, derate 30mW/°C
+                            above +70°C)</td>                                  <td>2404mW</td></tr>
+                        <tr><td>Operating Junction Temperature</td>            <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                 <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering 10s)</td>          <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>            <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25239EAFN/MAX25240EAFN</h3>
+                <div class="img">
+                    <img src="Pin_AE08_EAFN.png" alt="product AE08_EAFN AE08_EAFN">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th>    <th>NAME</th>   <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>       <td>BST1</td>        <td>Bootstrap Capacitor Connection for Switching Node LX1. Connect a 0.1μF ceramic capacitor between LX1 and BST1.</td></tr>
+                        <tr><td>2</td>     <td>SUP</td>         <td>Power Supply of the Buck-Boost Converter and Internal VCC LDO Regulator. Bypass SUP to PGND1 with a 4.7μF or larger ceramic capacitor.</td></tr>
+                        <tr><td>3,4</td>     <td>PGND1</td>       <td>Power Ground Connection for Buck Low-Side FET LS1. Connect PGND1 and PGND2 together to power ground.</td></tr>
+                        <tr><td>5</td>       <td>LX1</td>         <td>Buck-Boost Converter Switching Node 1. Connect LX1 to one side of the power inductor.</td></tr>
+                        <tr><td>6</td>       <td>LX2</td>         <td>Buck-Boost Converter Switching Node 2. Connect LX2 to the other side of the power inductor.</td></tr>
+                        <tr><td>7,8</td>    <td>PGND2</td>       <td>Power Ground Connection for Boost Low-Side FET LS2. Connect PGND1 and PGND2 together to power ground</td></tr>
+                        <tr><td>9</td>  <td>OUT</td>         <td>Buck-Boost Converter Output</td></tr>
+                        <tr><td>10</td>      <td>BST2</td>        <td>Bootstrap Capacitor Connection for Switching Node LX2. Connect a 0.1μF ceramic capacitor between LX2 and BST2</td></tr>
+                        <tr><td>11</td>      <td>EN</td>          <td>High-Voltage-Tolerant Enable Input. Drive EN high to enable buck-boost converter.</td></tr>
+                        <tr><td>12</td>      <td>FB</td>          <td>Feedback Input. Connect FB to a resistor-divider between OUT and AGND to set the desired output voltage in the range of 3V to 20V. Connect FB to VCC for the fixed output voltage option.</td></tr>
+                        <tr><td>13</td>      <td>COMP</td>        <td>Error Amplifier Output. Connect an RC compensation network between COMP and AGND to stabilize the control loop.</td></tr>
+                        <tr><td>14</td>      <td>SPS</td>         <td>Spread-Spectrum (SPS) Function Enable Input. Connect SPS high to enable SPS function and low to disable SPS function</td></tr>
+                        <tr><td>15</td>      <td>SYNC</td>        <td>External Clock Synchronization and Skip/PWM Mode Control Input. Connect SYNC to AGND to enable skip mode. Connect SYNC to VCC to enable PWM mode. Connect SYNC to a valid external clock to synchronize the buck-boost converter switching frequency to external clock.</td></tr>
+                        <tr><td>16</td>      <td>PGOOD</td>       <td>Open-Drain Power-Good Indicator. Pull up PGOOD with an external resistor to VCC or a positive voltage lower than 5.5V to correctly indicate the OUT voltage status. PGOOD asserts low when the OUT voltage falls below 93% (typ) of its regulation voltage. PGOOD becomes high impedance when the OUT voltage rises above 94% (typ) of its regulation voltage. PGOOD is also low during soft-start and in shutdown</td></tr>
+                        <tr><td>17</td>      <td>VCC</td>         <td>Internal 1.8V Regulator Output. Bypass VCC to ground with a minimum 4.7μF ceramic capacitor.</td></tr>
+                        <tr><td>18</td>      <td>AGND</td>        <td>Analog Ground. Connect AGND, PGND1, and PGND2 together at a single point in a star- ground connection.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, EN to AGND</td>            <td>-0.3V to +42V</td></tr>
+                        <tr><td>LX1 to PGND1</td>               <td>-0.3V to VSUP +0.3V</td></tr>
+                        <tr><td>LX2 to PGND2</td>               <td>-0.3V to VOUT +0.3V</td></tr>
+                        <tr><td>OUT to AGND</td>                <td>-0.3V to +28V</td></tr>
+                        <tr><td>BST1 to LX1, BST2 to LX2</td>   <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>BST1 to PGND1</td>              <td>-0.3V to +44V</td></tr>
+                        <tr><td>BST2 to PGND2</td>              <td>-0.3V to +30V</td></tr>
+                        <tr><td>VCC, SPS to AGND</td>           <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>COMP, FB to AGND</td>           <td>-0.3V to VVCC +0.3V</td></tr>
+                        <tr><td>PGND_ to AGND</td>              <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>SYNC, PGOOD to AGND</td>        <td>-0.3V to +6V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">ESD Protection</td></tr>
+                        <tr><td>Human Body Model</td>   <td>±2kV</td></tr>
+                        <tr><td>Machine Model</td>      <td>±100V</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (TA = +70°C, derate 30mW/°C
+                            above +70°C)</td>                                  <td>2404mW</td></tr>
+                        <tr><td>Operating Junction Temperature</td>            <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                 <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering 10s)</td>          <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>            <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <script src="../_script/header.js"></script>
+    <script src="../_script/navigation.js"></script>
+    <script src="../_script/iconNavigation.js"></script>
+
+</body>
+</html>
