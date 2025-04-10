@@ -107,20 +107,17 @@
     }
 
     .product .image-product{
-        grid-area: 1 / 1 / span 2 / 2;   
+        grid-area: 1 / 1 / 2 / 2;   
     }
 
     .product .pin-description{
-        grid-area: 3 / 1 / 3 / 3;
+        grid-area: 2 / 1 / 3 / 3;
     }
 
     .product .ratings{
         grid-area: 1 / 2 / 2 / 3;
     }
 
-    .product .range{
-        grid-area: 2 / 2 / 3 / 3;
-    }
 }
 
 .product[stateProductList = "hide"]{

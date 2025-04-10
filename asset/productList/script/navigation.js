@@ -71,7 +71,7 @@ function createCloseIcon() {
     let navigation = document.querySelector('[compoment=navigation]');
     let form = document.querySelector('[formData = form]');
     let imgPath = navigation.getAttribute('imgPath');
-    let homePath = navigation.getAttribute('homePźth');
+    let homePath = navigation.getAttribute('homepath');
 
     if(navigation.getAttribute('location') === 'product-page'){
         form.insertAdjacentHTML('beforeend', `
