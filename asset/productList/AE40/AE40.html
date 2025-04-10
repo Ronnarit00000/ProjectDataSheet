@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE40 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE40</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25256</h3>
+                <div class="img">
+                    <img src="Pin_AE40_25256.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1,2</td>    <td>VDD</td>        <td>Power Supply. Bypass VDD to ground with a 1µF capacitor as close as possible to the device.</td></tr>
+                        <tr><td>3</td>      <td>CLK</td>        <td>Clock Input. Connect CLK to GND to enable internal clocking. Apply a clock signal to CLK to enable external clocking.</td></tr>
+                        <tr><td>4</td>      <td>EN</td>         <td>Enable Input. Drive EN low to enable the device. Drive EN high to disable the device.</td></tr>
+                        <tr><td>5</td>      <td>ITH</td>        <td>Overcurrent Threshold Adjustment Input. Connect a resistor (RLIM) from ITH to GND to set the overcurrent threshold for the ST1 and ST2 outputs. Do not exceed 10pF of capacitance to GND on ITH.</td></tr>
+                        <tr><td>6</td>      <td>FAULT</td>      <td>FAULT Open-Drain Output. The fault open-drain transistor turns on when there is either an overtemperature or overcurrent condition.</td></tr>
+                        <tr><td>7,9</td>    <td>GND</td>        <td>Ground</td></tr>
+                        <tr><td>8</td>      <td>SßT2</td>        <td>Transformer Drive Output 2</td></tr>
+                        <tr><td>10</td>     <td>ST1</td>        <td>Transformer Drive Output 1ß</td></tr>
+                        <tr><td>-</td>      <td>EP</td>         <td>Exposed Pad. Internally connected to GND. Connect EP to a large ground plane to maximize thermal performance; not intended as an electrical connection point.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VDD,FAULT</td>                      <td>-0.3V to +40V</td></tr>
+                        <tr><td>ST1, ST2</td>                       <td>-0.3V to (VDD + 0.3V)</td></tr>
+                        <tr><td>CLK, ITH, EN</td>                   <td>-0.3V to +6V</td></tr>
+                        <tr><td>FAULT Continuous Current</td>       <td>±50mA</td></tr>
+                        <tr><td>ST1, ST2 Continuous Current</td>    <td>±850mA</td></tr>
+                    </tbody>
+                </table>
+   
+                <table>
+                    <tbody>
+                        <tr><td>TDFN (Single-Layer Board)<br>
+                            (Derate 18.5mW/°C above +70°C)</td>             <td>1481.5mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Operating Junction Temperature</td>         <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>         <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

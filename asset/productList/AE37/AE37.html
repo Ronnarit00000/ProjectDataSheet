@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE37 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE37</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25262 / MAX25263</h3>
+                <div class="img">
+                    <img src="Pin_AE37_25262&63.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>PGOOD</td>      <td>Open-Drain Output. Pull up PGOOD with an external resistor connected to a positive voltage lower than 5.5V. PGOOD is high impedance when OUT is in regulation.</td></tr>
+                        <tr><td>2</td>          <td>EN</td>         <td>Supply (SUP) Voltage Tolerant, Active-High Digital Enable Input for the Converter.</td></tr>
+                        <tr><td>3,9</td>        <td>SUP</td>        <td>Supply Input. Internal high-side supply powers the internal switch and LDO. Each SUP pin needs 2.2µF bypass capacitors and 0.1µF ceramic capacitors connected to them. The 0.1µF capacitor needs to be as close to the SUP pin as possible, followed by the 2.2µF capacitor.</td></tr>
+                        <tr><td>4,8</td>        <td>NC</td>         <td>No Connect. Do not route through these pins.</td></tr>
+                        <tr><td>5,7</td>        <td>PGND</td>       <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>6</td>          <td>LX</td>         <td>Inductor Connection. Connect LX to the switched side of the inductor.</td></tr>
+                        <tr><td>10</td>         <td>BST</td>        <td>Bootstrap Capacitor Connection. Connect a ceramic capacitor of 0.1µF between BST and LX.</td></tr>
+                        <tr><td>11</td>         <td>GND</td>        <td>Analog Ground</td></tr>
+                        <tr><td>12</td>         <td>BIAS</td>       <td>Linear Regulator (LDO) Output. BIAS powers the internal circuitry. Bypass with a minimum of 2.2μF ceramic capacitor to ground.</td></tr>
+                        <tr><td>13</td>         <td>FB</td>         <td>Feedback Input. For external feedback, connect a resistor-divider from OUT to FB to GND to set the output voltage. Connect FB to BIAS to select a fixed output voltage (P/N dependent).</td></tr>
+                        <tr><td>14</td>         <td>EXTVCC</td>     <td>External VCC Power and Switchover Comparator Input. Connect a voltage between 3.25V and 5.5V to EXTVCC to power the IC and bypass the internal bias LDO. Connect EXTVCC to ground if not used.</td></tr>
+                        <tr><td>15</td>         <td>OUT</td>        <td>Output Sense Input. When using the internal preset feedback divider, FB is connected to BIAS, and the converter uses OUT to sense the output voltage.</td></tr>
+                        <tr><td>16</td>         <td>SYNC</td>       <td>External Clock-Synchronization Input. Connect FSYNC to GND to enable Skip mode. Connect FSYNC to BIAS or an external clock to enable Forced-PWM mode. The SYNC input cannot exceed the BIAS voltage when driven externally.</td></tr>
+                        <tr><td>17</td>         <td>SPS</td>        <td>Spread-Spectrum Enable Input. Connect to BIAS to enable spread spectrum. Connect to GND to disable spread spectrum.</td></tr>
+                        <tr><td>-</td>          <td>EP</td>         <td>Exposed Pad. Connect to the input supply voltage along with pins 3 and 9.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>EN, SUP to PGND</td>            <td>-0.3V to +70V</td></tr>
+                        <tr><td>LX to PGND</td>                 <td>-0.3V to SUP+0.3V</td></tr>
+                        <tr><td>SYNC, BIAS to GND</td>          <td>-0.3V to +6V</td></tr>
+                        <tr><td>SPS, FB, EXTVCC to AGND</td>    <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>PGOOD to GND</td>               <td>-0.3V to +6V</td></tr>
+                        <tr><td>GND to PGND</td>                <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>OUT to PGND</td>                <td>-0.3V to +22V</td></tr>
+                        <tr><td>BST to LX</td>                  <td>-0.3V to +6V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br>
+                             (TA = +70°C, derate 35.71mW/°C above +70°C)</td>   <td>2857.14mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow) </td>        <td>+260°C</td></tr>
+                        <tr><td>Lead Temperature (soldering,10s) </td>      <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

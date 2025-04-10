@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE43 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <!-- conpoment header -->
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AE43</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20474</h3>
+                <div class="img">
+                    <img src="Pin_AE43_20474.png" alt="product AE43">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>BIAS</td>   <td>BIAS LDO Output. Connect a 2.2μF ceramic capacitor to from BIAS to GND.</td></tr>
+                        <tr><td>2</td>      <td>AV</td>     <td>Analog Power Input Supply. Connect a 0.1μF ceramic capacitor from AV to GND.</td></tr>
+                        <tr><td>3</td>      <td>REG</td>    <td>LDO Output. Connect a capacitor from REG to OUT. See REG Pin Considerations for required value.</td></tr>
+                        <tr><td>4</td>      <td>OUTS</td>   <td>Output Voltage Feedback Pin. Connect this pin to the output capacitor for part numbers with fixed output voltage or through a resistor-divider for the adjustable output version.</td></tr>
+                        <tr><td>5</td>      <td>OUT</td>    <td>Output Voltage.</td></tr>
+                        <tr><td>6,7</td>    <td>LX</td>     <td>Inductor Connection. Connect LX to the switched side of the inductor.</td></tr>
+                        <tr><td>8,9</td>    <td>PGND</td>   <td>Power Ground.</td></tr>
+                        <tr><td>10</td>     <td>RESET</td>  <td>Open-Drain RESET Output. To obtain a logic signal, pull up RESET with an external resistor.</td></tr>
+                        <tr><td>11</td>     <td>SSEN</td>   <td>Spread-Spectrum Enable. Connect to input supply to enable spread spectrum or to ground to disable.</td></tr>
+                        <tr><td>12</td>     <td>SYNC</td>   <td>SYNC Input. Connect SYNC to GND or leave unconnected to enable SKIP-mode operation under light loads. Connect SYNC to AV or an external clock to enable fixed-frequency forced-PWM-mode operation.</td></tr>
+                        <tr><td>13</td>     <td>GND</td>    <td>Ground. Connect all ground pins to the EP.</td></tr>
+                        <tr><td>14</td>     <td>EN</td>     <td>Active-High Enable. Drive EN HIGH for normal operation.</td></tr>
+                        <tr><td>-</td>      <td>EP</td>     <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to PGND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>EN, SYNC, SSEN, BIAS, AV, RESET to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>OUTS, OUT to PGND</td>                              <td>-0.3V to +22V</td></tr>
+                        <tr><td>REG to OUT</td>                                     <td>-6V to OUT + 0.3V</td></tr>
+                        <tr><td>LX to PGND</td>                                     <td>-0.3V to OUT + 0.3V</td></tr>
+                        <tr><td>GND to PGND</td>                                    <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>LX Continous RMS Current</td>                       <td>4A</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>                  <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br>
+                            (TA = +70°C, derate 22.15mW/°C above +70°C)</td>        <td>1771.87mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                    <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-40°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (Reflow)</td>                 <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>
