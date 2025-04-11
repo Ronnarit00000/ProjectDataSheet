@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE82 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AK82</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>DG1206ETJ+</h3>
+                <div class="img">
+                    <img src="Pin_AK82_DG1206ETJ.png" alt="product AK82">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: 
+                                    left; font-weight: 600;">POWER SUPPLY</td></tr>
+                        <tr><td>31</td>         <td>VPOS</td>       <td>Positive Power Supply. Bypass VPOS to GND with a minimum 0.1μF ceramic capacitor as close to the pin as possible.</td></tr>
+                        <tr><td>25</td>         <td>VNEG</td>       <td>Negative Power Suppy. Bypass VNEG to GND with a minimum 0.1μF ceramic capacitor as close to the pin as possible. In single-supply applications, connect VNEG to GND.</td></tr>
+                        <tr><td>9</td>          <td>GND</td>        <td>Logic Ground Reference</td></tr>
+                        <tr><td>12,13,26,<br> 
+                            27,28,30,32</td>    <td>NC</td>         <td>Not Connected</td></tr>
+                        
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: left; 
+                                    font-weight: 600;">DIGITAL INPUTS</td></tr>
+
+                        <tr><td>EP</td>         <td>EP</td>         <td>Exposed Pad. Leave unconnected or tied to VNEG. Do not connect to GND.</td></tr>
+                        <tr><td>10</td>         <td>A3</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>11</td>         <td>A2</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>14</td>         <td>A1</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>15</td>         <td>A0</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>16</td>         <td>EN</td>         <td>Enable Input. Drive EN high to enable the multiplexer. Drive EN low to disable all switches. Do not leave EN unconnected.</td></tr>
+                        
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: left; 
+                                    font-weight: 600;">ANALOG SWITCH</td></tr>
+
+                        <tr><td>29</td>         <td>COM</td>        <td>Common Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>1</td>          <td>NO16</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>2</td>          <td>NO15</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>3</td>          <td>NO14</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>4</td>          <td>NO13</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>5</td>          <td>NO12</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>6</td>          <td>NO11</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>7</td>          <td>NO10</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>8</td>          <td>NO9</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>24</td>         <td>NO8</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>23</td>         <td>NO7</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>22</td>         <td>NO6</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>21</td>         <td>NO5</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>20</td>         <td>NO4</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>19</td>         <td>NO3</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>18</td>         <td>NO2</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>17</td>         <td>NO1</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VPOS to GND</td>                        <td>-0.3V to +20.5V</td></tr>
+                        <tr><td>VNEG to GND</td>                        <td>-20.5V to +0.3V</td></tr>
+                        <tr><td>VPOS to VNEG</td>                       <td>-0.3V to +41V</td></tr>
+                        <tr><td>A_, EN to GND</td>                      <td>-0.3V to (VPOS + 0.3V)</td></tr>
+                        <tr><td>NO_, COM_ to GND</td>                   <td>(VNEG - 0.3V) to (VPOS + 0.3V)</td></tr>
+                        <tr><td>Continuous Current Into Any Pin</td>    <td>±30mA</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="3" style="text-align: left; font-weight: 600;">Continuous Power Dissipation (32 TQFN)</td></tr>
+                        <tr><td>Single-Layer Board <br>
+                            (TA = +70°C, derate 21.30mW/°C above +70°C)</td>        <td>1702.10mW</td></tr>
+                        <tr><td>Multilayer Board <br>
+                            (TA = +70°C, derate 34.50mW/°C above +70°C)</td>        <td>2758.60mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                    <td>-40°C to +85°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-40°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>                 <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>DG1206EUI+</h3>
+                <div class="img">
+                    <img src="Pin_AK82_DG1206EUI.png" alt="product AK82">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: 
+                                    left; font-weight: 600;">POWER SUPPLY</td></tr>
+                        <tr><td>1</td>         <td>VPOS</td>       <td>Positive Power Supply. Bypass VPOS to GND with a minimum 0.1μF ceramic capacitor as close to the pin as possible.</td></tr>
+                        <tr><td>27</td>         <td>VNEG</td>       <td>Negative Power Suppy. Bypass VNEG to GND with a minimum 0.1μF ceramic capacitor as close to the pin as possible. In single-supply applications, connect VNEG to GND.</td></tr>
+                        <tr><td>12</td>          <td>GND</td>        <td>Logic Ground Reference</td></tr>
+                        <tr><td>2,3,13</td>    <td>NC</td>         <td>Not Connected</td></tr>
+                        
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: left; 
+                                    font-weight: 600;">DIGITAL INPUTS</td></tr>
+
+                        <tr><td>14</td>         <td>A3</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>15</td>         <td>A2</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>16</td>         <td>A1</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>17</td>         <td>A0</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>18</td>         <td>EN</td>         <td>Enable Input. Drive EN high to enable the multiplexer. Drive EN low to disable all switches. Do not leave EN unconnected.</td></tr>
+                        
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: left; 
+                                    font-weight: 600;">ANALOG SWITCH</td></tr>
+
+                        <tr><td>28</td>         <td>COM</td>        <td>Common Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>4</td>          <td>NO16</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>5</td>          <td>NO15</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>6</td>          <td>NO14</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>7</td>          <td>NO13</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>8</td>          <td>NO12</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>9</td>          <td>NO11</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>10</td>         <td>NO10</td>       <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>11</td>         <td>NO9</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>26</td>         <td>NO8</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>25</td>         <td>NO7</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>24</td>         <td>NO6</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>23</td>         <td>NO5</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>22</td>         <td>NO4</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>21</td>         <td>NO3</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>20</td>         <td>NO2</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>19</td>         <td>NO1</td>        <td>Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VPOS to GND</td>                        <td>-0.3V to +20.5V</td></tr>
+                        <tr><td>VNEG to GND</td>                        <td>-20.5V to +0.3V</td></tr>
+                        <tr><td>VPOS to VNEG</td>                       <td>-0.3V to +41V</td></tr>
+                        <tr><td>A_, EN to GND</td>                      <td>-0.3V to (VPOS + 0.3V)</td></tr>
+                        <tr><td>NO_, COM_ to GND</td>                   <td>(VNEG - 0.3V) to (VPOS + 0.3V)</td></tr>
+                        <tr><td>Continuous Current Into Any Pin</td>    <td>±30mA</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="3" style="text-align: left; font-weight: 600;">Continuous Power Dissipation (28 TSSOP)</td></tr>
+                        <tr><td>Single-Layer Board <br>
+                            (TA = +70°C, derate 12.8mW/°C above +70°C)</td>         <td>1025.60mW</td></tr>
+                        <tr><td>Multilayer Board <br>
+                            (TA = +70°C, derate 14mW/°C above +70°C)</td>           <td>1117.30mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                    <td>-40°C to +85°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-40°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>                 <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page3" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>DG1207ETJ+</h3>
+                <div class="img">
+                    <img src="Pin_AK82_DG1207ETJ.png" alt="product AK82">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: 
+                                    left; font-weight: 600;">POWER SUPPLY</td></tr>
+
+                        <tr><td>29</td>         <td>VPOS</td>       <td>Positive Power Supply. Bypass VPOS to GND with a minimum 0.1μF ceramic capacitor as close to the pin as possible.</td></tr>
+                        <tr><td>25</td>         <td>VNEG</td>       <td>Negative Power Suppy. Bypass VNEG to GND with a minimum 0.1μF ceramic capacitor as close to the pin as possible. In single-supply applications, connect VNEG to GND.</td></tr>
+                        <tr><td>9</td>          <td>GND</td>        <td>Logic Ground Reference</td></tr>
+                        <tr><td>11,12,13,<br>
+                            26,28,30,32</td>    <td>NC</td>         <td>Not Connected</td></tr>
+                        <tr><td>EP</td>         <td>EP</td>         <td>Exposed Pad. Leave unconnected or tied to VNEG. Do not connect to GND.</td></tr>
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: left; 
+                                    font-weight: 600;">DIGITAL INPUTS</td></tr>
+
+                        <tr><td>10</td>         <td>A2</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>14</td>         <td>A1</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>15</td>         <td>A0</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>16</td>         <td>EN</td>         <td>Enable Input. Drive EN high to enable the multiplexer. Drive EN low to disable all switches. Do not leave EN unconnected.</td></tr>
+                        
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: left; 
+                                    font-weight: 600;">ANALOG SWITCH</td></tr>
+
+                        <tr><td>31</td>         <td>COMB</td>       <td>B-Side Common Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>27</td>         <td>COMA</td>       <td>A-Side Common Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>1</td>          <td>NO8B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>2</td>          <td>NO7B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>3</td>          <td>NO6B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>4</td>          <td>NO5B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>5</td>          <td>NO4B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>6</td>          <td>NO3B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>7</td>          <td>NO2B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>8</td>          <td>NO1B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>24</td>         <td>NO8A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>23</td>         <td>NO7A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>22</td>         <td>NO6A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>21</td>         <td>NO5A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>20</td>         <td>NO4A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>19</td>         <td>NO3A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>18</td>         <td>NO2A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>17</td>         <td>NO1A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VPOS to GND</td>                        <td>-0.3V to +20.5V</td></tr>
+                        <tr><td>VNEG to GND</td>                        <td>-20.5V to +0.3V</td></tr>
+                        <tr><td>VPOS to VNEG</td>                       <td>-0.3V to +41V</td></tr>
+                        <tr><td>A_, EN to GND</td>                      <td>-0.3V to (VPOS + 0.3V)</td></tr>
+                        <tr><td>NO_, COM_ to GND</td>                   <td>(VNEG - 0.3V) to (VPOS + 0.3V)</td></tr>
+                        <tr><td>Continuous Current Into Any Pin</td>    <td>±30mA</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="3" style="text-align: left; font-weight: 600;">Continuous Power Dissipation (32 TQFN)</td></tr>
+                        <tr><td>Single-Layer Board <br>
+                            (TA = +70°C, derate 21.30mW/°C above +70°C)</td>        <td>1702.10mW</td></tr>
+                        <tr><td>Multilayer Board <br>
+                            (TA = +70°C, derate 34.50mW/°C above +70°C)</td>        <td>2758.60mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                    <td>-40°C to +85°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-40°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>                 <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+        
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page4" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>DG1207EUI+</h3>
+                <div class="img">
+                    <img src="Pin_AK82_DG1207EUI.png" alt="product AK82">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: 
+                                    left; font-weight: 600;">POWER SUPPLY</td></tr>
+
+                        <tr><td>1</td>          <td>VPOS</td>       <td>Positive Power Supply. Bypass VPOS to GND with a minimum 0.1μF ceramic capacitor as close to the pin as possible.</td></tr>
+                        <tr><td>27</td>         <td>VNEG</td>       <td>Negative Power Suppy. Bypass VNEG to GND with a minimum 0.1μF ceramic capacitor as close to the pin as possible. In single-supply applications, connect VNEG to GND.</td></tr>
+                        <tr><td>12</td>         <td>GND</td>        <td>Logic Ground Reference</td></tr>
+                        <tr><td>3,13,14</td>    <td>NC</td>         <td>Not Connected</td></tr>
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: left; 
+                                    font-weight: 600;">DIGITAL INPUTS</td></tr>
+
+                        <tr><td>15</td>         <td>A2</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>16</td>         <td>A1</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>17</td>         <td>A0</td>         <td>Logic-Address Input. See the Control Logic section for more information.</td></tr>
+                        <tr><td>18</td>         <td>EN</td>         <td>Enable Input. Drive EN high to enable the multiplexer. Drive EN low to disable all switches. Do not leave EN unconnected.</td></tr>
+                        
+                        <tr><td 
+                            colspan="3" 
+                            style=  "text-align: left; 
+                                    font-weight: 600;">ANALOG SWITCH</td></tr>
+
+                        <tr><td>2</td>          <td>COMB</td>       <td>B-Side Common Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>28</td>         <td>COMA</td>       <td>A-Side Common Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>4</td>          <td>NO8B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>5</td>          <td>NO7B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>6</td>          <td>NO6B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>7</td>          <td>NO5B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>8</td>          <td>NO4B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>9</td>          <td>NO3B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>10</td>         <td>NO2B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>11</td>         <td>NO1B</td>       <td>B-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>26</td>         <td>NO8A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>25</td>         <td>NO7A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>24</td>         <td>NO6A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>23</td>         <td>NO5A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>22</td>         <td>NO4A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>21</td>         <td>NO3A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>20</td>         <td>NO2A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                        <tr><td>19</td>         <td>NO1A</td>       <td>A-Side Normally-Open Bidirectional Analog-Signal Terminal. It can be either an input or output.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VPOS to GND</td>                        <td>-0.3V to +20.5V</td></tr>
+                        <tr><td>VNEG to GND</td>                        <td>-20.5V to +0.3V</td></tr>
+                        <tr><td>VPOS to VNEG</td>                       <td>-0.3V to +41V</td></tr>
+                        <tr><td>A_, EN to GND</td>                      <td>-0.3V to (VPOS + 0.3V)</td></tr>
+                        <tr><td>NO_, COM_ to GND</td>                   <td>(VNEG - 0.3V) to (VPOS + 0.3V)</td></tr>
+                        <tr><td>Continuous Current Into Any Pin</td>    <td>±30mA</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="3" style="text-align: left; font-weight: 600;">Continuous Power Dissipation (28 TSSOP)</td></tr>
+                        <tr><td>Single-Layer Board <br>
+                            (TA = +70°C, derate 12.8mW/°C above +70°C)</td>         <td>1025.60mW</td></tr>
+                        <tr><td>Multilayer Board <br>
+                            (TA = +70°C, derate 14mW/°C above +70°C)</td>           <td>1117.30mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                    <td>-40°C to +85°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-40°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>                 <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

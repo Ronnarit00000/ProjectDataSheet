@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL45 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AL45</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX14576 / MAX14636 / MAX14637</h3>
+                <div class="img">
+                    <img src="Pin_AL45_14576&636&637.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>SW_OPEN</td>        <td>Data Switches Open Indicator. SW_OPEN is low when switches are closed. SW_OPEN is high impedance when switches are open. SW_OPEN is an open-drain output. Connect SW_OPEN to a pullup resistor externally.</td></tr>
+                        <tr><td>2</td>          <td>TDN</td>            <td>USB Transceiver D- Connection</td></tr>
+                        <tr><td>3</td>          <td>TDP</td>            <td>USB Transceiver D+ Connection</td></tr>
+                        <tr><td>4</td>          <td>CHG_AL_N</td>       <td>Charging Allow Indicator. CHG_AL_N is low when VBUS is valid and charging is allowed. CHG_AL_N is an open-drain output. Connect CHG_AL_N to a pullup resistor externally.</td></tr>
+                        <tr><td>5</td>          <td>GOOD_BAT</td>       <td>Good Battery Digital Input. Set GOOD_BAT low for a dead battery and enable USB BC 1.2 compliant dead battery charging. Set GOOD_BAT high for a good battery.</td></tr>
+                        <tr><td>6</td>          <td>GND</td>            <td>Ground</td></tr>
+                        <tr><td>7</td>          <td>CDP</td>            <td>USB Connector D+ Connection</td></tr>
+                        <tr><td>8</td>          <td>CDN</td>            <td>USB Connector D- Connection</td></tr>
+                        <tr><td>9</td>          <td>VBUS</td>           <td>USB VBUS Input. Bypass VBUS to ground with a 0.1μF ceramic capacitor as close to the device as possible to achieve high ±15kV HBM ESD protection.</td></tr>
+                        <tr><td>10</td>         <td>CHG_DET</td>        <td>Charger Detection Push-Pull Output. CHG_DET indicates the capability of the connected charger type (see Tables 1, 2, 3).</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VVBUS</td>                                  <td>-6V to +30V</td></tr>
+                        <tr><td>CHG_AL_N</td>                               <td>-0.3V to +30V</td></tr>
+                        <tr><td>SW_OPEN, GOOD_BAT</td>                      <td>-0.3V to +6V</td></tr>
+                        <tr><td>CHG_DET </td>                               <td>-0.3V to (VCCINT + 0.3V)</td></tr>
+                        <tr><td>TDP, TDN</td>                               <td>-0.3V to (VCCINT + 0.3V)</td></tr>
+                        <tr><td>CDP, CDN</td>                               <td>-0.3V to +6V</td></tr>
+                        <tr><td>Continuous Current into All Terminals</td>  <td>±50mA</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation <br>
+                            (TA = +70°C)UTQFN (derate 9mW/°C above +70°C)</td>  <td>722mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>0°C to +70°C</td></tr>
+                        <tr><td>Maximum Junction Temperature</td>               <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>          <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>
