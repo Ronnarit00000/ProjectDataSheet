@@ -7,7 +7,8 @@ const navigation = createNavigation();
             "AE08", "AE13", "AE18", "AE21", "AE26",
             "AE27", "AE28", "AE29", "AE31", "AE32",
             "AE33", "AE34", "AE37", "AE40", "AE43",
-            "AK82", "AK83", "AL45", "AL50", "AP87" 
+            "AK82", "AK83", "AL45", "AL50", "AL68",
+            "AP30", "AP87" 
         ]);
 
 search();

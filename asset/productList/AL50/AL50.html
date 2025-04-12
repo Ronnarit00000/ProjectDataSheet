@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL50 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AL50</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX14640 / MAX14651</h3>
+                <div class="img">
+                    <img src="Pin_AL50_14640&51.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td> <td>INT</td>         <td>Open-Drain Interrupt Output. INT asserts low when interrupt occurs.</td></tr>
+                        <tr><td>2</td> <td>DM</td>          <td>USB Connector D- Connection</td></tr>
+                        <tr><td>3</td> <td>DP</td>          <td>USB Connector D+ Connection</td></tr>
+                        <tr><td>4</td> <td>SCL</td>         <td>I2C Serial-Clock Input</td></tr>
+                        <tr><td>5</td> <td>VCC</td>         <td>Power-Supply Input. Bypass VCC to GND with a 0.1μF ceramic capacitor as close as possible to the device.</td></tr>
+                        <tr><td>6</td> <td>TDP</td>         <td>Host USB Transceiver D+ Connection</td></tr>
+                        <tr><td>7</td> <td>TDM</td>         <td>Host USB Transceiver D- Connection</td></tr>
+                        <tr><td>8</td> <td>SDA</td>         <td>I2C Serial-Data Input/Output</td></tr>
+                        <tr><td>-</td> <td>EP / GND</td>    <td>Exposed Pad and Ground. The exposed pad is the ground connection for the device. Connect EP/GND to the ground plane.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VCC, TDP, TDM, DP, DM, SDA, <br>
+                                SCL ,CB0, CB1, CEN, CEN, INT</td> <td>-0.3V to +6V</td></tr>
+                        <tr><td>Continuous Current into Any Terminal</td> <td>+-30mA</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation (TA = +70NC)<br>
+                            TDFN (derate 11.9mW/NC above +70NC)</td>            <td>953.5mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>-40NC to +85NC</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150NC</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65NC to +150NC</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>          <td>+300NC</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260NC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX14641 / MAX14642 / MAX14643</h3>
+                <div class="img">
+                    <img src="Pin_AL50_14641&42&43.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td> <td>CEN</td>         <td>nMOS Open-Drain Output. Pull up CEN to VCC by 10kΩ. CEN high enables the current-limit switch and VBUS ON, and nMOS ON makes CEN low and the current-limit switch OFF. When CB_ transitions from low to high or high to low, CEN is low for 1s (typ).</td></tr>
+                        <tr><td>2</td> <td>DM</td>          <td>USB Connector D- Connection</td></tr>
+                        <tr><td>3</td> <td>DP</td>          <td>USB Connector D+ Connection</td></tr>
+                        <tr><td>4</td> <td>CB1</td>         <td>Switch Control Input Bit 1. See the Switch Control Input Truth tables (Tables 2, 3, and 4).</td></tr>
+                        <tr><td>5</td> <td>VCC</td>         <td>Power-Supply Input. Bypass VCC to GND with a 0.1μF ceramic capacitor as close as possible to the device.</td></tr>
+                        <tr><td>6</td> <td>TDP</td>         <td>Host USB Transceiver D+ Connection</td></tr>
+                        <tr><td>7</td> <td>TDM</td>         <td>Host USB Transceiver D- Connection</td></tr>
+                        <tr><td>8</td> <td>CB0</td>         <td>Switch Control Input Bit 0. See the Switch Control Input Truth tables (Tables 2, 3, and 4).</td></tr>
+                        <tr><td>-</td> <td>EP / GND</td>    <td>Exposed Pad and Ground. The exposed pad is the ground connection for the device. Connect EP/GND to the ground plane.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VCC, TDP, TDM, DP, DM, SDA, <br>
+                                SCL ,CB0, CB1, CEN, CEN, INT</td> <td>-0.3V to +6V</td></tr>
+                        <tr><td>Continuous Current into Any Terminal</td> <td>+-30mA</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation (TA = +70NC)<br>
+                            TDFN (derate 11.9mW/NC above +70NC)</td>            <td>953.5mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>-40NC to +85NC</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150NC</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65NC to +150NC</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>          <td>+300NC</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260NC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page3" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX14644</h3>
+                <div class="img">
+                    <img src="Pin_AL50_14644.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td> <td>CEN</td>         <td>pMOS Open-Drain Output. Pull down CEN to GND by 10kΩ. CEN low enables the current-limit switch and VBUS ON, and pMOS ON makes CEN high and the current- limit switch OFF. When CB_ transitions from low to high or high to low, CEN is high for 1s (typ).</td></tr>
+                        <tr><td>2</td> <td>DM</td>          <td>USB Connector D- Connection</td></tr>
+                        <tr><td>3</td> <td>DP</td>          <td>USB Connector D+ Connection</td></tr>
+                        <tr><td>4</td> <td>CB1</td>         <td>Switch Control Input Bit 1. See the Switch Control Input Truth tables (Tables 2, 3, and 4).</td></tr>
+                        <tr><td>5</td> <td>VCC</td>         <td>Power-Supply Input. Bypass VCC to GND with a 0.1μF ceramic capacitor as close as possible to the device.</td></tr>
+                        <tr><td>6</td> <td>TDP</td>         <td>Host USB Transceiver D+ Connection</td></tr>
+                        <tr><td>7</td> <td>TDM</td>         <td>Host USB Transceiver D- Connection</td></tr>
+                        <tr><td>8</td> <td>CB0</td>         <td>Switch Control Input Bit 0. See the Switch Control Input Truth tables (Tables 2, 3, and 4).</td></tr>
+                        <tr><td>-</td> <td>EP / GND</td>    <td>Exposed Pad and Ground. The exposed pad is the ground connection for the device. Connect EP/GND to the ground plane.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VCC, TDP, TDM, DP, DM, SDA, <br>
+                                SCL ,CB0, CB1, CEN, CEN, INT</td> <td>-0.3V to +6V</td></tr>
+                        <tr><td>Continuous Current into Any Terminal</td> <td>+-30mA</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation (TA = +70NC)<br>
+                            TDFN (derate 11.9mW/NC above +70NC)</td>            <td>953.5mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>-40NC to +85NC</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150NC</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65NC to +150NC</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>          <td>+300NC</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260NC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        
+
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

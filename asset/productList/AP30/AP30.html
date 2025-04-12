@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP30 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP30</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20480A</h3>
+                <div class="img">
+                    <img src="Pin_AP30_20480A.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td> <td>IN1</td>      <td>Input voltage monitor 1.</td></tr>
+                        <tr><td>2</td> <td>IN2</td>      <td>Input voltage monitor 2.</td></tr>
+                        <tr><td>3</td> <td>IN3</td>      <td>Input voltage monitor 3.</td></tr>
+                        <tr><td>4</td> <td>IN4</td>      <td>Input voltage monitor 4.</td></tr>
+                        <tr><td>5</td> <td>EN0</td>      <td>Enable input 0. Raise/lower the EN0 input to indicate a transiton from OFF -> ON/ON -> OFF, respectively in the system</td></tr>
+                        <tr><td>6</td> <td>GND</td>      <td>Ground. connect all grounds together at the EP</td></tr>
+                        <tr><td>7</td> <td>EP1</td>      <td>Enable input 1. Rasie/lower the EN1 input to indicate a transtion from SLEEP -> ON/ON -> SLEEP, respectively in the system</td></tr>
+                        <tr><td>8</td> <td>VDD</td>      <td>Input supply voltage connect a 0.1uF capacitor between VDD and GND and place close to the IC For excessive VDD transients with edge rates >40mV/us an RC Filter is reduired in the VDD supply</td></tr>
+                        <tr><td>9</td> <td>GND</td>      <td>Ground. conect all grounds together at the EP.</td></tr>
+                        <tr><td>10</td> <td>GND</td>     <td>Ground. conect all grounds together at the EP.</td></tr>
+                        <tr><td>11</td> <td>GND</td>     <td>Ground. conect all grounds together at the EP.</td></tr>
+                        <tr><td>12</td> <td>GND</td>     <td>Ground. conect all grounds together at the EP.</td></tr>
+                        <tr><td>13</td> <td>RESET</td>   <td>RESET output. Open-drain output that signals a status change. Can be mapped to any combination of input monitors to indicate they are within nominal operating range. <br><br>Connect to logic supply with a pullup resistor.</td></tr>
+                        <tr><td>14</td> <td>ADDR</td>    <td>I2C Address select. connect to GND or VDD, with or without a 100KOhm pullup resistor, to set the I2C address.</td></tr>
+                        <tr><td>15</td> <td>SDA</td>     <td>I2C data I/O.</td></tr>
+                        <tr><td>16</td> <td>SCL</td>     <td>I2C clock input.</td></tr>
+                        <tr><td>-</td> <td>EP</td>       <td>Exposed pad. Connect to ground. Dose not serve as a substitute for a proper GND pin connect connection</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VDD to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>EN0, EN1 to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN1-In5 to GND</td>     <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN6P-IN7P to GND</td>   <td>+0.3V to +6V</td></tr>
+                        <tr><td>INM to GND</td>         <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>RESET to GND</td>       <td>-0.3V to +6V</td></tr>
+                        <tr><td>SDA, SCL to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>ADDR to GND</td>        <td>-0.3V to VDD + 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (TA = +70°C, derate 20.8mW/°C above +70°C)</td>     <td>1666.7mW</td></tr>
+                        <tr><td>Operating Temperature</td>                      <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperture Range</td>                      <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20480B</h3>
+                <div class="img">
+                    <img src="Pin_AP30_20480B.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td> <td>IN1</td>      <td>Input voltage monitor 1.</td></tr>
+                        <tr><td>2</td> <td>IN2</td>      <td>Input voltage monitor 2.</td></tr>
+                        <tr><td>3</td> <td>IN3</td>      <td>Input voltage monitor 3.</td></tr>
+                        <tr><td>4</td> <td>IN4</td>      <td>Input voltage monitor 4.</td></tr>
+                        <tr><td>5</td> <td>EN0</td>      <td>Enable input 0. Raise/lower the EN0 input to indicate a transiton from OFF -> ON/ON -> OFF, respectively in the system</td></tr>
+                        <tr><td>6</td> <td>GND</td>      <td>Ground. connect all grounds together at the EP</td></tr>
+                        <tr><td>7</td> <td>EP1</td>      <td>Enable input 1. Rasie/lower the EN1 input to indicate a transtion from SLEEP -> ON/ON -> SLEEP, respectively in the system</td></tr>
+                        <tr><td>8</td> <td>VDD</td>      <td>Input supply voltage connect a 0.1uF capacitor between VDD and GND and place close to the IC For excessive VDD transients with edge rates >40mV/us an RC Filter is reduired in the VDD supply</td></tr>
+                        <tr><td>9</td> <td>INP5</td>     <td>Input Voltage Monitor 5.</td></tr>
+                        <tr><td>10</td> <td>GND</td>     <td>Ground. conect all grounds together at the EP.</td></tr>
+                        <tr><td>11</td> <td>GND</td>     <td>Ground. conect all grounds together at the EP.</td></tr>
+                        <tr><td>12</td> <td>GND</td>     <td>Ground. conect all grounds together at the EP.</td></tr>
+                        <tr><td>13</td> <td>RESET</td>   <td>RESET output. Open-drain output that signals a status change. Can be mapped to any combination of input monitors to indicate they are within nominal operating range. <br><br>Connect to logic supply with a pullup resistor.</td></tr>
+                        <tr><td>14</td> <td>ADDR</td>    <td>I2C Address select. connect to GND or VDD, with or without a 100KOhm pullup resistor, to set the I2C address.</td></tr>
+                        <tr><td>15</td> <td>SDA</td>     <td>I2C data I/O.</td></tr>
+                        <tr><td>16</td> <td>SCL</td>     <td>I2C clock input.</td></tr>
+                        <tr><td>-</td> <td>EP</td>       <td>Exposed pad. Connect to ground. Dose not serve as a substitute for a proper GND pin connect connection</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VDD to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>EN0, EN1 to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN1-In5 to GND</td>     <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN6P-IN7P to GND</td>   <td>+0.3V to +6V</td></tr>
+                        <tr><td>INM to GND</td>         <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>RESET to GND</td>       <td>-0.3V to +6V</td></tr>
+                        <tr><td>SDA, SCL to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>ADDR to GND</td>        <td>-0.3V to VDD + 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (TA = +70°C, derate 20.8mW/°C above +70°C)</td>     <td>1666.7mW</td></tr>
+                        <tr><td>Operating Temperature</td>                      <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperture Range</td>                      <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page3" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20480C</h3>
+                <div class="img">
+                    <img src="Pin_AP30_20480C.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td> <td>IN1</td>      <td>Input voltage monitor 1.</td></tr>
+                        <tr><td>2</td> <td>IN2</td>      <td>Input voltage monitor 2.</td></tr>
+                        <tr><td>3</td> <td>IN3</td>      <td>Input voltage monitor 3.</td></tr>
+                        <tr><td>4</td> <td>IN4</td>      <td>Input voltage monitor 4.</td></tr>
+                        <tr><td>5</td> <td>EN0</td>      <td>Enable input 0. Raise/lower the EN0 input to indicate a transiton from OFF -> ON/ON -> OFF, respectively in the system</td></tr>
+                        <tr><td>6</td> <td>GND</td>      <td>Ground. connect all grounds together at the EP</td></tr>
+                        <tr><td>7</td> <td>EP1</td>      <td>Enable input 1. Rasie/lower the EN1 input to indicate a transtion from SLEEP -> ON/ON -> SLEEP, respectively in the system</td></tr>
+                        <tr><td>8</td> <td>VDD</td>      <td>Input supply voltage connect a 0.1uF capacitor between VDD and GND and place close to the IC For excessive VDD transients with edge rates >40mV/us an RC Filter is reduired in the VDD supply</td></tr>
+                        <tr><td>9</td> <td>INP5</td>     <td>Input Voltage Monitor 5.</td></tr>
+                        <tr><td>10</td> <td>IN6P</td>     <td>Differential input Voltage Monitor 6.</td></tr>
+                        <tr><td>11</td> <td>INM</td>     <td>Common negation input for voltage monitors IN6P and IN7P</td></tr>
+                        <tr><td>12</td> <td>GND</td>     <td>Ground. conect all grounds together at the EP.</td></tr>
+                        <tr><td>13</td> <td>RESET</td>   <td>RESET output. Open-drain output that signals a status change. Can be mapped to any combination of input monitors to indicate they are within nominal operating range. <br><br>Connect to logic supply with a pullup resistor.</td></tr>
+                        <tr><td>14</td> <td>ADDR</td>    <td>I2C Address select. connect to GND or VDD, with or without a 100KOhm pullup resistor, to set the I2C address.</td></tr>
+                        <tr><td>15</td> <td>SDA</td>     <td>I2C data I/O.</td></tr>
+                        <tr><td>16</td> <td>SCL</td>     <td>I2C clock input.</td></tr>
+                        <tr><td>-</td> <td>EP</td>       <td>Exposed pad. Connect to ground. Dose not serve as a substitute for a proper GND pin connect connection</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VDD to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>EN0, EN1 to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN1-In5 to GND</td>     <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN6P-IN7P to GND</td>   <td>+0.3V to +6V</td></tr>
+                        <tr><td>INM to GND</td>         <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>RESET to GND</td>       <td>-0.3V to +6V</td></tr>
+                        <tr><td>SDA, SCL to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>ADDR to GND</td>        <td>-0.3V to VDD + 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (TA = +70°C, derate 20.8mW/°C above +70°C)</td>     <td>1666.7mW</td></tr>
+                        <tr><td>Operating Temperature</td>                      <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperture Range</td>                      <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page4" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20480D</h3>
+                <div class="img">
+                    <img src="Pin_AP30_20480D.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>IN1</td>        <td>Input voltage monitor 1.</td></tr>
+                        <tr><td>2</td>      <td>IN2</td>        <td>Input voltage monitor 2.</td></tr>
+                        <tr><td>3</td>      <td>IN3</td>        <td>Input voltage monitor 3.</td></tr>
+                        <tr><td>4</td>      <td>IN4</td>        <td>Input voltage monitor 4.</td></tr>
+                        <tr><td>5</td>      <td>EN0</td>        <td>Enable input 0. Raise/lower the EN0 input to indicate a transiton from OFF -> ON/ON -> OFF, respectively in the system</td></tr>
+                        <tr><td>6</td>      <td>GND</td>        <td>Ground. connect all grounds together at the EP</td></tr>
+                        <tr><td>7</td>      <td>EP1</td>        <td>Enable input 1. Rasie/lower the EN1 input to indicate a transtion from SLEEP -> ON/ON -> SLEEP, respectively in the system</td></tr>
+                        <tr><td>8</td>      <td>VDD</td>        <td>Input supply voltage connect a 0.1uF capacitor between VDD and GND and place close to the IC For excessive VDD transients with edge rates >40mV/us an RC Filter is reduired in the VDD supply</td></tr>
+                        <tr><td>9</td>      <td>INP5</td>       <td>Input Voltage Monitor 5.</td></tr>
+                        <tr><td>10</td>     <td>IN6P</td>       <td>Differential input Voltage Monitor 6.</td></tr>
+                        <tr><td>11</td>     <td>INM</td>        <td>Common negation input for voltage monitors IN6P and IN7P</td></tr>
+                        <tr><td>12</td>     <td>IN7P</td>       <td>Differential input Voltage Monitor 7.</td></tr>
+                        <tr><td>13</td>     <td>RESET</td>      <td>RESET output. Open-drain output that signals a status change. Can be mapped to any combination of input monitors to indicate they are within nominal operating range. <br><br>Connect to logic supply with a pullup resistor.</td></tr>
+                        <tr><td>14</td>     <td>ADDR</td>       <td>I2C Address select. connect to GND or VDD, with or without a 100KOhm pullup resistor, to set the I2C address.</td></tr>
+                        <tr><td>15</td>     <td>SDA</td>        <td>I2C data I/O.</td></tr>
+                        <tr><td>16</td>     <td>SCL</td>        <td>I2C clock input.</td></tr>
+                        <tr><td>-</td>      <td>EP</td>         <td>Exposed pad. Connect to ground. Dose not serve as a substitute for a proper GND pin connect connection</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VDD to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>EN0, EN1 to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN1-In5 to GND</td>     <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN6P-IN7P to GND</td>   <td>+0.3V to +6V</td></tr>
+                        <tr><td>INM to GND</td>         <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>RESET to GND</td>       <td>-0.3V to +6V</td></tr>
+                        <tr><td>SDA, SCL to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>ADDR to GND</td>        <td>-0.3V to VDD + 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (TA = +70°C, derate 20.8mW/°C above +70°C)</td>     <td>1666.7mW</td></tr>
+                        <tr><td>Operating Temperature</td>                      <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperture Range</td>                      <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page5" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20481A</h3>
+                <div class="img">
+                    <img src="Pin_AP30_20481A.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>IN1</td>        <td>Input voltage monitor 1.</td></tr>
+                        <tr><td>2</td>          <td>IN2</td>        <td>Input voltage monitor 2.</td></tr>
+                        <tr><td>3</td>          <td>IN3</td>        <td>Input voltage monitor 3.</td></tr>
+                        <tr><td>4</td>          <td>IN4</td>        <td>Input voltage monitor 4.</td></tr>
+                        <tr><td>5,6,7</td>      <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>8</td>          <td>VDD</td>        <td>Input supply voltage connect a 0.1uF capacitor between VDD and GND and place close to the IC For excessive VDD transients with edge rates >40mV/us an RC Filter is reduired in the VDD supply</td></tr>
+                        <tr><td>9</td>          <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>10</td>         <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>11</td>         <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>12</td>         <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>13</td>         <td>RESET</td>      <td>RESET output. Open-drain output that signals a status change. Can be mapped to any combination of input monitors to indicate they are within nominal operating range. <br><br>Connect to logic supply with a pullup resistor.</td></tr>
+                        <tr><td>14</td>         <td>WDDIS</td>      <td>Watchdog Disable. Connect to GND to enable windowed watchdog. Connect to VDD to disable watchdog.</td></tr>
+                        <tr><td>15</td>         <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>16</td>         <td>WDI</td>        <td>Watchdog Input. A low-to-high transition will refresh the watchdog. This pin is only available on the MAX20481 version.</td></tr>
+                        <tr><td>-</td>          <td>EP</td>         <td>Exposed pad. Connect to ground. Dose not serve as a substitute for a proper GND pin connect connection</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VDD to GND</td>             <td>-0.3V to +6V</td></tr>
+                        <tr><td>EN0, EN1 to GND</td>        <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN1-In5 to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN6P-IN7P to GND</td>       <td>+0.3V to +6V</td></tr>
+                        <tr><td>INM to GND</td>             <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>RESET to GND</td>           <td>-0.3V to +6V</td></tr>
+                        <tr><td>WDI to GND</td>             <td>-0.3V to +6V</td></tr>
+                        <tr><td>WDDIS to GND</td>           <td>-0.3V to VDD + 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation <br>
+                            (TA = +70°C) 16-TQFN (derate 22.5mW/°C > 70°C)</td>    <td>1797.8mW</td></tr>
+                        <tr><td>Operating Temperature</td>                          <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperture Range</td>                          <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page6" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20481B</h3>
+                <div class="img">
+                    <img src="Pin_AP30_20481B.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>IN1</td>        <td>Input voltage monitor 1.</td></tr>
+                        <tr><td>2</td>          <td>IN2</td>        <td>Input voltage monitor 2.</td></tr>
+                        <tr><td>3</td>          <td>IN3</td>        <td>Input voltage monitor 3.</td></tr>
+                        <tr><td>4</td>          <td>IN4</td>        <td>Input voltage monitor 4.</td></tr>
+                        <tr><td>5,6,7</td>      <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>8</td>          <td>VDD</td>        <td>Input supply voltage connect a 0.1uF capacitor between VDD and GND and place close to the IC For excessive VDD transients with edge rates >40mV/us an RC Filter is reduired in the VDD supply</td></tr>
+                        <tr><td>9</td>          <td>IN5</td>        <td>Input Voltage Monitor 5.</td></tr>
+                        <tr><td>10</td>         <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>11</td>         <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>12</td>         <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>13</td>         <td>RESET</td>      <td>RESET output. Open-drain output that signals a status change. Can be mapped to any combination of input monitors to indicate they are within nominal operating range. <br><br>Connect to logic supply with a pullup resistor.</td></tr>
+                        <tr><td>14</td>         <td>WDDIS</td>      <td>Watchdog Disable. Connect to GND to enable windowed watchdog. Connect to VDD to disable watchdog.</td></tr>
+                        <tr><td>15</td>         <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>16</td>         <td>WDI</td>        <td>Watchdog Input. A low-to-high transition will refresh the watchdog. This pin is only available on the MAX20481 version.</td></tr>
+                        <tr><td>-</td>          <td>EP</td>         <td>Exposed pad. Connect to ground. Dose not serve as a substitute for a proper GND pin connect connection</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VDD to GND</td>             <td>-0.3V to +6V</td></tr>
+                        <tr><td>EN0, EN1 to GND</td>        <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN1-In5 to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN6P-IN7P to GND</td>       <td>+0.3V to +6V</td></tr>
+                        <tr><td>INM to GND</td>             <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>RESET to GND</td>           <td>-0.3V to +6V</td></tr>
+                        <tr><td>WDI to GND</td>             <td>-0.3V to +6V</td></tr>
+                        <tr><td>WDDIS to GND</td>           <td>-0.3V to VDD + 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation <br>
+                            (TA = +70°C) 16-TQFN (derate 22.5mW/°C > 70°C)</td>    <td>1797.8mW</td></tr>
+                        <tr><td>Operating Temperature</td>                          <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperture Range</td>                          <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page7" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20481C</h3>
+                <div class="img">
+                    <img src="Pin_AP30_20481C.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>IN1</td>        <td>Input voltage monitor 1.</td></tr>
+                        <tr><td>2</td>          <td>IN2</td>        <td>Input voltage monitor 2.</td></tr>
+                        <tr><td>3</td>          <td>IN3</td>        <td>Input voltage monitor 3.</td></tr>
+                        <tr><td>4</td>          <td>IN4</td>        <td>Input voltage monitor 4.</td></tr>
+                        <tr><td>5,6,7</td>      <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>8</td>          <td>VDD</td>        <td>Input supply voltage connect a 0.1uF capacitor between VDD and GND and place close to the IC For excessive VDD transients with edge rates >40mV/us an RC Filter is reduired in the VDD supply</td></tr>
+                        <tr><td>9</td>          <td>IN5</td>        <td>Input Voltage Monitor 5.</td></tr>
+                        <tr><td>10</td>         <td>IN6P</td>       <td>Differential Input Voltage Monitor 6.</td></tr>
+                        <tr><td>11</td>         <td>INM</td>        <td>Common Negative Input for Voltage Monitors 6 and 7.</td></tr>
+                        <tr><td>12</td>         <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>13</td>         <td>RESET</td>      <td>RESET output. Open-drain output that signals a status change. Can be mapped to any combination of input monitors to indicate they are within nominal operating range. <br><br>Connect to logic supply with a pullup resistor.</td></tr>
+                        <tr><td>14</td>         <td>WDDIS</td>      <td>Watchdog Disable. Connect to GND to enable windowed watchdog. Connect to VDD to disable watchdog.</td></tr>
+                        <tr><td>15</td>         <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>16</td>         <td>WDI</td>        <td>Watchdog Input. A low-to-high transition will refresh the watchdog. This pin is only available on the MAX20481 version.</td></tr>
+                        <tr><td>-</td>          <td>EP</td>         <td>Exposed pad. Connect to ground. Dose not serve as a substitute for a proper GND pin connect connection</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VDD to GND</td>             <td>-0.3V to +6V</td></tr>
+                        <tr><td>EN0, EN1 to GND</td>        <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN1-In5 to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN6P-IN7P to GND</td>       <td>+0.3V to +6V</td></tr>
+                        <tr><td>INM to GND</td>             <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>RESET to GND</td>           <td>-0.3V to +6V</td></tr>
+                        <tr><td>WDI to GND</td>             <td>-0.3V to +6V</td></tr>
+                        <tr><td>WDDIS to GND</td>           <td>-0.3V to VDD + 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation <br>
+                            (TA = +70°C) 16-TQFN (derate 22.5mW/°C > 70°C)</td>    <td>1797.8mW</td></tr>
+                        <tr><td>Operating Temperature</td>                          <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperture Range</td>                          <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page8" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20481D</h3>
+                <div class="img">
+                    <img src="Pin_AP30_20481D.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>IN1</td>        <td>Input voltage monitor 1.</td></tr>
+                        <tr><td>2</td>          <td>IN2</td>        <td>Input voltage monitor 2.</td></tr>
+                        <tr><td>3</td>          <td>IN3</td>        <td>Input voltage monitor 3.</td></tr>
+                        <tr><td>4</td>          <td>IN4</td>        <td>Input voltage monitor 4.</td></tr>
+                        <tr><td>5,6,7</td>      <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>8</td>          <td>VDD</td>        <td>Input supply voltage connect a 0.1uF capacitor between VDD and GND and place close to the IC For excessive VDD transients with edge rates >40mV/us an RC Filter is reduired in the VDD supply</td></tr>
+                        <tr><td>9</td>          <td>IN5</td>        <td>Input Voltage Monitor 5.</td></tr>
+                        <tr><td>10</td>         <td>IN6P</td>       <td>Differential Input Voltage Monitor 6.</td></tr>
+                        <tr><td>11</td>         <td>INM</td>        <td>Common Negative Input for Voltage Monitors 6 and 7.</td></tr>
+                        <tr><td>12</td>         <td>IN7P</td>       <td>Differential Input Voltage Monitor 7.</td></tr>
+                        <tr><td>13</td>         <td>RESET</td>      <td>RESET output. Open-drain output that signals a status change. Can be mapped to any combination of input monitors to indicate they are within nominal operating range. <br><br>Connect to logic supply with a pullup resistor.</td></tr>
+                        <tr><td>14</td>         <td>WDDIS</td>      <td>Watchdog Disable. Connect to GND to enable windowed watchdog. Connect to VDD to disable watchdog.</td></tr>
+                        <tr><td>15</td>         <td>GND</td>        <td>Ground. Connect all grounds together at the EP.</td></tr>
+                        <tr><td>16</td>         <td>WDI</td>        <td>Watchdog Input. A low-to-high transition will refresh the watchdog. This pin is only available on the MAX20481 version.</td></tr>
+                        <tr><td>-</td>          <td>EP</td>         <td>Exposed pad. Connect to ground. Dose not serve as a substitute for a proper GND pin connect connection</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VDD to GND</td>             <td>-0.3V to +6V</td></tr>
+                        <tr><td>EN0, EN1 to GND</td>        <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN1-In5 to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN6P-IN7P to GND</td>       <td>+0.3V to +6V</td></tr>
+                        <tr><td>INM to GND</td>             <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>RESET to GND</td>           <td>-0.3V to +6V</td></tr>
+                        <tr><td>WDI to GND</td>             <td>-0.3V to +6V</td></tr>
+                        <tr><td>WDDIS to GND</td>           <td>-0.3V to VDD + 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation <br>
+                            (TA = +70°C) 16-TQFN (derate 22.5mW/°C > 70°C)</td>    <td>1797.8mW</td></tr>
+                        <tr><td>Operating Temperature</td>                          <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperture Range</td>                          <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page9" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX42500</h3>
+                <div class="img">
+                    <img src="Pin_AP30_42500.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>IN1</td>         <td>Input voltage monitor 1.</td></tr>
+                        <tr><td>2</td>          <td>IN2</td>         <td>Input voltage monitor 2.</td></tr>
+                        <tr><td>3</td>          <td>IN3</td>         <td>Input voltage monitor 3.</td></tr>
+                        <tr><td>4</td>          <td>IN4</td>         <td>Input voltage monitor 4.</td></tr>
+                        <tr><td>5</td>          <td>EN0</td>         <td>Enable input 0. Raise/lower the EN0 input to indicate a transiton from OFF -> ON/ON -> OFF, respectively in the system</td></tr>
+                        <tr><td>6</td>          <td>GND</td>         <td>Ground. connect all grounds together at the EP</td></tr>
+                        <tr><td>7</td>          <td>EP1</td>         <td>Enable input 1. Rasie/lower the EN1 input to indicate a transtion from SLEEP -> ON/ON -> SLEEP, respectively in the system</td></tr>
+                        <tr><td>8</td>          <td>VDD</td>         <td>Input supply voltage connect a 0.1uF capacitor between VDD and GND and place close to the IC For excessive VDD transients with edge rates >40mV/us an RC Filter is reduired in the VDD supply</td></tr>
+                        <tr><td>9</td>          <td>IN5</td>         <td>Input Voltage Monitor 5.</td></tr>
+                        <tr><td>10</td>         <td>IN6P</td>       <td>Differential Input Voltage Monitor 6.</td></tr>
+                        <tr><td>11</td>         <td>INM</td>        <td>Common negative input for voltage monitors IN6P and IN7P.</td></tr>
+                        <tr><td>12</td>         <td>IN7P</td>       <td>Differential Input Voltage Monitor 7.</td></tr>
+                        <tr><td>13</td>         <td>RESET</td>      <td>RESET output. Open-drain output that signals a status change. Can be mapped to any combination of input monitors to indicate they are within nominal operating range. <br><br>Connect to logic supply with a pullup resistor.</td></tr>
+                        <tr><td>14</td>         <td>ADDR</td>       <td>I2C Address select. connect to GND or VDD, with or without a 100KOhm pullup resistor, to set the I2C address.</td></tr>
+                        <tr><td>15</td>         <td>SDA</td>        <td>I2C data I/O.</td></tr>
+                        <tr><td>16</td>         <td>SCL</td>        <td>I2C clock input.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VDD to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>EN0, EN1 to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN1-In5 to GND</td>     <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN6P-IN7P to GND</td>   <td>+0.3V to +6V</td></tr>
+                        <tr><td>INM to GND</td>         <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>RESET to GND</td>       <td>-0.3V to +6V</td></tr>
+                        <tr><td>SDA, SCL to GND</td>    <td>-0.3V to +6V</td></tr>
+                        <tr><td>ADDR to GND</td>        <td>-0.3V to VDD + 0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation<br> 
+                            (TA = +70°C, derate 20.8mW/°C above +70°C)</td>     <td>1666.7mW</td></tr>
+                        <tr><td>Operating Temperature</td>                      <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperture Range</td>                      <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>         
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

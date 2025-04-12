@@ -27,14 +27,12 @@
     margin-inline: auto;
     grid-column: 3 / 5;
     display: grid;
-    grid-template-columns: 1fr max-content;
     padding-block: 0.5rem;
 }
 
 .header--inner .group-btn{
     display: grid;
     gap: 0.35em;
-    grid-auto-flow: column;
 }
 
 .header--inner .btn {
@@ -62,4 +60,27 @@
     color: var(--btn-onclick-clr);
     border: 0.25rem solid var(--btn-onclick-bd);
     background-color: var(--btn-onclick-bg);    
+}
+
+@media screen and (max-width:899px) {
+    .header--inner {
+        padding-block: 0.5rem;
+    }
+
+    .header--inner .group-btn{
+        gap: 0.25em 0.25rem;
+        grid-template-columns: repeat(auto-fill, minmax(2.5rem, 1fr));
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .header--inner{
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        padding-block: 0.5rem;
+    }
+
+    .header--inner .group-btn{
+        grid-auto-flow: column;
+    }
 }

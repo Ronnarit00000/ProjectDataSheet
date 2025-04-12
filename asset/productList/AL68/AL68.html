@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL68 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AL68</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX14689</h3>
+                <div class="img">
+                    <img src="Pin_AL68_14689A.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>5</td>          <td>NC1</td>    <td>Normally Closed Terminal for Switch 1</td></tr>
+                        <tr><td>7</td>          <td>CB</td>     <td>Digital Control Input. Drive CB low to connect COM_ to NC_. Drive CB high to connect COM_ to NO_.</td></tr>
+                        <tr><td>6</td>          <td>NC2</td>    <td>Normally Closed Terminal for Switch 2</td></tr>
+                        <tr><td>3</td>          <td>COM1</td>   <td>Common Terminal for Switch 1</td></tr>
+                        <tr><td>4, 9</td>       <td>GND</td>    <td>Ground</td></tr>
+                        <tr><td>8</td>          <td>COM2</td>   <td>Common Terminal for Switch 2</td></tr>
+                        <tr><td>1</td>          <td>NO1</td>    <td>Normally Open Terminal for Switch 1</td></tr>
+                        <tr><td>2</td>          <td>VCC</td>    <td>Supply Voltage Input. Bypass VCC to GND with a 0.1μF capacitor as close to the device as possible.</td></tr>
+                        <tr><td>10</td>         <td>NO2</td>    <td>Normally Open Terminal for Switch 2</td></tr>
+                        <tr><td>-</td>          <td>EP</td>     <td>Exposed Pad. Connect EP to ground. (TDFN only)</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VCC, CB</td>                                        <td>-0.3V to +6V</td></tr>
+                        <tr><td>NC_, NO_, COM_.</td>                                <td>-6V to +6V</td></tr>
+                        <tr><td>Continuous Current NC_, NO_, COM_.</td>             <td>±500mA</td></tr>
+                        <tr><td>Peak Current NC_, NO_, COM_ (50% duty cycle)</td>   <td>±850mA</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2" style="text-align: left;">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>10-Pin TDFN (derate 9.8mW/°C above +70°C)</td>      <td>784mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                    <td>-40°C to +85°C</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>                 <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>
