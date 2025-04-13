@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP27 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP27</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20098</h3>
+                <div class="img">
+                    <img src="Pin_AP27_20098.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>SUP</td>            <td>Supply Input. Bypass SUP with enough capacitors to minimize input ripple.</td></tr>
+                        <tr><td>2</td>      <td>FOSC</td>           <td>Frequency-Setting Input. Connect a resistor to FOSC to set the switching frequency of the DC-DC controller.</td></tr>
+                        <tr><td>3</td>      <td>FSYNC/SYNCOUT</td>  <td>External Clock-Synchronization Input. Synchronization to the controller operating-frequency ratio is <br> 1. See the Electrical Characteristics table for frequency range and the Switching Frequency/ External Synchronization section for additional information. Connect FSYNC to AGND to enable skip mode of operation. Connect to BIAS or an external clock to enable forced-PWM mode of operation. Factory option allows synchronous output to allow controllers to operate in parallel.</td></tr>
+                        <tr><td>4</td>      <td>AGND</td>           <td>Signal Ground for the IC</td></tr>
+                        <tr><td>5</td>      <td>COMP</td>           <td>Buck Controller Error-Amplifier Output. Connect an RC network to COMP to compensate the buck controller.</td></tr>
+                        <tr><td>6</td>      <td>FB</td>             <td>Feedback Input for Buck Controller. Connect FB to BIAS for the fixed output, or to a resistive divider between OUT and AGND to adjust the output voltage between 1V and 10V. In adjustable mode, FB regulates to 1V (typ). See the Setting the Output Voltage section.</td></tr>
+                        <tr><td>7</td>      <td>OUT</td>            <td>Output Sense and Negative Current-Sense Input for Buck Controller. When using the internal preset feedback-divider (FB = BIAS), the controller uses OUT to sense the output voltage. Connect OUT to the negative terminal of the current-sense element. See the Current Limiting and Current- Sense Inputs (OUT and CS) and Current-Sense Measurement sections.</td></tr>
+                        <tr><td>8</td>      <td>CS</td>             <td>Positive Current-Sense Input for Buck Controller. Connect CS to the positive terminal of the current sense element. See the Current Limiting and Current-Sense Inputs (OUT and CS) and Current- Sense Measurement sections.</td></tr>
+                        <tr><td>9</td>      <td>PGOOD</td>          <td>Open-Drain Power-Good Output for Buck Controller. PGOOD is low if OUT is more than 7% (typ) below the normal regulation point. PGOOD asserts low during soft-start and in shutdown. PGOOD becomes high impedance when OUT is in regulation. To obtain a logic signal, pull up PGOOD with an external resistor connected to a positive voltage lower than 5.5V.</td></tr>
+                        <tr><td>10</td>     <td>BIAS</td>           <td>5V Internal Linear Regulator Output. Bypass BIAS to GND with a low-ESR ceramic capacitor of 2.2μF minimum value. BIAS provides the power to the internal circuitry and external loads. See the Fixed 5V Linear Regulator (BIAS) section.</td></tr>
+                        <tr><td>11</td>     <td>PGND</td>           <td>Power Ground for the Controller</td></tr>
+                        <tr><td>12</td>     <td>DL</td>             <td>Low-Side Gate-Driver Output. DL output voltage swings from VPGND to VBIAS.</td></tr>
+                        <tr><td>13</td>     <td>LX</td>             <td>Inductor Connection. Connect LX to the switched side of the inductor. LX serves as the lower supply rail for the DH high-side gate driver.</td></tr>
+                        <tr><td>14</td>     <td>DH</td>             <td>High-Side Gate-Driver Output. DH output voltage swings from VLX to VBST.</td></tr>
+                        <tr><td>15</td>     <td>BST</td>            <td>Boost Flying-Capacitor Connection. Connect a ceramic capacitor between BST and LX. See the High-Side Gate-Driver Supply (BST) section. When the switching frequency is greater than 1MHz, connect a high-voltage Schottky diode between BIAS and BST.</td></tr>
+                        <tr><td>16</td>     <td>EN</td>             <td>High-Voltage Tolerant, Active-High Digital-Enable Input for the Controller</td></tr>
+                        <tr><td>EP</td>     <td>-</td>              <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to PGND and AGND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, EN, LX to PGND </td>                       <td>-0.3V to +42V</td></tr>
+                        <tr><td>OUT to AGND</td>                                <td>-0.3V to +12V</td></tr>
+                        <tr><td>CS to OUT</td>                                  <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BST to LX</td>                                  <td>-0.3V to +6V</td></tr>
+                        <tr><td>FSYNC, FSYNCOUT, FOSC, COMP, FB to AGND</td>    <td>0.3V to to VBIAS + 0.3V</td></tr>
+                        <tr><td>BIAS to AGND</td>                               <td>-0.3V to +6V</td></tr>
+                        <tr><td>PGOOD to AGND</td>                              <td>-0.3V to +6V</td></tr>
+                        <tr><td>DL to PGND</td> <td>-0.3V to to VBIAS + 0.3V</td></tr>
+                        <tr><td>DH to LX</td> <td>-0.3V to to VBST + 0.3V</td></tr>
+                        <tr><td>Template</td> <td>Template</td></tr>
+                        <tr><td>Template</td> <td>Template</td></tr>
+                    </tbody>
+                </table>
+    
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation (TA = +70°C) <br> 
+                            16 SW TQFN (derate 23.09mW/°C above +70°C)</td>     <td>1847mW</td></tr>
+                        <tr><td>Operating Temperature Range</td>                <td>-40ºC to +125ºC</td></tr>
+                        <tr><td>Junction Temperature </td>                      <td>+150ºC</td></tr>
+                        <tr><td>Storage Temperature Range </td>                 <td>-40ºC to +150ºC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>
