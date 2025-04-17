@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP76 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP76</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20048</h3>
+                <div class="img">
+                    <img src="Pin_AP76_20048.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>DL1</td>                <td>Buck Low Side Gate Drive</td></tr>
+                        <tr><td>2</td>      <td>PGND</td>               <td>Power Ground</td></tr>
+                        <tr><td>3</td>      <td>CSN1</td>               <td>Negative Input of the Input Side Current-Sense Amplifier. Connect CSN1 to the negative side of the input current-sense resistor.</td></tr>
+                        <tr><td>4</td>      <td>CSP1</td>               <td>Positive Input of the Input Side Current-Sense Amplifier. Connect CSP1 to the positive side of the input current-sense resistor.</td></tr>
+                        <tr><td>5</td>      <td>IN</td>                 <td>Voltage Supply Input. IN powers up the internal linear regulator. Bypass IN to PGND with a ceramic capacitor as suggested in the Typical Application Circuit.</td></tr>
+                        <tr><td>6</td>      <td>EN</td>                 <td>High-Voltage Enable Input. Driving EN high enables the buck-boost controller.</td></tr>
+                        <tr><td>7</td>      <td>SLP</td>                <td>Slope Compensation for Peak Current Mode Control. Connect a resistor between SLP and AGND to set the desired slope compensation for the current feedback loop.</td></tr>
+                        <tr><td>8</td>      <td>FB</td>                 <td>Feedback Analog Input. Connect an external resistive divider from OUT to FB and AGND to set the desired output voltage. Connect to VCC to set the output voltage to 5V.</td></tr>
+                        <tr><td>9</td>      <td>FSW</td>                <td>Switching Frequency Setting. Connect a resistor between FSW and AGND to set the desired frequency.</td></tr>
+                        <tr><td>10</td>     <td>COMP</td>               <td>Error Amplifier Output. Connect the external compensation network of the feedback loop between COMP and AGND for stable operation.</td></tr>
+                        <tr><td>11</td>     <td>PGOOD</td>              <td>Open-Drain, Power Good Output Indicator. An external pullup is required.</td></tr>
+                        <tr><td>12</td>     <td>FSYNC / SYNCOUT</td>    <td>Connect to AGND or Leave Open to Enable Skip Mode Operation During Light Load. Connect to VCC instead to force fixed-frequency operation during light load. This input pin has a 1MΩ internal pulldown. OTP option for SYNCOUT is available to output 180° out-of-phase clock.</td></tr>
+                        <tr><td>13</td>     <td>OUT</td>                <td>Switching Regulator Voltage Output. Connect recommended capacitor values between OUT and PGND as per the Typical Application Circuit.</td></tr>
+                        <tr><td>14</td>     <td>CSN2</td>               <td>Negative Input of the Output Side Current-Sense Amplifier. Connect CSN2 to the negative side of the output current-sense resistor.</td></tr>
+                        <tr><td>15</td>     <td>CSP2</td>               <td>Positive Input of the Output Side Current-Sense Amplifier. Connect CSP2 to the positive side of the output current-sense resistor.</td></tr>
+                        <tr><td>16</td>     <td>AGND</td>               <td>Analog Ground of the IC. Connect to ground plane reference of the PCB.</td></tr>
+                        <tr><td>17</td>     <td>VCC</td>                <td>Linear Regulator Output. VCC powers up the internal circuitry. Bypass with 4.7μF ceramic capacitor to AGND.</td></tr>
+                        <tr><td>18</td>     <td>DL2</td>                <td>Boost Low-Side Gate Drive</td></tr>
+                        <tr><td>19</td>     <td>BST2</td>               <td>Bootstrap Capacitor for High-Side Driver of the LX2 Node. Connect a 0.1μF capacitor from BST2 to LX2.</td></tr>
+                        <tr><td>20</td>     <td>DH2</td>                <td>Boost High-Side Gate Drive.</td></tr>
+                        <tr><td>21</td>     <td>LX2</td>                <td>OUT to PGND Switching Output Node. High impedance when the part is off. Connect to one of the external inductor terminals.</td></tr>
+                        <tr><td>22</td>     <td>LX1</td>                <td>IN to PGND Switching Input Node. High impedance when the part is off. Connect to the other external inductor terminal.</td></tr>
+                        <tr><td>23</td>     <td>DH1</td>                <td>Buck High-Side Gate Drive.</td></tr>
+                        <tr><td>24</td>     <td>BST1</td>               <td>Bootstrap Capacitor for High-Side Driver of LX1 Node. Connect a 0.1μF capacitor between BST1 and LX1.</td></tr>
+                        <tr><td>-</td>      <td>EP</td>                 <td>Exposed Pad. EP must be connected to the ground plane on the PCB, but it is not a current- carrying path and is needed only for thermal transfer.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN</td>                                 <td>-0.3V to +40V</td></tr>
+                        <tr><td>EN, LX1, CSP1, CSN1</td>                <td>-0.3V to VIN + 0.3V</td></tr>
+                        <tr><td>LX2, OUT, CSP2, CSN2</td>               <td>-0.3V to +30V</td></tr>
+                        <tr><td>CSP_ to CSN_</td>                       <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BST1 to LX1, BST2 to LX2</td>           <td>-0.3V to 6V</td></tr>
+                        <tr><td>BST1, DH1</td>                          <td>-0.3V to 46V</td></tr>
+                        <tr><td>BST2, DH2</td>                          <td>-0.3V to 36V</td></tr>
+                        <tr><td>DH_ to LX_</td>                         <td>-0.3V to VBST__ + 0.3V</td></tr>
+                        <tr><td>VCC, PGOOD</td>                         <td>-0.3V to 6V</td></tr>
+                        <tr><td>DL_, COMP, FB, SLP, FSW, FSYNCH</td>    <td>-0.3V to VCC + 0.3V</td></tr>
+                        <tr><td>PGND_</td>                              <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>OUT/FB Short-Circuit Duration</td>      <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (Multilayer Board)</td></tr>
+                        <tr><td>24L TQFN (TA = +70°C, derate 45 mW/°C above +70°C)</td> <td>2000mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40ºC to +125ºC</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>+150ºC</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>40ºC to +150ºC</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300ºC</td></tr>
+                        <tr><td>Soldering Temperature</td>                  <td>+260ºC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20048</h3>
+                <div class="img">
+                    <img src="Pin_AP76_25431.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>DL1</td>                <td>Buck Low Side Gate Drive</td></tr>
+                        <tr><td>2</td>      <td>PGND</td>               <td>Power Ground</td></tr>
+                        <tr><td>3</td>      <td>CSN1</td>               <td>Negative Input of the Input Side Current-Sense Amplifier. Connect CSN1 to the negative side of the input current-sense resistor.</td></tr>
+                        <tr><td>4</td>      <td>CSP1</td>               <td>Positive Input of the Input Side Current-Sense Amplifier. Connect CSP1 to the positive side of the input current-sense resistor.</td></tr>
+                        <tr><td>5</td>      <td>IN</td>                 <td>Voltage Supply Input. IN powers up the internal linear regulator. Bypass IN to PGND with a ceramic capacitor as suggested in the Typical Application Circuit.</td></tr>
+                        <tr><td>6</td>      <td>EN</td>                 <td>High-Voltage Enable Input. Driving EN high enables the buck-boost controller.</td></tr>
+                        <tr><td>7</td>      <td>SLP</td>                <td>Slope Compensation for Peak Current Mode Control. Connect a resistor between SLP and AGND to set the desired slope compensation for the current feedback loop.</td></tr>
+                        <tr><td>8</td>      <td>FB</td>                 <td>Feedback Analog Input. Connect an external resistive divider from OUT to FB and AGND to set the desired output voltage. Connect to VCC to set the output voltage to 5V.</td></tr>
+                        <tr><td>9</td>      <td>FSW</td>                <td>Switching Frequency Setting. Connect a resistor between FSW and AGND to set the desired frequency.</td></tr>
+                        <tr><td>10</td>     <td>COMP</td>               <td>Error Amplifier Output. Connect the external compensation network of the feedback loop between COMP and AGND for stable operation.</td></tr>
+                        <tr><td>11</td>     <td>PGOOD</td>              <td>Open-Drain, Power Good Output Indicator. An external pullup is required.</td></tr>
+                        <tr><td>12</td>     <td>FSYNC / SYNCOUT</td>    <td>Connect to AGND or Leave Open to Enable Skip Mode Operation During Light Load. Connect to VCC instead to force fixed-frequency operation during light load. This input pin has a 1MΩ internal pulldown. OTP option for SYNCOUT is available to output 180° out-of-phase clock.</td></tr>
+                        <tr><td>13</td>     <td>OUT</td>                <td>Switching Regulator Voltage Output. Connect recommended capacitor values between OUT and PGND as per the Typical Application Circuit.</td></tr>
+                        <tr><td>14</td>     <td>CSN2</td>               <td>Negative Input of the Output Side Current-Sense Amplifier. Connect CSN2 to the negative side of the output current-sense resistor.</td></tr>
+                        <tr><td>15</td>     <td>CSP2</td>               <td>Positive Input of the Output Side Current-Sense Amplifier. Connect CSP2 to the positive side of the output current-sense resistor.</td></tr>
+                        <tr><td>16</td>     <td>AGND</td>               <td>Analog Ground of the IC. Connect to ground plane reference of the PCB.</td></tr>
+                        <tr><td>17</td>     <td>VCC</td>                <td>Linear Regulator Output. VCC powers up the internal circuitry. Bypass with 4.7μF ceramic capacitor to AGND.</td></tr>
+                        <tr><td>18</td>     <td>DL2</td>                <td>Boost Low-Side Gate Drive</td></tr>
+                        <tr><td>19</td>     <td>BST2</td>               <td>Bootstrap Capacitor for High-Side Driver of the LX2 Node. Connect a 0.1μF capacitor from BST2 to LX2.</td></tr>
+                        <tr><td>20</td>     <td>DH2</td>                <td>Boost High-Side Gate Drive.</td></tr>
+                        <tr><td>21</td>     <td>LX2</td>                <td>OUT to PGND Switching Output Node. High impedance when the part is off. Connect to one of the external inductor terminals.</td></tr>
+                        <tr><td>22</td>     <td>LX1</td>                <td>IN to PGND Switching Input Node. High impedance when the part is off. Connect to the other external inductor terminal.</td></tr>
+                        <tr><td>23</td>     <td>DH1</td>                <td>Buck High-Side Gate Drive.</td></tr>
+                        <tr><td>24</td>     <td>BST1</td>               <td>Bootstrap Capacitor for High-Side Driver of LX1 Node. Connect a 0.1μF capacitor between BST1 and LX1.</td></tr>
+                        <tr><td>-</td>      <td>EP</td>                 <td>Exposed Pad. EP must be connected to the ground plane on the PCB, but it is not a current- carrying path and is needed only for thermal transfer.</td></tr>    
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN</td>                                 <td>-0.3V to +40V</td></tr>
+                        <tr><td>EN, LX1, CSP1, CSN1</td>                <td>-0.3V to VIN + 0.3V</td></tr>
+                        <tr><td>LX2, OUT, CSP2, CSN2</td>               <td>-0.3V to +30V</td></tr>
+                        <tr><td>CSP_ to CSN_</td>                       <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BST1 to LX1, BST2 to LX2</td>           <td>-0.3V to 6V</td></tr>
+                        <tr><td>BST1, DH1</td>                          <td>-0.3V to 46V</td></tr>
+                        <tr><td>BST2, DH2</td>                          <td>-0.3V to 36V</td></tr>
+                        <tr><td>DH_ to LX_</td>                         <td>-0.3V to VBST__ + 0.3V</td></tr>
+                        <tr><td>VCC, PGOOD</td>                         <td>-0.3V to 6V</td></tr>
+                        <tr><td>DL_, COMP, FB, SLP, FSW, FSYNCH</td>    <td>-0.3V to VCC + 0.3V</td></tr>
+                        <tr><td>PGND_</td>                              <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>OUT/FB Short-Circuit Duration</td>      <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+                        
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (Multilayer Board)</td></tr>
+                        <tr><td>24L TQFN (TA = +70°C, derate 45 mW/°C above +70°C)</td> <td>1886.6mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40ºC to +125ºC</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>+150ºC</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>40ºC to +150ºC</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300ºC</td></tr>
+                        <tr><td>Soldering Temperature</td>                  <td>+260ºC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

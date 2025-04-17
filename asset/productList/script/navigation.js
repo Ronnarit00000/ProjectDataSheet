@@ -11,7 +11,7 @@ const navigation = createNavigation();
             "AP27", "AP30", "AP32", "AP35", "AP36",
             "AP37", "AP41", "AP54", "AP55", "AP57", 
             "AP58", "AP59", "AP61", "AP66", "AP75", 
-            "AP87" 
+            "AP76", "AP77", "AP87", "AP89", "DE03"
         ]);
 
 search();

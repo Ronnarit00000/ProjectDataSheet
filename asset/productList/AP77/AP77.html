@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP77 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP77</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20094 / MAX20095</h3>
+                <div class="img">
+                    <img src="Pin_AP77_20094&5.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>  <td>SUP1</td>       <td>Input to the CC/CV Charger. Connect a 2.2μF ceramic capacitor from SUP1 to the ground plane.</td></tr>
+                        <tr><td>2</td>  <td>BATTP</td>      <td>Charger Output for the Backup Battery (BUB). BATTP is the current sink for the battery state-of- health (SOH) check. Place a 10μF, 2.2μF, and 0.1μF ceramic capacitor as close as possible to the SUP2 pin. See the PCB Layout Recommendations section for details on trace sizing to BATTP.</td></tr>
+                        <tr><td>3</td>  <td>SNK</td>        <td>Connection for the Source of the External MOSFET (M4) for State-of-Health (SOH) Measurements. The SNK pin sinks the preset current from the BUB to the external MOSFET during SOH measurements.</td></tr>
+                        <tr><td>4</td>  <td>G2</td>         <td>Gate Drive to Turn on the MOSFET (M4) and Sink Current into the IC. This function is controlled by I2C. G2 is not connected when the discharger is disabled. When the discharger is enabled, G2 is driven to BATTP for 62μs (typ) before the circuit starts up.</td></tr>
+                        <tr><td>5</td>  <td>AVI</td>        <td>Analog Voltage Measurement for SNK Current Set During SOH Measurement. There is a 30kΩ pull-down resistor when AVI is disabled.</td></tr>
+                        <tr><td>6</td>  <td>AVB</td>        <td>Analog Battery Voltage-Measurement Output During SOH Measurements. There is a 60kΩ pull- down resistor connected 10μs before the AVB switch is turned off through I2C.</td></tr>
+                        <tr><td>7</td>  <td>STATUSB</td>    <td>STATUSB (Battery Boost) Default Open-Drain Output. Driven to AGND during boost operation due to loss of primary power; otherwise, high impedance.</td></tr>
+                        <tr><td>8</td>  <td>BUBTRIG</td>    <td>STATUSB (Battery Boost) Default Open-Drain Output. Driven to AGND during boost operation due to loss of primary power; otherwise, high impedance.</td></tr>
+                        <tr><td>9</td>  <td>EN1B</td>       <td>Charger Disable. EN1B is connected to ground during normal operation. If pulled high, the charger is disabled, regardless of the I2C register setting.</td></tr>
+                        <tr><td>10</td> <td>VDDIO</td>      <td>I2C Logic Interface Supply Voltage, 2.5V to 5.5V. Connect to the I2C bus supply.</td></tr>
+                        <tr><td>11</td> <td>SDA</td>        <td>I2C Data Signal</td></tr>
+                        <tr><td>12</td> <td>SCL</td>        <td>I2C Clock Input</td></tr>
+                        <tr><td>13</td> <td>N.C.</td>       <td>Connect to GND in the Application</td></tr>
+                        <tr><td>14</td> <td>G1</td>         <td>High-Side p-Channel MOSFET (M3) Driver. There is a 188kΩ resistor between G1 and SG1.</td></tr>
+                        <tr><td>15</td> <td>SG1</td>        <td>Source of the External p-Channel MOSFET (M3). SG1 and G1 control the gate drive of external MOSFET M3.</td></tr>
+                        <tr><td>16</td> <td>SUP2</td>       <td>System Supply Voltage Input. High-voltage-tolerant input to the LDO, which generates 5V supply for the IC. Connect a resistor and capacitor filter from the battery-filtered rail and SUP2</td></tr>
+                        <tr><td>17</td> <td>PGND</td>       <td>Power Ground Pin. Connect directly to the PCB ground plane.</td></tr>
+                        <tr><td>18</td> <td>DL</td>         <td>Low-Side MOSFET Driver Output. Connect to the gate of the boost converter's low-side MOSFET.</td></tr>
+                        <tr><td>19</td> <td>DH</td>         <td>High-Side MOSFET Driver Output. Connect to the boost converter's high-side MOSFET.</td></tr>
+                        <tr><td>20</td> <td>LX</td>         <td>Switching Node of DC-DC Controller</td></tr>
+                        <tr><td>21</td> <td>BST</td>        <td>Boosted Supply Voltage for the High-Side Sync MOSFET Gate Drive</td></tr>
+                        <tr><td>22</td> <td>CSN</td>        <td>Current-Sense Resistor, Inductor-Side Sense Point. Connect CSN as close as possible to the current-sense resistor terminal.</td></tr>
+                        <tr><td>23</td> <td>CSP</td>        <td>Current-Sense Resistor Input Pin. Connect CSP as close as possible to the current-sense resistor for accurate current sensing.</td></tr>
+                        <tr><td>24</td> <td>COMP</td>       <td>Loop-Compensation Component Connection Pin. COMP is the output of the internal gm amplifier. Connect a resistor in series with a capacitor to the AGND pin. The component values are selected according to the data sheet recommendations.</td></tr>
+                        <tr><td>25</td> <td>IMON</td>       <td>Connect IMON to GND with a 500Ω Resistor. VIMON = (ICHG/440) x 500Ω. <br><br> Max RIMON = (VBATTP(MIN) - 0.25)/(0.0025ICHG) - 200.</td></tr>
+                        <tr><td>26</td> <td>BIAS</td>       <td>Supply Pin for the Internal IC Circuits. This pin should be decoupled with a 2.2μF capacitor. BIAS is the output of the LDO connected to the VSUP_ pin, and is used to supply the internal circuitry with 5V.</td></tr>
+                        <tr><td>27</td> <td>AGND</td>       <td>Analog Ground. Low-noise ground for precision circuit blocks.</td></tr>
+                        <tr><td>28</td> <td>BATTS</td>      <td>Battery Voltage-Sensing Input. Senses the battery voltage for the voltage-feedback loop and routes to the internal analog switch. Connect BATTS as close as possible to the battery's positive terminal for the most accurate voltage sensing of the battery.</td></tr>
+                        <tr><td>-</td>  <td>EP</td>         <td>Exposed Pad</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP2, DH, LX, SG1, CSP, CSN to PGND</td>        <td>-0.3V to +40V</td></tr>
+                        <tr><td>G1 to SG1</td>                                  <td>-7.0V to +0.3V</td></tr>
+                        <tr><td>BST to LX</td>                                  <td>-0.3V to +6V</td></tr>
+                        <tr><td>CSP to CSN</td>                                 <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>AVI, BUBTRIG, DL, <br> COMP, IMON to AGND</td>  <td>-0.3V to VBIAS + 0.3V</td></tr>
+                        <tr><td>SCL, SDA to AGND</td>                           <td>-0.3V to VDDIO + 0.3V</td></tr>
+                        <tr><td>PGND to AGND</td>                               <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>EN1B, BIAS, VDDIO, STATUSB to AGND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>BATTP, SNK, BATTS, SUP1 to AGND</td>            <td>-0.3V to +7.0V</td></tr>
+                        <tr><td>AVB to AGND</td>                                <td>-0.3V to VBATTS + 0.3V</td></tr>
+                        <tr><td>G2 to BATTP</td>                                <td>-6.0V to +0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>                <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range </td>                 <td>-40°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                        <tr><td>ESD Protection - Human Body Mode</td>           <td>±2kV</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>
