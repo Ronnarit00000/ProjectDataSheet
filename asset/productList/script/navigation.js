@@ -8,7 +8,10 @@ const navigation = createNavigation();
             "AE27", "AE28", "AE29", "AE31", "AE32",
             "AE33", "AE34", "AE37", "AE40", "AE43",
             "AK82", "AK83", "AL45", "AL50", "AL68",
-            "AP27", "AP30", "AP32", "AP35", "AP87" 
+            "AP27", "AP30", "AP32", "AP35", "AP36",
+            "AP37", "AP41", "AP54", "AP55", "AP57", 
+            "AP58", "AP59", "AP61", "AP66", "AP75", 
+            "AP87" 
         ]);
 
 search();
@@ -22,7 +25,7 @@ function createNavigation(){
 
     return {
         createProductWrapper(){
-            // 
+        
             // create form for search product and product-wrapper
             // <!-- form -->
             // <form formData = "form" class="form">
@@ -30,13 +33,11 @@ function createNavigation(){
             //      <button type="submit"><img src="${imgPath}search-icon.png" alt="search-icon"></button>
             //      <small></small>
             //  </form>
-            // 
             //   <!-- product-wrapper -->
             //  <div class="link-wrapper">
             //      <small class="result" show-result="result"></small>
             //      <div class="auto-fill" nav-list-wrapper="all-list"></div>
-            //  </div>`;
-            //
+            //  </div>
 
             navigation.innerHTML = `
                 <!-- form -->

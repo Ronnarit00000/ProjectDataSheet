@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP55 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP55</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX16935 / MAX16939 TQFN</h3>
+                <div class="img">
+                    <img src="Pin_AP55_16935&39TQFN.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>16</td>     <td>SYNCOUT</td>    <td>Open-Drain Clock Output. SYNCOUT outputs 180N out-of-phase signal relative to the internal oscillator. Connect to OUT with a resistor between 100I and 1kW for 2MHz operation. For low frequency operation, use a resistor between 1kW and 10kW.</td></tr>
+                        <tr><td>1</td>      <td>FSYNC</td>      <td>Synchronization Input. The device synchronizes to an external signal applied to FSYNC. Connect FSYNC to AGND to enable skip mode operation. Connect to BIAS or to an external clock to enable fixed-frequency forced PWM mode operation.</td></tr>
+                        <tr><td>2</td>      <td>FOSC</td>       <td>Resistor-Programmable Switching Frequency Setting Control Input. Connect a resistor from FOSC to AGND to set the switching frequency.</td></tr>
+                        <tr><td>3</td>      <td>OUT</td>        <td>Switching Regulator Output. OUT also provides power to the internal circuitry when the output voltage of the converter is set between 3V to 5V during standby mode.</td></tr>
+                        <tr><td>4</td>      <td>FB</td>         <td>Feedback Input. Connect an external resistive divider from OUT to FB and AGND to set the output voltage. Connect to BIAS to set the output voltage to 5V.</td></tr>
+                        <tr><td>5</td>      <td>COMP</td>       <td>Error Amplifier Output. Connect an RC network from COMP to AGND for stable operation. See the Compensation Network section for more information.</td></tr>
+                        <tr><td>6</td>      <td>BIAS</td>       <td>Linear Regulator Output. BIAS powers up the internal circuitry. Bypass with a 1FF capacitor to ground.</td></tr>
+                        <tr><td>7</td>      <td>AGND</td>       <td>Analog Ground</td></tr>
+                        <tr><td>8</td>      <td>BST</td>        <td>High-Side Driver Supply. Connect a 0.1FF capacitor between LX and BST for proper operation.</td></tr>
+                        <tr><td>9</td>      <td>EN</td>         <td>SUP Voltage Compatible Enable Input. Drive EN low to disable the device. Drive EN high to enable the device.</td></tr>
+                        <tr><td>10</td>     <td>SUP</td>        <td>Voltage Supply Input. SUP powers up the internal linear regulator. Bypass SUP to PGND with a 4.7FF ceramic capacitor. It is recommended to add a placeholder for an RC filter to reduce noise on the internal logic supply</td></tr>
+                        <tr><td>11</td>     <td>SUPSW</td>      <td>Internal High-Side Switch Supply Input. SUPSW provides power to the internal switch. Bypass SUPSW to PGND with 0.1FF and 4.7FF ceramic capacitors.</td></tr>
+                        <tr><td>12,13</td>  <td>LX</td>         <td>Inductor Switching Node. Connect a Schottky diode between LX and AGND.</td></tr>
+                        <tr><td>14</td>     <td>PGND</td>       <td>Power Ground</td></tr>
+                        <tr><td>15</td>     <td>PGOOD</td>      <td>Open-Drain, Active-Low Power-Good Output. PGOOD asserts when VOUT is above 95% regulation point. PGOOD goes low when VOUT is below 92% regulation point.</td></tr>
+                        <tr><td>-</td>      <td>EP</td>         <td>Exposed Pad. Connect EP to a large-area contiguous copper ground plane for effective power dissipation. Do not use as the only IC ground connection. EP must be connected to PGND.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, SUPSW, EN to PGND</td>                             <td>-0.3V to +42V</td></tr>
+                        <tr><td>LX</td>                                                 <td>-0.3V to +42V</td></tr>
+                        <tr><td>SUP to SUPSW</td>                                       <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BIAS to AGND</td>                                       <td>-0.3V to +6V</td></tr>
+                        <tr><td>SYNCOUT, FOSC, COMP, FSYNC,<br>PGOOD, FB to AGND</td>   <td>-0.3V to (VBIAS + 0.3V)</td></tr>
+                        <tr><td>OUT to PGND</td>                                        <td>-0.3V to +12V</td></tr>
+                        <tr><td>BST to LX</td>                                          <td>-0.3V to +6V</td></tr>
+                        <tr><td>AGND to PGND</td>                                       <td>-0.3V to + 0.3V</td></tr>
+                        <tr><td>LX Continuous RMS Current</td>                          <td>3.5A</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>                      <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70NC)</td></tr>
+                        <tr><td>TQFN (derate 28.6mW/NC above +70NC)</td>               <td>2285.7mW</td></tr>
+                        <tr><td>TSSOP (derate 26.1mW/NC above +70NC)</td>              <td>2088.8mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>                    <td>-40NC to +125NC</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>template</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65NC to +150NC</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>              <td>+300NC</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>                 <td>+260NC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+        
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX16935 / MAX16939 TSSOP</h3>
+                <div class="img">
+                    <img src="Pin_AP55_16935&39TSSOP.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>     <td>SYNCOUT</td>    <td>Open-Drain Clock Output. SYNCOUT outputs 180N out-of-phase signal relative to the internal oscillator. Connect to OUT with a resistor between 100I and 1kW for 2MHz operation. For low frequency operation, use a resistor between 1kW and 10kW.</td></tr>
+                        <tr><td>2</td>      <td>FSYNC</td>      <td>Synchronization Input. The device synchronizes to an external signal applied to FSYNC. Connect FSYNC to AGND to enable skip mode operation. Connect to BIAS or to an external clock to enable fixed-frequency forced PWM mode operation.</td></tr>
+                        <tr><td>3</td>      <td>FOSC</td>       <td>Resistor-Programmable Switching Frequency Setting Control Input. Connect a resistor from FOSC to AGND to set the switching frequency.</td></tr>
+                        <tr><td>4</td>      <td>OUT</td>        <td>Switching Regulator Output. OUT also provides power to the internal circuitry when the output voltage of the converter is set between 3V to 5V during standby mode.</td></tr>
+                        <tr><td>5</td>      <td>FB</td>         <td>Feedback Input. Connect an external resistive divider from OUT to FB and AGND to set the output voltage. Connect to BIAS to set the output voltage to 5V.</td></tr>
+                        <tr><td>6</td>      <td>COMP</td>       <td>Error Amplifier Output. Connect an RC network from COMP to AGND for stable operation. See the Compensation Network section for more information.</td></tr>
+                        <tr><td>7</td>      <td>BIAS</td>       <td>Linear Regulator Output. BIAS powers up the internal circuitry. Bypass with a 1FF capacitor to ground.</td></tr>
+                        <tr><td>8</td>      <td>AGND</td>       <td>Analog Ground</td></tr>
+                        <tr><td>9</td>      <td>BST</td>        <td>High-Side Driver Supply. Connect a 0.1FF capacitor between LX and BST for proper operation.</td></tr>
+                        <tr><td>10</td>      <td>EN</td>         <td>SUP Voltage Compatible Enable Input. Drive EN low to disable the device. Drive EN high to enable the device.</td></tr>
+                        <tr><td>11</td>     <td>SUP</td>        <td>Voltage Supply Input. SUP powers up the internal linear regulator. Bypass SUP to PGND with a 4.7FF ceramic capacitor. It is recommended to add a placeholder for an RC filter to reduce noise on the internal logic supply</td></tr>
+                        <tr><td>12</td>     <td>SUPSW</td>      <td>Internal High-Side Switch Supply Input. SUPSW provides power to the internal switch. Bypass SUPSW to PGND with 0.1FF and 4.7FF ceramic capacitors.</td></tr>
+                        <tr><td>13,14</td>  <td>LX</td>         <td>Inductor Switching Node. Connect a Schottky diode between LX and AGND.</td></tr>
+                        <tr><td>15</td>     <td>PGND</td>       <td>Power Ground</td></tr>
+                        <tr><td>16</td>     <td>PGOOD</td>      <td>Open-Drain, Active-Low Power-Good Output. PGOOD asserts when VOUT is above 95% regulation point. PGOOD goes low when VOUT is below 92% regulation point.</td></tr>
+                        <tr><td>-</td>      <td>EP</td>         <td>Exposed Pad. Connect EP to a large-area contiguous copper ground plane for effective power dissipation. Do not use as the only IC ground connection. EP must be connected to PGND.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP, SUPSW, EN to PGND</td>                             <td>-0.3V to +42V</td></tr>
+                        <tr><td>LX</td>                                                 <td>-0.3V to +42V</td></tr>
+                        <tr><td>SUP to SUPSW</td>                                       <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BIAS to AGND</td>                                       <td>-0.3V to +6V</td></tr>
+                        <tr><td>SYNCOUT, FOSC, COMP, FSYNC,<br>PGOOD, FB to AGND</td>   <td>-0.3V to (VBIAS + 0.3V)</td></tr>
+                        <tr><td>OUT to PGND</td>                                        <td>-0.3V to +12V</td></tr>
+                        <tr><td>BST to LX</td>                                          <td>-0.3V to +6V</td></tr>
+                        <tr><td>AGND to PGND</td>                                       <td>-0.3V to + 0.3V</td></tr>
+                        <tr><td>LX Continuous RMS Current</td>                          <td>3.5A</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>                      <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70NC)</td></tr>
+                        <tr><td>TQFN (derate 28.6mW/NC above +70NC)</td>               <td>2285.7mW</td></tr>
+                        <tr><td>TSSOP (derate 26.1mW/NC above +70NC)</td>              <td>2088.8mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>                    <td>-40NC to +125NC</td></tr>
+                        <tr><td>Junction Temperature</td>                           <td>template</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65NC to +150NC</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>              <td>+300NC</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>                 <td>+260NC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>     
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

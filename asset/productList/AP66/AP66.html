@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP66 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP66</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section>  
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20039 / MAX20040</h3>
+                <div class="img">
+                    <img src="Pin_AE13.png" alt="product AE13">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td> <td>PGND2</td> <td>Ground Reference for the Boost Low-Side Integrated FETs</td></tr>
+                        <tr><td>2</td> <td>LX1</td> <td>IN to PGND Switching Node</td></tr>
+                        <tr><td>3</td> <td>BST1</td> <td>Bootstrap Capacitor for High-Side Driver of LX1 Node. Connect a 100nF capacitor between BST1 and LX1.</td></tr>
+                        <tr><td>4</td> <td>VCC</td> <td>Linear Regulator Output. VCC powers up the internal circuitry. Bypass with 2.2μF ceramic capacitor to AGND.</td></tr>
+                        <tr><td>5</td> <td>AGND1</td> <td>Analog Ground of the IC. Connect to ground-plane reference of the PCB.</td></tr>
+                        <tr><td>6</td> <td>COMP</td> <td>External Compensation. Connect the External Compensation Network of the Loop.</td></tr>
+                        <tr><td>7</td> <td>SPS</td> <td>Spread-Spectrum Enable/Disable Pin. Pull high for spread spectrum on and low for spread spectrum off.</td></tr>
+                        <tr><td>8</td> <td>PGOOD</td> <td>Open-Drain Output, Active-High Power-Good Indicator. PGOOD asserts when VOUT is above 96% of regulation point. PGOOD goes low when VOUT is below 93% of regulation point.</td></tr>
+                        <tr><td>9</td> <td>FSW</td> <td>Internal-Oscillator Pin for Setting the Switching-Frequency. Connect a resistor to ground to set the desired frequency.</td></tr>
+                        <tr><td>10</td> <td>FB</td> <td>Feedback Analog Input. Connect an external resistive divider from OUT to FB and AGND to set the desired output voltage. Connect to VCC to set the output voltage to 5V.</td></tr>
+                        <tr><td>11</td> <td>FSYNC</td> <td>Synchronization Input. Connect to AGND to enable skip mode of operation during light load. Connect to VCC to force PWM mode during light-load operation. FSYNC has a 1MΩ internal pull-down.</td></tr>
+                        <tr><td>12</td> <td>AGND2</td> <td>Analog Ground Reference</td></tr>
+                        <tr><td>13</td> <td>IN</td> <td>Voltage-Supply Input. IN powers the internal voltage regulator. Bypass IN to PGND with a 4.7μF (min) ceramic capacitor.</td></tr>
+                        <tr><td>14</td> <td>PGND1</td> <td>Ground Reference for the Buck Low-Side Integrated FETs</td></tr>
+                        <tr><td>15</td> <td>OUT</td> <td>Switching-Regulator Voltage Output</td></tr>
+                        <tr><td>16</td> <td>OUT_S</td> <td>Regulator Voltage-Sense Input</td></tr>
+                        <tr><td>17</td> <td>EN</td> <td>High Voltage-Enable Input</td></tr>
+                        <tr><td>18</td> <td>N.C.</td> <td>No Connection. Not internally connected to any circuitry.</td></tr>
+                        <tr><td>19</td> <td>LX2</td> <td>OUT to PGND Switching Output Node</td></tr>
+                        <tr><td>20</td> <td>BST2</td> <td>Bootstrap Capacitor for High-Side Driver of the LX2 Node. Connect a 100nF from BST2 to LX2.</td></tr>
+                        <tr><td>-</td> <td>EP</td> <td>Exposed Pad</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN</td>                         <td>-0.3V to +40V</td></tr>
+                        <tr><td>EN, LX1</td>                    <td>-0.3V to VIN + 0.3V</td></tr>
+                        <tr><td>LX2 and OUT_S</td>              <td>-0.3V VOUT + 0.3V</td></tr>
+                        <tr><td>OUT</td>                        <td>-0.3 to +18V</td></tr>
+                        <tr><td>BST1 to LX1, BST2 to LX2</td>   <td>-0.3v to +5v</td></tr>
+                        <tr><td>VCC, PGOOD, SPS, FSYNC</td>     <td>-0.3V to +6V</td></tr>
+                        <tr><td>COMP, FB,FSW</td>               <td>-0.3V to VCC +0.3V</td></tr>
+                        <tr><td>PGND_</td>                      <td>-0.3V to +0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Continuous Power Dissipation (Four-Layer Board)<br>
+                            20-pin SWTQFN, TA = +70°C (derate 30.3 mW/°C above +70°C)</td>  <td>2424mV</td></tr>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>         <td>+260°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

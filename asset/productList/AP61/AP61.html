@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP61 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP61</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20073 / MAX20074</h3>
+                <div class="img">
+                    <img src="Pin_AP61_20073&4.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>RESET</td>     <td>Active-Low Open-Drain RESET Output. External pull-up resistor required if used.</td></tr>
+                        <tr><td>2</td>      <td>SSEN</td>      <td>Spread-Spectrum Enable. Drive SSEN high for spread-spectrum operation.</td></tr>
+                        <tr><td>3</td>      <td>AV</td>        <td>Analog Voltage Supply. Connect a 1.0μF ceramic capacitor from AV to GND. Connect AV to PV with a 10Ω resistor.</td></tr>
+                        <tr><td>4</td>      <td>GND</td>       <td>Analog Ground</td></tr>
+                        <tr><td>5</td>      <td>SYNC</td>      <td>SYNC I/O. When configured as an input, connect SYNC to GND or leave unconnected to enable skip mode operation under light loads. Connect SYNC to AV or an external clock to enable fixed-frequency FPWM mode operation. When configured as an output, connect SYNC to other device’s SYNC inputs.</td></tr>
+                        <tr><td>6</td>      <td>PGND</td>      <td>Power Ground</td></tr>
+                        <tr><td>7</td>      <td>LX</td>        <td>Inductor Connection. Connect LX to the switched side of the inductor.</td></tr>
+                        <tr><td>8</td>      <td>PV</td>        <td>Power Input-Voltage Supply. Connect a 4.7μF or larger ceramic capacitor from PV to PGND.</td></tr>
+                        <tr><td>9</td>      <td>OUT</td>       <td>Feedback Input. Connect an external resistive divider from the converter’s output to OUT and GND to set the output voltage. Connect to the output capacitor when configured as a fixed-output device.</td></tr>
+                        <tr><td>10</td>     <td>EN</td>        <td>Active-High Enable Input. Drive EN high for normal operation. On the rising edge, the device enters soft-  start; on the falling edge, the device turns off.</td></tr>
+                        <tr><td>-</td>      <td>EP</td>        <td>Exposed Pad. Internally connected to GND. Connect to a large ground plane to maximize thermal performance. Not intended as an electrical connection point.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>PV to PGND</td>                     <td>-0.3V to +6V</td></tr>
+                        <tr><td>AV to GND</td>                      <td>-0.3V to +6V</td></tr>
+                        <tr><td>RESET, OUT to GND</td>              <td>-0.3V to +6V</td></tr>
+                        <tr><td>SYNC, EN, SSEN to GND</td>          <td>-0.3V to PV+0.3V</td></tr>
+                        <tr><td>GND to PGND</td>                    <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>LX Continuous RMS Current</td>      <td>4A</td></tr>
+                        <tr><td>LX to PGND</td>                     <td>-0.3V to PV+0.3V</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>  <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>10-pin TDFN-EP(derate 24.4mW/°C > 70°C)</td>    <td>1951mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>. +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-40°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature Range</td>                 <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+</body>
+</html>

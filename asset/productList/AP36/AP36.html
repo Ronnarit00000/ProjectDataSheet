@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP36 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP36</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX16956</h3>
+                <div class="img">
+                    <img src="Pin_AP36_16956.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>BST</td>    <td>High-Side Driver Supply. Connect a 0.1μF bootstrap capacitor between LX and BST.</td></tr>
+                        <tr><td>2</td>      <td>SUP</td>    <td>IC Supply Input. Connect a minimum of 4.7μF ceramic capacitor from SUP to PGND.</td></tr>
+                        <tr><td>3</td>      <td>LX</td>     <td>Buck Switching Node. LX is high impedance when the device is off.</td></tr>
+                        <tr><td>4</td>      <td>PGND</td>   <td>Power Ground. Connect to AGND under the device in a star configuration.</td></tr>
+                        <tr><td>5</td>      <td>AGND</td>   <td>Analog Ground. Connect to PGND under the device in a star configuration.</td></tr>
+                        <tr><td>6</td>      <td>RESET</td>  <td>Open-Drain Reset Output. An external pullup resistor is required.</td></tr>
+                        <tr><td>7</td>      <td>MODE</td>   <td>Mode Switch-Control Input. Connect to ground or leave open to enable skip-mode operation under light loads. Connect to BIAS to enable forced-PWM mode. MODE has a 1MΩ internal pulldown.</td></tr>
+                        <tr><td>8</td>      <td>BIAS</td>   <td>5V Internal Logic Supply. Connect a 1μF ceramic capacitor to AGND.</td></tr>
+                        <tr><td>9</td>      <td>OUT/FB</td> <td>MAX16956A/B/D/E (Fixed Output): Buck Regulator Voltage-Sense Input. Bypass OUT to PGNDwith a minimum 22μF X7R ceramic capacitor.<br><br> MAX16956C/F (Adjustable Output): Feedback Input. Connect FB to a resistive divider between the buck output and AGND to set the output voltage.</td></tr>
+                        <tr><td>10</td>     <td>EN</td>     <td>SUP Voltage-Compatible Enable Input. Drive EN low to disable the device. Drive EN high to enable the device.</td></tr>
+                        <tr><td>-</td>      <td>EP</td>     <td>Exposed Pad. Connect EP to a large copper ground plane for effective power dissipation. Do not use EP as the only IC ground connection. EP must be connected to PGND.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP</td>                            <td>-0.3V to +42V</td></tr>
+                        <tr><td>EN</td>                             <td>-0.3V to VSUP + 0.3V</td></tr>
+                        <tr><td>BST to LX</td>                      <td>+6V</td></tr>
+                        <tr><td>BST</td>                            <td>-0.3V to +47V</td></tr>
+                        <tr><td>MODE, OUT/FB, RESET</td>            <td>-0.3V to VBIAS + 0.3V</td></tr>
+                        <tr><td>AGND</td>                           <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BIAS</td>                           <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>OUT/FB Short-Circuit Duration</td>  <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>(derate 12.9mW/ºC above +70°C)</td>         <td>1031mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range </td>             <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s) </td>     <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>         <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

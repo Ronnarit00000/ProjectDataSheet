@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP41 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP41</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20034</h3>
+                <div class="img">
+                    <img src="Pin_AP41_20034.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>  <td>LX1</td>            <td>Inductor Connection for Buck 1. Connect LX1 to the switched side of the inductor. LX1 serves as the lower supply rail for the DH1 high-side gate driver.</td></tr>
+                        <tr><td>2</td>  <td>DL1 </td>           <td>Low-Side Gate-Driver Output for Buck 1. DL1 output voltage swings from VPGND1 to VBIAS.</td></tr>
+                        <tr><td>3</td>  <td>PGND1</td>          <td>Power Ground for Buck 1</td></tr>
+                        <tr><td>4</td>  <td>CS1</td>            <td>Positive Current-Sense Input for Buck 1. Connect CS1 to the positive terminal of the current-sense element. See the Current Limiting and Current-Sense Inputs (OUT_ and CS_) and Current-Sense Measurement sections.</td></tr>
+                        <tr><td>5</td>  <td>OUT1</td>           <td>Output Sense and Negative Current-Sense Input for Buck 1. When using the internal preset 5V feedback-divider (FB1 = BIAS), the controller uses OUT1 to sense the output voltage. Connect OUT1 to the negative terminal of the current-sense element. See the Current Limiting and Current- Sense Inputs (OUT_ and CS_) and Current-Sense Measurement sections.</td></tr>
+                        <tr><td>6</td>  <td>FB1</td>            <td>Feedback Input for Buck 1. Connect FB1 to BIAS for the 5V fixed output or to a resistive divider between OUT1 and AGND to adjust the output voltage between 1V and 10V. In adjustable version, FB1 regulates to 1V (typ). See the Setting the Output Voltage in Buck Converters section.</td></tr>
+                        <tr><td>7</td>  <td>COMP1</td>          <td>Buck 1 Error-Amplifier Output. Connect an RC network to COMP1 to compensate.</td></tr>
+                        <tr><td>8</td>  <td>BIAS</td>           <td>5V Internal Linear Regulator Output. Bypass BIAS to PGND with a low-ESR ceramic capacitor of 6.8µF minimum value. BIAS provides the power to the internal circuitry and external loads. See the Fixed 5V Linear Regulator (BIAS) section.</td></tr>
+                        <tr><td>9</td>  <td>AGND</td>           <td>Signal Ground for IC</td></tr>
+                        <tr><td>10</td> <td>EXTVCC</td>         <td>Switchover Comparator Input. Connect a voltage between 3.25V and 5.5V to EXTVCC to power the IC and bypass the internal bias LDO.</td></tr>
+                        <tr><td>11</td> <td>IN</td>             <td>Supply Input. Bypass IN with enough capacitors to supply the two out-of-phase buck converters.</td></tr>
+                        <tr><td>12</td> <td>PGOOD1</td>         <td>Open-Drain Power-Good Output for Buck 1. PGOOD1 is low if OUT1 is more than 92% (typ) below the normal regulation point. PGOOD1 asserts low during soft-start and in shutdown. PGOOD1 becomes high impedance when OUT1 is in regulation. To obtain a logic signal, pull PGOOD1 up with an external resistor connected to a positive voltage lower than 5.5V.</td></tr>
+                        <tr><td>13</td> <td>PGOOD2</td>         <td>Open-Drain Power-Good Output for Buck 2. PGOOD2 is low if OUT2 is more than 92% (typ) below the normal regulation point. PGOOD2 asserts low during soft-start and in shutdown. PGOOD2 becomes high impedance when OUT2 is in regulation. To obtain a logic signal, pull PGOOD2 up with an external resistor connected to a positive voltage lower than 5.5V.</td></tr>
+                        <tr><td>14</td> <td>FSYNC</td>          <td>External Clock-Synchronization Input. Synchronization to the controller operating-frequency ratio is 1. See the Switching Frequency/External Synchronization section. For FSYNC high, and TON < TON,MIN, ensure there is at least 50μA (including the resistor-divider current on VOUT1,2) of load current if VBIAS - VOUT > 1.3V.</td></tr>
+                        <tr><td>15</td> <td>FOSC</td>           <td>Frequency-Setting Input. Connect a resistor from FOSC to AGND to set the switching frequency of the DC-DC converters.</td></tr>
+                        <tr><td>16</td> <td>COMP2</td>          <td>Buck 2 Error-Amplifier Output. Connect an RC network to COMP2 to compensate buck converter 2.</td></tr>
+                        <tr><td>17</td> <td>FB2</td>            <td>Feedback Input for Buck 2. Connect FB2 to BIAS for the 3.3V fixed output or to a resistive divider between OUT2 and AGND to adjust the output voltage between 1V and 10V. In adjustable version, FB2 regulates to 1V (typ). See the Setting the Output Voltage in Buck Converters section.</td></tr>
+                        <tr><td>18</td> <td>OUT2</td>           <td>Output Sense and Negative Current-Sense Input for Buck 2. When using the internal preset 3.3V feedback-divider (FB2 = BIAS), the buck uses OUT2 to sense the output voltage. Connect OUT2 to the negative terminal of the current-sense element. See the Current Limiting and Current-Sense Inputs (OUT_ and CS_) and Current-Sense Measurement sections.</td></tr>
+                        <tr><td>19</td> <td>CS2</td>            <td>Positive Current-Sense Input for Buck 2. Connect CS2 to the positive terminal of the current-sense element. See Current Limiting and Current-Sense Inputs (OUT_ and CS_) and Current-Sense Measurement sections.</td></tr>
+                        <tr><td>20</td> <td>PGND2</td>          <td>Power Ground for Buck 2</td></tr>
+                        <tr><td>21</td> <td>DL2</td>            <td>Low-Side Gate-Driver Output for Buck 2. DL2 output voltage swings from VPGND2 to VBIAS.</td></tr>
+                        <tr><td>22</td> <td>LX2</td>            <td>Inductor Connection for Buck 2. Connect LX2 to the switched side of the inductor. LX2 serves as the lower supply rail for the DH2 high-side gate driver.</td></tr>
+                        <tr><td>23</td> <td>DH2</td>            <td>High-Side Gate-Driver Output for Buck 2. DH2 output voltage swings from VLX2 to VBST2.</td></tr>
+                        <tr><td>24</td> <td>BST2</td>           <td>Boost Flying-Capacitor Connection for High-Side Gate Voltage of Buck 2. Connect a high-voltage diode between BIAS and BST2. Connect a ceramic capacitor between BST2 and LX2. See the High-Side Gate-Driver Supply (BST_) section.</td></tr>
+                        <tr><td>25</td> <td>EN2</td>            <td>High-Voltage-Tolerant, Active-High Digital Enable Input for Buck 2. Driving EN2 high enables Buck 2.</td></tr>
+                        <tr><td>26</td> <td>EN1</td>            <td>High-Voltage-Tolerant, Active-High Digital Enable Input for Buck 1. Driving EN1 high enables Buck 1.</td></tr>
+                        <tr><td>27</td> <td>BST1</td>           <td>Boost Flying-Capacitor Connection for High-Side Gate Voltage of Buck 1. Connect a high-voltage diode between BIAS and BST2. Connect a ceramic capacitor between BST1 and LX1. See the High-Side Gate-Driver Supply (BST_) section.</td></tr>
+                        <tr><td>28</td> <td>DH1</td>            <td>High-Side Gate-Driver Output for Buck 2. DH1 output voltage swings from VLX1 to VBST1.</td></tr>
+                        <tr><td>-</td>  <td>EP</td>             <td>Exposed Pad. Connect EP to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to PGND1, PGND2, and AGND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN, EN1, EN2, LX_ to PGND</td>                      <td>-0.3V to +42V</td></tr>
+                        <tr><td>OUT1, OUT2 to AGND</td>                             <td>-0.3V to +12V</td></tr>
+                        <tr><td>CS1 to OUT1</td>                                    <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>CS2 to OUT2</td>                                    <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BIAS, FSYNC, PGOOD_, FB_,<br>EXTVCC to AGND.</td>   <td>-0.3V to +6V</td></tr>
+                        <tr><td>COMP_, FOSC to PGND_</td>                           <td>-0.3V to VBIAS + 0.3V</td></tr>
+                        <tr><td>DL_ to PGND_</td>                                   <td>-0.3V to VBIAS + 0.3V</td></tr>
+                        <tr><td>BST_ to LX_</td>                                    <td>-0.3V to +6V</td></tr>
+                        <tr><td>DH_ to LX_</td>                                     <td>-0.3V to VBST_ + 0.3V</td></tr>
+                        <tr><td>PGND_ to AGND</td>                                  <td>-0.3V to +0.3V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>28 TQFN (derate 37mW/°C above +70°C)</td>           <td>2285mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range.</td>               <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                       <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                  <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>          <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>             <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

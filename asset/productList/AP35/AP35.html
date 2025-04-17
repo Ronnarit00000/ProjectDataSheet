@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP35 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP35</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX16984</h3>
+                <div class="img">
+                    <img src="Pin_AP35_16984.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>FAULT</td>      <td>Active-Low Open-Drain Fault Indicator Output. Connect a 100kΩ pullup resistor to IN.</td></tr>
+                        <tr><td>2</td>      <td>SYNC</td>       <td>Synchronization Input. The device synchronizes to an external signal applied to SYNC. When connected to GND or unconnected, skip mode is allowed under light loads. See Table 1. When connected to a clock source or IN, forced-PWM (FPWM) mode is enabled.</td></tr>
+                        <tr><td>3</td>      <td>FOSC</td>       <td>Resistor-Programmable Switching-Frequency Setting Control Input. Connect a resistor from FOSC to GND to set the switching frequency.</td></tr>
+                        <tr><td>4</td>      <td>CD0</td>        <td>Charger Detection Configuration Bit 0</td></tr>
+                        <tr><td>5</td>      <td>CD1</td>        <td>Charger Detection Configuration Bit 1</td></tr>
+                        <tr><td>6</td>      <td>I.C.</td>       <td>Internal Connection. Must be connected to external GND.</td></tr>
+                        <tr><td>7</td>      <td>FBPER</td>      <td>Digital Input. Used to select voltage feedback adjustment percentage.</td></tr>
+                        <tr><td>8</td>      <td>IN</td>         <td>Logic Enable Input. Connect to I/O voltage of USB transceiver. IN is also used for clamping during overvoltage events on HVD+ or HVD-. Connect a 1µF ceramic capacitor from IN to GND.</td></tr>
+                        <tr><td>9</td>      <td>D+</td>         <td>USB Differential Data D+ Input. Connect D+ to low-voltage USB transceiver D+ pin.</td></tr>
+                        <tr><td>10</td>     <td>D-</td>         <td>USB Differential Data D- Input. Connect D- to low-voltage USB transceiver D- pin.</td></tr>
+                        <tr><td>11</td>     <td>N.C.</td>       <td>No Connection</td></tr>
+                        <tr><td>12</td>     <td>HVD-</td>       <td>High-Voltage-Protected USB Differential Data D- Output. Connect HVD- directly to the USB connector D- pin.</td></tr>
+                        <tr><td>13</td>     <td>HVD+</td>       <td>High-Voltage-Protected USB Differential Data D+ Output. Connect HVD+ directly to the USB connector D+ pin.</td></tr>
+                        <tr><td>14</td>     <td>GND</td>        <td>Analog Ground</td></tr>
+                        <tr><td>15</td>     <td>FBMAX</td>      <td>Current-Sense Amp Output. Connect a resistor and capacitor to GND to set the voltage-adjustment bandwidth and the USB DC current level at which maximum voltage-feedback adjustment is reached.</td></tr>
+                        <tr><td>16</td>     <td>FBCAP</td>      <td>External Capacitor Connection. Connect a 10pF capacitor to GND.</td></tr>
+                        <tr><td>17</td>     <td>SENSO</td>      <td>Current-Sense Amp Output. Connect a resistor and capacitor to GND to set the maximum USB DC current limit.</td></tr>
+                        <tr><td>18</td>     <td>SENSN</td>      <td>Current-Sense Amp Negative Input. Connect to negative terminal of current-sense resistor.</td></tr>
+                        <tr><td>19</td>     <td>SENSP</td>      <td>DC-DC Converter Feedback Input and Current-Sense Amp Positive Input. Connect to positive terminal of current-sense resistor and the main output of the converter. Used for internal voltage regulation loop.</td></tr>
+                        <tr><td>20</td>     <td>BIAS</td>       <td>5V Linear Regulator Output. Connect a 1µF ceramic capacitor from BIAS to GND. BIAS powers up the internal circuitry.</td></tr>
+                        <tr><td>21</td>     <td>SUP</td>        <td>Voltage Supply Input. SUP is the supply pin for the internal linear regulator. Connect a minimum of 4.7µF capacitor from SUP to GND close to the IC.</td></tr>
+                        <tr><td>22</td>     <td>BST</td>        <td>High-Side Driver Supply. Connect a 0.1µF capacitor from BST to LX.</td></tr>
+                        <tr><td>23,24</td>  <td>LX</td>         <td>Inductor Connection. Connect a rectifying Schottky diode between LX and GND. Connect an inductor from LX to the DC-DC converter output (SENSP).</td></tr>
+                        <tr><td>25,26</td>  <td>SUPSW</td>      <td>Internal High-Side Switch-Supply Input. SUPSW provides power to the internal switch. Connect a 4.7µF ceramic capacitor in parallel with a 47µF capacitor from SUPSW to PGND. See the DC-DC Input Capacitor Selection section.</td></tr>
+                        <tr><td>27</td>     <td>PGND</td>       <td>Power Ground</td></tr>
+                        <tr><td>28</td>     <td>ENBUCK</td>     <td>Battery-Compatible Enable Input. Drive ENBUCK low/high to disable/enable the switching regulator.</td></tr>
+                        <tr><td>-</td>      <td>EP</td>         <td>Exposed Pad. Connect EP to a large-area contiguous copper ground plane for effective power dissipation. Do not use as the only IC ground connection. EP must be connected to GND.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN, D+, D-, CD0, CD1, FBPER,<br>
+                            FBMAX, SENSO, FBCAP to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>FAULT, FOSC, BIAS, SYNC to GND</td> <td>-0.3V to +6V</td></tr>
+                        <tr><td>D+, D-, to IN</td>                  <td>+0.3V</td></tr>
+                        <tr><td>HVD+, HVD- to GND</td>              <td>-0.3V to +18V</td></tr>
+                        <tr><td>SENSN, SENSP to GND</td>            <td>-0.3V to +30V</td></tr>
+                        <tr><td>SENSP to SENSN</td>                 <td>-6.0V to +6.0V</td></tr>
+                        <tr><td>SUP, SUPSW, ENBUCK to GND</td>      <td>-0.3V to +42V</td></tr>
+                        <tr><td>LX</td>                             <td>-0.3V to +42V</td></tr>
+                        <tr><td>SUP to SUPSW</td>                   <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BST to GND</td>                     <td>-0.3V to +47V</td></tr>
+                        <tr><td>BST to LX</td>                      <td>-0.3V to +6V</td></tr>
+                        <tr><td>PGND to GND</td>                    <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>  <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = 70°C)</td></tr>
+                        <tr><td>Side-Wettable QFND (derate 33.3mW/°C above +70°C)</td>      <td>2666.7mW</td></tr>
+                        <tr><td>TQFN (derate 34.5mW/°C above +70°C)</td>                    <td>2759mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>        <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>               <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>          <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>  <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>      <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX16984RACIL / MAX16984SACIL</h3>
+                <div class="img">
+                    <img src="Pin_AP35_16984R&S.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2</td>      <td>FAULT</td>      <td>Active-Low Open-Drain Fault Indicator Output. Connect a 100kΩ pullup resistor to IN.</td></tr>
+                        <tr><td>3</td>      <td>SYNC</td>       <td>Synchronization Input. The device synchronizes to an external signal applied to SYNC. When connected to GND or unconnected, skip mode is allowed under light loads. See Table 1. When connected to a clock source or IN, forced-PWM (FPWM) mode is enabled.</td></tr>
+                        <tr><td>4</td>      <td>FOSC</td>       <td>Resistor-Programmable Switching-Frequency Setting Control Input. Connect a resistor from FOSC to GND to set the switching frequency.</td></tr>
+                        <tr><td>5</td>      <td>CD0</td>        <td>Charger Detection Configuration Bit 0</td></tr>
+                        <tr><td>6</td>      <td>CD1</td>        <td>Charger Detection Configuration Bit 1</td></tr>
+                        <tr><td>7</td>      <td>I.C.</td>       <td>Internal Connection. Must be connected to external GND.</td></tr>
+                        <tr><td>8</td>      <td>FBPER</td>      <td>Digital Input. Used to select voltage feedback adjustment percentage.</td></tr>
+                        <tr><td>9</td>      <td>IN</td>         <td>Logic Enable Input. Connect to I/O voltage of USB transceiver. IN is also used for clamping during overvoltage events on HVD+ or HVD-. Connect a 1µF ceramic capacitor from IN to GND.</td></tr>
+                        <tr><td>10</td>     <td>D+</td>         <td>USB Differential Data D+ Input. Connect D+ to low-voltage USB transceiver D+ pin.</td></tr>
+                        <tr><td>11</td>     <td>D-</td>         <td>USB Differential Data D- Input. Connect D- to low-voltage USB transceiver D- pin.</td></tr>
+                        <tr><td>22</td>     <td>N.C.</td>       <td>No Connection</td></tr>
+                        <tr><td>12</td>     <td>HVD-</td>       <td>High-Voltage-Protected USB Differential Data D- Output. Connect HVD- directly to the USB connector D- pin.</td></tr>
+                        <tr><td>13</td>     <td>HVD+</td>       <td>High-Voltage-Protected USB Differential Data D+ Output. Connect HVD+ directly to the USB connector D+ pin.</td></tr>
+                        <tr><td>14</td>     <td>GND</td>        <td>Analog Ground</td></tr>
+                        <tr><td>15</td>     <td>FBMAX</td>      <td>Current-Sense Amp Output. Connect a resistor and capacitor to GND to set the voltage-adjustment bandwidth and the USB DC current level at which maximum voltage-feedback adjustment is reached.</td></tr>
+                        <tr><td>16</td>     <td>FBCAP</td>      <td>External Capacitor Connection. Connect a 10pF capacitor to GND.</td></tr>
+                        <tr><td>17</td>     <td>SENSO</td>      <td>Current-Sense Amp Output. Connect a resistor and capacitor to GND to set the maximum USB DC current limit.</td></tr>
+                        <tr><td>18</td>     <td>SENSN</td>      <td>Current-Sense Amp Negative Input. Connect to negative terminal of current-sense resistor.</td></tr>
+                        <tr><td>19</td>     <td>SENSP</td>      <td>DC-DC Converter Feedback Input and Current-Sense Amp Positive Input. Connect to positive terminal of current-sense resistor and the main output of the converter. Used for internal voltage regulation loop.</td></tr>
+                        <tr><td>20</td>     <td>BIAS</td>       <td>5V Linear Regulator Output. Connect a 1µF ceramic capacitor from BIAS to GND. BIAS powers up the internal circuitry.</td></tr>
+                        <tr><td>21</td>     <td>SUP</td>        <td>Voltage Supply Input. SUP is the supply pin for the internal linear regulator. Connect a minimum of 4.7µF capacitor from SUP to GND close to the IC.</td></tr>
+                        <tr><td>22</td>     <td>BST</td>        <td>High-Side Driver Supply. Connect a 0.1µF capacitor from BST to LX.</td></tr>
+                        <tr><td>24,25</td>  <td>LX</td>         <td>Inductor Connection. Connect a rectifying Schottky diode between LX and GND. Connect an inductor from LX to the DC-DC converter output (SENSP).</td></tr>
+                        <tr><td>26,27</td>  <td>SUPSW</td>      <td>Internal High-Side Switch-Supply Input. SUPSW provides power to the internal switch. Connect a 4.7µF ceramic capacitor in parallel with a 47µF capacitor from SUPSW to PGND. See the DC-DC Input Capacitor Selection section.</td></tr>
+                        <tr><td>28</td>     <td>PGND</td>       <td>Power Ground</td></tr>
+                        <tr><td>1</td>      <td>ENBUCK</td>     <td>Battery-Compatible Enable Input. Drive ENBUCK low/high to disable/enable the switching regulator.</td></tr>
+                        <tr><td>-</td>      <td>EP</td>         <td>Exposed Pad. Connect EP to a large-area contiguous copper ground plane for effective power dissipation. Do not use as the only IC ground connection. EP must be connected to GND.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>IN, D+, D-, CD0, CD1, FBPER,<br>
+                            FBMAX, SENSO, FBCAP to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>FAULT, FOSC, BIAS, SYNC to GND</td> <td>-0.3V to +6V</td></tr>
+                        <tr><td>D+, D-, to IN</td>                  <td>+0.3V</td></tr>
+                        <tr><td>HVD+, HVD- to GND</td>              <td>-0.3V to +18V</td></tr>
+                        <tr><td>SENSN, SENSP to GND</td>            <td>-0.3V to +30V</td></tr>
+                        <tr><td>SENSP to SENSN</td>                 <td>-6.0V to +6.0V</td></tr>
+                        <tr><td>SUP, SUPSW, ENBUCK to GND</td>      <td>-0.3V to +42V</td></tr>
+                        <tr><td>LX</td>                             <td>-0.3V to +42V</td></tr>
+                        <tr><td>SUP to SUPSW</td>                   <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BST to GND</td>                     <td>-0.3V to +47V</td></tr>
+                        <tr><td>BST to LX</td>                      <td>-0.3V to +6V</td></tr>
+                        <tr><td>PGND to GND</td>                    <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>  <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = 70°C)</td></tr>
+                        <tr><td>Side-Wettable QFND (derate 33.3mW/°C above +70°C)</td>      <td>2666.7mW</td></tr>
+                        <tr><td>TQFN (derate 34.5mW/°C above +70°C)</td>                    <td>2759mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>        <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>               <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>          <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>  <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>      <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP54 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP54</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20012</h3>
+                <div class="img">
+                    <img src="Pin_AP54_20012.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>  <td>GND</td>        <td>Analog Ground</td></tr>
+                        <tr><td>2</td>  <td>PV</td>         <td>Analog Input Supply. Connect a 1μF ceramic capacitor from PV to GND. Connect PV to PV1 and PV2 through a 10Ω resistor.</td></tr>
+                        <tr><td>3</td>  <td>SDA</td>        <td>I2C Data I/O</td></tr>
+                        <tr><td>4</td>  <td>SCL</td>        <td>I2C Clock Input</td></tr>
+                        <tr><td>5</td>  <td>EN2</td>        <td>Active-High Digital Enable Input for DCDC2. Drive EN2 high for normal operation. Connect EN2 to GND if DCDC2 is not used.</td></tr>
+                        <tr><td>6</td>  <td>RS2-</td>       <td>DCDC2 Remote Voltage-Sense Negative Input</td></tr>
+                        <tr><td>7</td>  <td>RS2+</td>       <td>DCDC2 Remote Voltage-Sense Positive Input</td></tr>
+                        <tr><td>8</td>  <td>CS2-</td>       <td>Current-Sense Negative Input for DCDC2. Connect CS2- to the negative side of the current-sense element.</td></tr>
+                        <tr><td>9</td>  <td>CS2+</td>       <td>Current-Sense Positive Input for DCDC2. Connect CS2+ to the positive side of the current-sense element.</td></tr>
+                        <tr><td>10</td> <td>PG2</td>        <td>Open-Drain DCDC2 Reset Output. This output remains low for 120μs after the output has reached its regulation level To obtain a logic signal, pull up PG2 with an external resistor.</td></tr>
+                        <tr><td>11</td> <td>PGND2</td>      <td>Power Ground for DCDC2</td></tr>
+                        <tr><td>12</td> <td>DL2</td>        <td>Low-Side Gate Drive for DCDC2</td></tr>
+                        <tr><td>13</td> <td>PV2</td>        <td>Input-Voltage Pin for DCDC2. Bypass this pin with enough input capacitance to supply current to the buck controller. Connect PV1 and PV2 together externally</td></tr>
+                        <tr><td>14</td> <td>BST2</td>       <td>Bootstrap Capacitor for High-Side Driver of Buck 2. Connect a 0.1μF from LX2 to BST2.</td></tr>
+                        <tr><td>15</td> <td>DH2</td>        <td>High-Side Gate Drive for DCDC2</td></tr>
+                        <tr><td>16</td> <td>LX2</td>        <td>Inductor Connection for DCDC2. Connect LX2 to the switched side of the inductor. LX2 serves as the lower supply rail for the DH2 high-side gate driver.</td></tr>
+                        <tr><td>17</td> <td>SYNC</td>       <td>SYNC I/O. When configured as an input, connect SYNC to GND or leave unconnected to enable skip-mode operation under light loads. Connect SYNC to PV or an external clock to enable fixed- frequency forced-PWM mode operation. When configured as an output, connect SYNC to other devices’ SYNC inputs.</td></tr>
+                        <tr><td>18</td> <td>PWM1X</td>      <td>PWM Output for Optional 2nd Phase of DCDC1. Connect to the MAX15492 PWM pin. If unused, leave PWM1X unconnected.</td></tr>
+                        <tr><td>19</td> <td>ADDR</td>       <td>I2C Address Select. Connect to GND or PV to select between two different I2C addresses</td></tr>
+                        <tr><td>20</td> <td>CS1X+</td>      <td>Current-Sense Positive Input for the 2nd Phase of DCDC1. Connect CS1X+ to the positive side of the current-sense element. To disable phase 2, short CS1X+ to PV</td></tr>
+                        <tr><td>21</td> <td>EN1</td>        <td>Active-High Digital Enable Input for DCDC1. Drive EN1 high for normal operation. Connect EN1 to GND if DCDC1 is not used.</td></tr>
+                        <tr><td>22</td> <td>RS1-</td>       <td>DCDC1 Remote Voltage-Sense Negative Input</td></tr>
+                        <tr><td>23</td> <td>RS1+</td>       <td>DCDC1 Remote Voltage-Sense Positive Input</td></tr>
+                        <tr><td>24</td> <td>CS1-</td>       <td>Current-Sense Negative Input for DCDC1. Connect CS1- to the negative side of the current-sense element.</td></tr>
+                        <tr><td>25</td> <td>CS1+</td>       <td>Current-Sense Positive Input for DCDC1. Connect CS1+ to the positive side of the current-sense element.</td></tr>
+                        <tr><td>26</td> <td>PG1</td>        <td>Open-Drain DCDC1 Reset Output. This output remains low for 120μs after the output has reached its regulation level To obtain a logic signal, pull up PG1 with an external resistor.</td></tr>
+                        <tr><td>27</td> <td>PGND1</td>      <td>Power Ground for DCDC1</td></tr>
+                        <tr><td>28</td> <td>DL1</td>        <td>Low-Side Gate Drive for DCDC1</td></tr>
+                        <tr><td>29</td> <td>PV1</td>        <td>Input-Voltage Pin for DCDC1. Bypass this pin with enough input capacitance to supply current to the buck controller. Connect PV1 and PV2 together externally.</td></tr>
+                        <tr><td>30</td> <td>BST1</td>       <td>Bootstrap Capacitor for High-Side Driver of DCDC1. Connect a 0.1μF from LX1 to BST1.</td></tr>
+                        <tr><td>31</td> <td>DH1</td>        <td>High-Side Gate Drive of DCDC1</td></tr>
+                        <tr><td>32</td> <td>LX1</td>        <td>Inductor Connection for DCDC1. Connect LX1 to the switched side of the inductor. LX1 serves as the lower supply rail for the DH1 high-side gate driver.</td></tr>
+                        <tr><td>-</td>  <td>EP</td>         <td>Exposed Pad. Connect EP to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to PGND1, PGND2, and GND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>PV1, PV2 to PGND_</td>                  <td>-0.3V to +6V</td></tr>
+                        <tr><td>PV to GND</td>                          <td>-0.3V to +6V</td></tr>
+                        <tr><td>EN_, RS_+, RS_-, SYNC to GND</td>       <td>-0.3V to PV + 0.3V</td></tr>
+                        <tr><td>PG_, ADDR, SDA, SCL to GND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>DH_ to LX_</td>                         <td>-0.3V to BST_ + 0.3V</td></tr>
+                        <tr><td>DL_ to PGND_</td>                       <td>-0.3V to PV_ + 0.3V</td></tr>
+                        <tr><td>BST_ to LX</td>                         <td>-0.3V to +6V</td></tr>
+                        <tr><td>LX_ to PGND</td>                        <td>-0.3V to +18V</td></tr>
+                        <tr><td>CS1+ to CS1-, CS2+ to CS2-</td>         <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>CS_-, CS1X+ to GND</td>                 <td>-0.3V to +6V</td></tr>
+                        <tr><td>PWM1X to GND</td>                       <td>-0.3V to PV + 0.3V</td></tr>
+                        <tr><td>GND to PGND</td>                        <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>      <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C) (Multilayer Board)</td></tr>
+                        <tr><td>32-Pin TQFN (derate 34.5mW/°C above +70°C)</td> <td>2758.6mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40ºC to +125ºC</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>+150ºC</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65ºC to +150ºC</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300ºC</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>         <td>+260ºC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

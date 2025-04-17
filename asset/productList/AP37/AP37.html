@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP37 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP37</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX16990AUBA / MAX16990AUBB / MAX16992AUBA / MAX16992AUBB</h3>
+                <div class="img">
+                    <img src="Pin_AP37_16990AUBA&B.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>SUP</td>        <td>Power-Supply Input. Place a bypass capacitor of at least 1µF between this pin and ground.</td></tr>
+                        <tr><td>2</td>          <td>EN</td>         <td>Active-High Enable Input. This input is high-voltage-capable or can alternatively be driven from a logic-level signal.</td></tr>
+                        <tr><td>3</td>          <td>GND</td>        <td>Ground Connection</td></tr>
+                        <tr><td>4</td>          <td>DRV</td>        <td>Drive Output for Gate of nMOS Boost Switch. The nominal voltage swing of this output is between PVL and GND.</td></tr>
+                        <tr><td>5</td>          <td>PVL</td>        <td>Output of 5V Internal Regulator. Connect a ceramic capacitor of at least 2.2µF from this pin to ground, placing it as close as possible to the pin.</td></tr>
+                        <tr><td>6</td>          <td>ISNS</td>       <td>Current-Sense Input to Regulator. Connect a sense resistor between the source of the external switching FET and GND. Then connect another resistor between ISNS and the source of the FET for slope compensation adjustment.</td></tr>
+                        <tr><td>7</td>          <td>PGOOD</td>      <td>Open-Drain Power-Good Output. Connect a resistor from this pin to PVL or to another voltage less than or equal to 5V. PGOOD goes high after soft-start when the output exceeds 90% of its final value. When EN is low, PGOOD is also low. After soft-start is complete, if PGOOD goes low and 16 consecutive current-limit cycles occur, the devices enter hiccup mode and a new soft- start is initiated after a delay of 44ms.</td></tr>
+                        <tr><td>8</td>          <td>FSET/SYNC</td>  <td>Frequency Set/Synchronization. To set a switching frequency between 100kHz and 1000kHz (MAX16990) or between 1000kHz and 2500kHz (MAX16992), connect a resistor from this pin to GND. To synchronize the converter, connect a logic signal in the range 220kHz to 1000kHz (MAX16990) or 1000kHz to 2500kHz (MAX16992) to this input. The external n-channel MOSFET is turned on (i.e., DRV goes high) after a short delay (60ns for 2.2MHz operation, 125ns for 400kHz) when SYNC transitions low</td></tr>
+                        <tr><td>9</td>          <td>COMP</td>       <td>Output of Error Amplifier. Connect the compensation network between COMP and GND.</td></tr>
+                        <tr><td>10</td>         <td>FB</td>         <td>Boost Converter Feedback. This pin is regulated to 1V when REFIN is tied to PVL or otherwise regulated to REFIN during boost operation. Connect a resistor divider between the boost output, the FB pin, and  GND to set the boost output voltage. In a two-phase converter, connect the FB pin of the slave IC to PVL.</td></tr>
+                        <tr><td>-</td>          <td>EP</td>         <td>Exposed Pad. Internally connected to GND. Connect to a large ground plane to maximize thermal performance. Not intended as an electrical connection point.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>EN, SUP, OVP, FB to GND</td>        <td>-0.3V to +42V</td></tr>
+                        <tr><td>DRV, SYNCO, FSET/SYNC, COMP,<br>
+                            PGOOD, ISNS, REFIN to GND. </td>        <td>-0.3V to (VPVL + 0.3V)</td></tr>
+                        <tr><td>PVL to GND.</td>                    <td>-0.3V to 6V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>µMAX on SLB (derate 10.3mW/°C above +70°C)</td>     <td>825mW</td></tr>
+                        <tr><td>µMAX on MLB (derate 12.9mW/°C above +70°C)</td>     <td>1031mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Maximum Junction Temperature</td>           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>         <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+            
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX16990ATCC / MAX16990ATCD / MAX16992ATCC / MAX16992ATCD</h3>
+                <div class="img">
+                    <img src="Pin_AP37_16990ATCC&D.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>SUP</td>        <td>Power-Supply Input. Place a bypass capacitor of at least 1µF between this pin and ground.</td></tr>
+                        <tr><td>2</td>          <td>GND</td>        <td>Ground Connection</td></tr>
+                        <tr><td>3</td>          <td>EN</td>         <td>Active-High Enable Input. This input is high-voltage-capable or can alternatively be driven from a logic-level signal.</td></tr>
+                        <tr><td>4</td>          <td>DRV</td>        <td>Drive Output for Gate of nMOS Boost Switch. The nominal voltage swing of this output is between PVL and GND.</td></tr>
+                        <tr><td>5</td>          <td>PVL</td>        <td>Output of 5V Internal Regulator. Connect a ceramic capacitor of at least 2.2µF from this pin to ground, placing it as close as possible to the pin.</td></tr>
+                        <tr><td>6</td>          <td>ISNS</td>       <td>Current-Sense Input to Regulator. Connect a sense resistor between the source of the external switching FET and GND. Then connect another resistor between ISNS and the source of the FET for slope compensation adjustment.</td></tr>
+                        <tr><td>7</td>          <td>OVP</td>        <td>Overvoltage Protection Input. When this pin goes above 110% of the FB regulation voltage, all switching is disabled. Operation resumes normally when OVP drops below 107.5% of the FB regulation point. Connect a resistor divider between the output, OVP, and GND to set the overvoltage protection level.</td></tr>
+                        <tr><td>8</td>          <td>REFIN</td>      <td>Reference Input. When using the internal reference, connect REFIN to PVL. Otherwise, drive this pin with an external voltage between 0.5V and 2V to set the boost output voltage.</td></tr>
+                        <tr><td>9</td>          <td>PGOOD</td>      <td>Open-Drain Power-Good Output. Connect. a resistor from this pin to PVL or to another voltage less than or equal to 5V. PGOOD goes high after soft-start when the output exceeds 90% of its final value. When EN is low, PGOOD is also low. After soft-start is complete, if PGOOD goes low and 16 consecutive current-limit cycles occur, the devices enter hiccup mode and a new soft- start is initiated after a delay of 44ms.</td></tr>
+                        <tr><td>10</td>         <td>FSET/SYNC</td>  <td>Frequency Set/Synchronization. To set a switching frequency between 100kHz and 1000kHz (MAX16990) or between 1000kHz and 2500kHz (MAX16992), connect a resistor from this pin to GND. To synchronize the converter, connect a logic signal in the range 220kHz to 1000kHz (MAX16990) or 1000kHz to 2500kHz (MAX16992) to this input. The external n-channel MOSFET is turned on (i.e., DRV goes high) after a short delay(60ns for 2.2MHz operation, 125ns for 400kHz) when SYNC transitions low.</td></tr>
+                        <tr><td>11</td>         <td>COMP</td>       <td>Output of Error Amplifier. Connect the compensation network between COMP and GND.</td></tr>
+                        <tr><td>12</td>         <td>FB</td>         <td>Boost Converter Feedback. This pin is regulated to 1V when REFIN is tied to PVL or otherwise regulated to REFIN during boost operation. Connect a resistor divider between the boost output, the FB pin, and  GND to set the boost output voltage. In a two-phase converter, connect the FB pin of the slave IC to PVL.</td></tr>
+                        <tr><td>-</td>          <td>EP</td>         <td>Exposed Pad. Internally connected to GND. Connect to a large ground plane to maximize thermal performance. Not intended as an electrical connection point.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>EN, SUP, OVP, FB to GND</td>        <td>-0.3V to +42V</td></tr>
+                        <tr><td>DRV, SYNCO, FSET/SYNC, COMP,<br>
+                            PGOOD, ISNS, REFIN to GND. </td>        <td>-0.3V to (VPVL + 0.3V)</td></tr>
+                        <tr><td>PVL to GND.</td>                    <td>-0.3V to 6V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>TQFN 12 on SLB (derate 13.2mW/°C above +70°C)</td>      <td>1053mW</td></tr>
+                        <tr><td>TQFN 12 on MLB (derate 21.32mW/°C above +70°C)</td>     <td>705mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Maximum Junction Temperature</td>           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>         <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page3" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX16990ATCE / MAX16990ATCF / MAX16992ATCE / MAX16992ATCF</h3>
+                <div class="img">
+                    <img src="Pin_AP37_16990ATCE&F.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>SUP</td>        <td>Power-Supply Input. Place a bypass capacitor of at least 1µF between this pin and ground.</td></tr>
+                        <tr><td>2</td>          <td>GND</td>        <td>Ground Connection</td></tr>
+                        <tr><td>3</td>          <td>EN</td>         <td>Active-High Enable Input. This input is high-voltage-capable or can alternatively be driven from a logic-level signal.</td></tr>
+                        <tr><td>4</td>          <td>DRV</td>        <td>Drive Output for Gate of nMOS Boost Switch. The nominal voltage swing of this output is between PVL and GND.</td></tr>
+                        <tr><td>5</td>          <td>PVL</td>        <td>Output of 5V Internal Regulator. Connect a ceramic capacitor of at least 2.2µF from this pin to ground, placing it as close as possible to the pin.</td></tr>
+                        <tr><td>6</td>          <td>ISNS</td>       <td>Current-Sense Input to Regulator. Connect a sense resistor between the source of the external switching FET and GND. Then connect another resistor between ISNS and the source of the FET for slope compensation adjustment.</td></tr>
+                        <tr><td>7</td>          <td>SYNCO</td>      <td>Open-Drain Synchronization Output. SYNCO outputs a square-wave signal which is 180° out-of-phase with the device’s operational clock. Connect a pullup resistor from this pin to PVL or to a 5V or lower supply when used.</td></tr>
+                        <tr><td>8</td>          <td>REFIN</td>      <td>Reference Input. When using the internal reference, connect REFIN to PVL. Otherwise, drive this pin with an external voltage between 0.5V and 2V to set the boost output voltage.</td></tr>
+                        <tr><td>9</td>          <td>PGOOD</td>      <td>Open-Drain Power-Good Output. Connect. a resistor from this pin to PVL or to another voltage less than or equal to 5V. PGOOD goes high after soft-start when the output exceeds 90% of its final value. When EN is low, PGOOD is also low. After soft-start is complete, if PGOOD goes low and 16 consecutive current-limit cycles occur, the devices enter hiccup mode and a new soft- start is initiated after a delay of 44ms.</td></tr>
+                        <tr><td>10</td>         <td>FSET/SYNC</td>  <td>Frequency Set/Synchronization. To set a switching frequency between 100kHz and 1000kHz (MAX16990) or between 1000kHz and 2500kHz (MAX16992), connect a resistor from this pin to GND. To synchronize the converter, connect a logic signal in the range 220kHz to 1000kHz (MAX16990) or 1000kHz to 2500kHz (MAX16992) to this input. The external n-channel MOSFET is turned on (i.e., DRV goes high) after a short delay(60ns for 2.2MHz operation, 125ns for 400kHz) when SYNC transitions low.</td></tr>
+                        <tr><td>11</td>         <td>COMP</td>       <td>Output of Error Amplifier. Connect the compensation network between COMP and GND.</td></tr>
+                        <tr><td>12</td>         <td>FB</td>         <td>Boost Converter Feedback. This pin is regulated to 1V when REFIN is tied to PVL or otherwise regulated to REFIN during boost operation. Connect a resistor divider between the boost output, the FB pin, and  GND to set the boost output voltage. In a two-phase converter, connect the FB pin of the slave IC to PVL.</td></tr>
+                        <tr><td>-</td>          <td>EP</td>         <td>Exposed Pad. Internally connected to GND. Connect to a large ground plane to maximize thermal performance. Not intended as an electrical connection point.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>EN, SUP, OVP, FB to GND</td>        <td>-0.3V to +42V</td></tr>
+                        <tr><td>DRV, SYNCO, FSET/SYNC, COMP,<br>
+                            PGOOD, ISNS, REFIN to GND. </td>        <td>-0.3V to (VPVL + 0.3V)</td></tr>
+                        <tr><td>PVL to GND.</td>                    <td>-0.3V to 6V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>TQFN 12 on SLB (derate 13.2mW/°C above +70°C)</td>      <td>1053mW</td></tr>
+                        <tr><td>TQFN 12 on MLB (derate 21.32mW/°C above +70°C)</td>     <td>705mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Maximum Junction Temperature</td>           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>         <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page4" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX16990ATEF / MAX16990ATEF</h3>
+                <div class="img">
+                    <img src="Pin_AP37_16990ATEF.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>SUP</td>        <td>Power-Supply Input. Place a bypass capacitor of at least 1µF between this pin and ground.</td></tr>
+                        <tr><td>2</td>          <td>NC</td>         <td>No Connect</td></tr>
+                        <tr><td>3</td>          <td>GND</td>        <td>Ground Connection</td></tr>
+                        <tr><td>4</td>          <td>EN</td>         <td>Active-High Enable Input. This input is high-voltage-capable or can alternatively be driven from a logic-level signal.</td></tr>
+                        <tr><td>5</td>          <td>DRV</td>        <td>Drive Output for Gate of nMOS Boost Switch. The nominal voltage swing of this output is between PVL and GND.</td></tr>
+                        <tr><td>6</td>          <td>NC</td>         <td>No Connect</td></tr>
+                        <tr><td>7</td>          <td>PVL</td>        <td>Output of 5V Internal Regulator. Connect a ceramic capacitor of at least 2.2µF from this pin to ground, placing it as close as possible to the pin.</td></tr>
+                        <tr><td>8</td>          <td>ISNS</td>       <td>Current-Sense Input to Regulator. Connect a sense resistor between the source of the external switching FET and GND. Then connect another resistor between ISNS and the source of the FET for slope compensation adjustment.</td></tr>
+                        <tr><td>9</td>          <td>SYNCO</td>      <td>Open-Drain Synchronization Output. SYNCO outputs a square-wave signal which is 180° out-of-phase with the device’s operational clock. Connect a pullup resistor from this pin to PVL or to a 5V or lower supply when used.</td></tr>
+                        <tr><td>10</td>         <td>REFIN</td>      <td>Reference Input. When using the internal reference, connect REFIN to PVL. Otherwise, drive this pin with an external voltage between 0.5V and 2V to set the boost output voltage.</td></tr>
+                        <tr><td>11</td>         <td>PGOOD</td>      <td>Open-Drain Power-Good Output. Connect. a resistor from this pin to PVL or to another voltage less than or equal to 5V. PGOOD goes high after soft-start when the output exceeds 90% of its final value. When EN is low, PGOOD is also low. After soft-start is complete, if PGOOD goes low and 16 consecutive current-limit cycles occur, the devices enter hiccup mode and a new soft- start is initiated after a delay of 44ms.</td></tr>
+                        <tr><td>12</td>         <td>FSET/SYNC</td>  <td>Frequency Set/Synchronization. To set a switching frequency between 100kHz and 1000kHz (MAX16990) or between 1000kHz and 2500kHz (MAX16992), connect a resistor from this pin to GND. To synchronize the converter, connect a logic signal in the range 220kHz to 1000kHz (MAX16990) or 1000kHz to 2500kHz (MAX16992) to this input. The external n-channel MOSFET is turned on (i.e., DRV goes high) after a short delay(60ns for 2.2MHz operation, 125ns for 400kHz) when SYNC transitions low.</td></tr>
+                        <tr><td>13</td>         <td>NC</td>         <td>No Connect</td></tr>
+                        <tr><td>14</td>         <td>COMP</td>       <td>Output of Error Amplifier. Connect the compensation network between COMP and GND.</td></tr>
+                        <tr><td>15</td>         <td>NC</td>         <td>No Connect</td></tr>
+                        <tr><td>16</td>         <td>FB</td>         <td>Boost Converter Feedback. This pin is regulated to 1V when REFIN is tied to PVL or otherwise regulated to REFIN during boost operation. Connect a resistor divider between the boost output, the FB pin, and  GND to set the boost output voltage. In a two-phase converter, connect the FB pin of the slave IC to PVL.</td></tr>
+                        <tr><td>-</td>          <td>EP</td>         <td>Exposed Pad. Internally connected to GND. Connect to a large ground plane to maximize thermal performance. Not intended as an electrical connection point.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>EN, SUP, OVP, FB to GND</td>        <td>-0.3V to +42V</td></tr>
+                        <tr><td>DRV, SYNCO, FSET/SYNC, COMP,<br>
+                            PGOOD, ISNS, REFIN to GND. </td>        <td>-0.3V to (VPVL + 0.3V)</td></tr>
+                        <tr><td>PVL to GND.</td>                    <td>-0.3V to 6V</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>TQFN 16 on SLB (derate 14.7mW/°C above +70°C)</td>      <td>1176mW</td></tr>
+                        <tr><td>TQFN 16 on MLB (derate 23.1mW/°C above +70°C)</td>      <td>1847mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Maximum Junction Temperature</td>           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>         <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page5" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX16990ATED / MAX16992ATED</h3>
+                <div class="img">
+                    <img src="Pin_AP37_16990ATED.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>SUP</td>        <td>Power-Supply Input. Place a bypass capacitor of at least 1µF between this pin and ground.</td></tr>
+                        <tr><td>2</td>          <td>NC</td>         <td>No Connect</td></tr>
+                        <tr><td>3</td>          <td>GND</td>        <td>Ground Connection</td></tr>
+                        <tr><td>4</td>          <td>EN</td>         <td>Active-High Enable Input. This input is high-voltage-capable or can alternatively be driven from a logic-level signal.</td></tr>
+                        <tr><td>5</td>          <td>DRV</td>        <td>Drive Output for Gate of nMOS Boost Switch. The nominal voltage swing of this output is between PVL and GND.</td></tr>
+                        <tr><td>6</td>          <td>NC</td>         <td>No Connect</td></tr>
+                        <tr><td>7</td>          <td>PVL</td>        <td>Output of 5V Internal Regulator. Connect a ceramic capacitor of at least 2.2µF from this pin to ground, placing it as close as possible to the pin.</td></tr>
+                        <tr><td>8</td>          <td>ISNS</td>       <td>Current-Sense Input to Regulator. Connect a sense resistor between the source of the external switching FET and GND. Then connect another resistor between ISNS and the source of the FET for slope compensation adjustment.</td></tr>
+                        <tr><td>9</td>          <td>OVP</td>        <td>Overvoltage Protection Input. When this pin goes above 110% of the FB regulation voltage, all switching is disabled. Operation resumes normally when OVP drops below 107.5% of the FB regulation point. Connect a resistor divider between the output, OVP, and GND to set the overvoltage protection level.</td></tr>
+                        <tr><td>10</td>         <td>REFIN</td>      <td>Reference Input. When using the internal reference, connect REFIN to PVL. Otherwise, drive this pin with an external voltage between 0.5V and 2V to set the boost output voltage.</td></tr>
+                        <tr><td>11</td>         <td>PGOOD</td>      <td>Open-Drain Power-Good Output. Connect. a resistor from this pin to PVL or to another voltage less than or equal to 5V. PGOOD goes high after soft-start when the output exceeds 90% of its final value. When EN is low, PGOOD is also low. After soft-start is complete, if PGOOD goes low and 16 consecutive current-limit cycles occur, the devices enter hiccup mode and a new soft- start is initiated after a delay of 44ms.</td></tr>
+                        <tr><td>12</td>         <td>FSET/SYNC</td>  <td>Frequency Set/Synchronization. To set a switching frequency between 100kHz and 1000kHz (MAX16990) or between 1000kHz and 2500kHz (MAX16992), connect a resistor from this pin to GND. To synchronize the converter, connect a logic signal in the range 220kHz to 1000kHz (MAX16990) or 1000kHz to 2500kHz (MAX16992) to this input. The external n-channel MOSFET is turned on (i.e., DRV goes high) after a short delay(60ns for 2.2MHz operation, 125ns for 400kHz) when SYNC transitions low.</td></tr>
+                        <tr><td>13</td>         <td>NC</td>         <td>No Connect</td></tr>
+                        <tr><td>14</td>         <td>COMP</td>       <td>Output of Error Amplifier. Connect the compensation network between COMP and GND.</td></tr>
+                        <tr><td>15</td>         <td>NC</td>         <td>No Connect</td></tr>
+                        <tr><td>16</td>         <td>FB</td>         <td>Boost Converter Feedback. This pin is regulated to 1V when REFIN is tied to PVL or otherwise regulated to REFIN during boost operation. Connect a resistor divider between the boost output, the FB pin, and  GND to set the boost output voltage. In a two-phase converter, connect the FB pin of the slave IC to PVL.</td></tr>
+                        <tr><td>-</td>          <td>EP</td>         <td>Exposed Pad. Internally connected to GND. Connect to a large ground plane to maximize thermal performance. Not intended as an electrical connection point.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>EN, SUP, OVP, FB to GND</td>        <td>-0.3V to +42V</td></tr>
+                        <tr><td>DRV, SYNCO, FSET/SYNC, COMP,<br>
+                            PGOOD, ISNS, REFIN to GND. </td>        <td>-0.3V to (VPVL + 0.3V)</td></tr>
+                        <tr><td>PVL to GND.</td>                    <td>-0.3V to 6V</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>TQFN 16 on SLB (derate 14.7mW/°C above +70°C)</td>      <td>1176mW</td></tr>
+                        <tr><td>TQFN 16 on MLB (derate 23.1mW/°C above +70°C)</td>      <td>1847mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Maximum Junction Temperature</td>           <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>         <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

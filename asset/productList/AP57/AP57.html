@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP57 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP57</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20028</h3>
+                <div class="img">
+                    <img src="Pin_AP57_20028.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>  <td>PV1</td>        <td>Supply Input for Buck 1 Low-Side Gate Drive. Connect a ceramic bypass capacitor of at least 0.1µF from PV1 to GND.</td></tr>
+                        <tr><td>2</td>  <td>DL1</td>        <td>Low-Side Gate-Drive Output for Buck 1. DL1 output voltage swings from VGND to VPV1.</td></tr>
+                        <tr><td>3</td>  <td>GND</td>        <td>Power Ground for Buck 1</td></tr>
+                        <tr><td>4</td>  <td>LX1</td>        <td>Inductor Connection for Buck 1. Connect LX1 to the switched side of the inductor. LX1 serves as the lower supply rail for the DH1 high-side gate drive.</td></tr>
+                        <tr><td>5</td>  <td>DH1</td>        <td>High-Side Gate-Drive Output for Buck 1. DH1 output voltage swings from VLX1 to VBST1.</td></tr>
+                        <tr><td>6</td>  <td>BST1</td>       <td>Bootstrap Capacitor Connection for High-Side Gate Drive of Buck 1. Connect a high-voltage diode between BIAS and BST1. Connect a ceramic capacitor between BST1 and LX1. See the High- Side Gate-Drive Supply (BST1) section.</td></tr>
+                        <tr><td>7</td>  <td>VSUP</td>       <td>Supply Input. Bypass VSUP with a minimum 0.1µF capacitor as close as possible to the device.</td></tr>
+                        <tr><td>8</td>  <td>EN1</td>        <td>High-Voltage Tolerant, Active-High Digital Enable Input for Buck 1. Driving EN1 high enables Buck 1.</td></tr>
+                        <tr><td>9</td>  <td>BIAS</td>       <td>5V Internal Linear Regulator Output. Bypass BIAS to GND with a low-ESR ceramic capacitor of 2.2µF minimum value. BIAS provides the power to the internal circuitry.</td></tr>
+                        <tr><td>10</td> <td>PV</td>         <td>Analog Supply. Connect PV to BIAS through a 10Ω resistor and connect a 1µF ceramic capacitor from PV to ground.</td></tr>
+                        <tr><td>11</td> <td>FB1</td>        <td>Feedback Input for Buck 1. For the fixed output-voltage option, connect FB1 to BIAS for the factory-trimmed (3.0V to 3.75V or 4.6V to 5.35V) fixed output. Connect FB1 to GND for the 3.3V fixed output. For the resistor-divider-adjustable output-voltage option, connect FB1 to a resistive divider between OUT1 and GND to adjust the output voltage between 3.0V and 5.5V. In adjustable mode, FB1 regulates to 1.0V (typ).</td></tr>
+                        <tr><td>12</td> <td>CS1</td>        <td>Positive Current-Sense Input for Buck 1. Connect CS1 to the positive terminal of the current-sense resistor. See the Current-Limit/Short-Circuit Protection and Current-Sense Measurement sections.</td></tr>
+                        <tr><td>13</td> <td>OUT1</td>       <td>Output Sense and Negative Current-Sense Input for Buck 1. The buck uses OUT1 to sense the output voltage. Connect OUT1 to the negative terminal of the current-sense resistor. See the Current-Limit/Short-Circuit Protection and Current-Sense Measurement sections.</td></tr>
+                        <tr><td>14</td> <td>EN2</td>        <td>Active-High Digital Enable Input for Buck 2. Driving EN2 high enables Buck 2.</td></tr>
+                        <tr><td>15</td> <td>EN3</td>        <td>Active-High Digital Enable Input for Buck 3. Driving EN3 high enables Buck 3.</td></tr>
+                        <tr><td>16</td> <td>OUT3</td>       <td>Buck Converter 3 Voltage-Sense Input. Connect OUT3 to the output of Buck 3. Connect OUT3 to an external feedback divider when setting DC-DC3 voltage externally. See the OUT2/OUT3 Adjustable Output-Voltage Option section.</td></tr>
+                        <tr><td>17</td> <td>RESET3</td>     <td>Open-Drain Buck 3 Reset Output. RESET3 remains low for a fixed time after the output of Buck 3 has reached its regulation level (see the Selector Guide). To obtain a logic signal, pull up RESET3 with an external resistor connected to a positive voltage lower than 5V.</td></tr>
+                        <tr><td>18</td> <td>PV3</td>        <td>Buck 3 Voltage Input. Connect a 2.2µF or larger ceramic capacitor from PV3 to PGND3. Connect PV3 to OUT1.</td></tr>
+                        <tr><td>19</td> <td>LX3 </td>       <td>Buck 3 Switching Node. LX3 is high impedance when the device is off.</td></tr>
+                        <tr><td>20</td> <td>PGND3</td>      <td>Power Ground for Buck 3</td></tr>
+                        <tr><td>21</td> <td>PGND2</td>      <td>Power Ground for Buck 2</td></tr>
+                        <tr><td>22</td> <td>LX2</td>        <td>Buck 2 Switching Node. LX2 is high impedance when the device is off.</td></tr>
+                        <tr><td>23</td> <td>PV2</td>        <td>Buck 2 Voltage Input. Connect a 2.2µF or larger ceramic capacitor from PV2 to PGND2. Connect PV2 to OUT1.</td></tr>
+                        <tr><td>24</td> <td>RESET2</td>     <td>Open-Drain Buck 2 Reset Output. RESET2 remains low for a fixed time after the output of Buck 2 has reached its regulation level (see the Selector Guide). To obtain a logic signal, pull up RESET2 with an external resistor connected to a positive voltage lower than 5V.</td></tr>
+                        <tr><td>25</td> <td>OUT2</td>       <td>Buck Converter 2 Voltage-Sense Input. Connect OUT2 to the output of Buck 2. Connect OUT2 to an external feedback divider when setting DC-DC2 voltage externally. See the OUT2/OUT3 Adjustable Output-Voltage Option section.</td></tr>
+                        <tr><td>26</td> <td>CSEL1</td>      <td>Buck 1 Clock Select. Connect CSEL1 to GND for 2.1MHz operation. Connect CSEL1 to BIAS for an OTP-programmable divide-down operation. See the Selector Guide for the fSW1 divide ratio.</td></tr>
+                        <tr><td>27</td> <td>SSEN</td>       <td>Spread-Spectrum Enable. Connect SSEN to GND for standard oscillator operation. Connect SSEN to BIAS to enable the spread-spectrum oscillator.</td></tr>
+                        <tr><td>28</td> <td>RESET1</td>     <td>Open-Drain Buck 1 Reset Output. RESET1 remains low for a fixed time after the output of Buck 1 has reached its regulation level (see the Selector Guide). To obtain a logic signal, pull up RESET1 with an external resistor connected to an appropriate voltage.</td></tr>
+                        <tr><td>29</td> <td>GND</td>        <td>Analog Ground</td></tr>
+                        <tr><td>30</td> <td>COMP1</td>      <td>Compensation for Buck 1. See the Compensation Network section.</td></tr>
+                        <tr><td>31</td> <td>ERR</td>        <td>Open-Drain Error-Status Output. ERR signals a thermal-warning/shutdown condition. To obtain a logic signal, pull up ERR with an external resistor connected to a positive voltage lower than 5V.</td></tr>
+                        <tr><td>32</td> <td>SYNC</td>       <td>Synchronization Input/Output. SYNC allows the device to synchronize to other supplies. Connect SYNC to GND or leave unconnected to enable skip-mode operation under light loads. Connect SYNC to BIAS or an external clock to enable fixed-frequency forced-PWM-mode operation. When configured as an output, SYNC outputs the internally generated 2.1MHz clock.</td></tr>
+                        <tr><td>-</td>  <td>EP</td>         <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to PGND2–PGND3 and GND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VSUP, EN1 to GND</td>                       <td>-0.3V to +45V</td></tr>
+                        <tr><td>PV to GND</td>                              <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>PV1 to GND</td>                             <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>PV2 to GND, PV2 to PGND2</td>               <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>PV3 to GND, PV3 to PGND3</td>               <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>PGND2, PGND3 to GND</td>                    <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>LX1 to GND</td>                             <td>-6.0V to VSUP + 6.0V</td></tr>
+                        <tr><td>BST1 to LX1</td>                            <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>DH1 to LX1</td>                             <td>-0.3V to PV1 + 0.3V</td></tr>
+                        <tr><td>LX2 to PGND2</td>                           <td>-0.3V to PV2 + 0.3V</td></tr>
+                        <tr><td>LX3 to PGND3</td>                           <td>-0.3V to PV3 + 0.3V</td></tr>
+                        <tr><td>OUT1 - OUT3, CS1 to GND</td>                <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>FB1, EN2, EN3 to GND</td>                   <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>RESET_, ERR to GND</td>                     <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>CS1 to OUT1</td>                            <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>CSEL1, SYNC, SSEN to GND</td>               <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>COMP1 to GND</td>                           <td>-0.3V to PV + 0.3V</td></tr>
+                        <tr><td>LX2, LX3 Output Short-Circuit Duratio</td>  <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation</td></tr>
+                        <tr><td>(TA = +70°C, TQFN derate 34.5mW/°C above +70°C.)</td>   <td>2758.6mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Storage Temperature Range </td>             <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (Reflow)</td>         <td>+260°C</td></tr>
+                        <tr><td>Lead Temperature (Soldering, 10s)</td>      <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>

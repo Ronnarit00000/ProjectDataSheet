@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP75 Data-sheet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AP75</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20079</h3>
+                <div class="img">
+                    <img src="Pin_AP75_20079.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>EN</td>     <td>High-Voltage-Compatible Enable Input. If this pin is low, the part is off.</td></tr>
+                        <tr><td>2</td>          <td>BST</td>    <td>Bootstrap pin for HS driver. It is recommended to use 0.1μF from BST to LX.</td></tr>
+                        <tr><td>4,5,11</td>     <td>SUP</td>    <td>Supply Input. Connect a 4.7μF ceramic capacitor from SUP to ground.</td></tr>
+                        <tr><td>8,9</td>        <td>LX</td>     <td>Buck Switching Node. Connect inductor between LX and OUT. See the Inductor Selection section. If the part is off, this node is high impedance.</td></tr>
+                        <tr><td>13</td>         <td>FB</td>     <td>Feedback pin. Connect a resistor-divider from the buck output to FB to ground for external adjustment of the output voltage. Connect FB to BIAS for internal fixed voltages.</td></tr>
+                        <tr><td>15</td>         <td>BIAS</td>   <td>5V Internal BIAS supply. Connect a 1μF (minimum) ceramic capacitor to ground.</td></tr>
+                        <tr><td>17</td>         <td>SYNC</td>   <td>Sync Input. If connected to ground or left floating, skip-mode operation is enabled under light loads. If connected to BIAS, forced PWM mode is enabled. This pin has a 1MΩ internal pulldown.</td></tr>
+                        <tr><td>18</td>         <td>PGOOD</td>  <td>Open-Drain Reset Output. External pullup required.</td></tr>
+                        <tr><td>3,6,16,19</td>  <td>NC</td>     <td>No Connect</td></tr>
+                        <tr><td>20</td>         <td>SPS</td>    <td>Spread-Spectrum Enable. Connect logic-high to enable spread spectrum of internal oscillator, or logic-low to disable spread spectrum. This pin has a 1MΩ internal pulldown.</td></tr>
+                        <tr><td>7,10</td>       <td>PGND</td>   <td>Power Ground.</td></tr>
+                        <tr><td>12</td>         <td>AGND</td>   <td>Analog Ground.</td></tr>
+                        <tr><td>14</td>         <td>OUT</td>    <td>Buck Regulator Output-Voltage-Sense Input. Bypass OUT to PGND with ceramic capacitors.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP</td>                            <td>-0.3V to +40V</td></tr>
+                        <tr><td>EN</td>                             <td>-0.3V to +40V</td></tr>
+                        <tr><td>BST to LX</td>                      <td>+6V</td></tr>
+                        <tr><td>BST</td>                            <td>-0.3V to +45V</td></tr>
+                        <tr><td>FB</td>                             <td>-0.3V to VBIAS + 0.3V</td></tr>
+                        <tr><td>SYNC</td>                           <td>-0.3V to VBIAS + 0.3V</td></tr>
+                        <tr><td>SPS</td>                            <td>-0.3V to VBIAS + 0.3V</td></tr>
+                        <tr><td>OUT</td>                            <td>-0.3V to 13V</td></tr>
+                        <tr><td>PGOOD</td>                          <td>-0.3V to 6V</td></tr>
+                        <tr><td>PGND to AGND</td>                   <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>BIAS</td>                           <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>OUT Short-Circuit Duration</td>     <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">ESD Protection</td></tr>
+                        <tr><td>Human Body Model</td>               <td>±2kV</td></tr>
+                    </tbody>
+                </table>
+             
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>20-L SW TQFN (Derate 30.3 mW/°C above +70°C)</td>       <td>2424.20mW</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Operating Ambient Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Operating Junction Temperature</td>                 <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (Soldering 10s)</td>               <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (Reflow)</td>                 <td>+260ºC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25223</h3>
+                <div class="img">
+                    <img src="Pin_AP75_25223.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>              <td>EN</td>         <td>High-Voltage-Compatible Enable Input. If this pin is low, the part is off.</td></tr>
+                        <tr><td>2</td>              <td>BST</td>        <td>Bootstrap pin for HS driver. It is recommended to use 0.1μF from BST to LX.</td></tr>
+                        <tr><td>4,5,11</td>         <td>SUP</td>        <td>Supply Input. Connect a 4.7μF ceramic capacitor from SUP to ground.</td></tr>
+                        <tr><td>8,9</td>            <td>LX</td>         <td>Buck Switching Node. Connect inductor between LX and OUT. See the Inductor Selection section. If the part is off, this node is high impedance.</td></tr>
+                        <tr><td>15</td>             <td>BIAS</td>       <td>5V Internal BIAS supply. Connect a 1μF (minimum) ceramic capacitor to ground.</td></tr>
+                        <tr><td>17</td>             <td>SYNC</td>       <td>Sync Input. If connected to ground or left floating, skip-mode operation is enabled under light loads. If connected to BIAS, forced PWM mode is enabled. This pin has a 1MΩ internal pulldown.</td></tr>
+                        <tr><td>18</td>             <td>PGOOD</td>      <td>Open-Drain Reset Output. External pullup required.</td></tr>
+                        <tr><td>3,6,12,16,19</td>   <td>NC</td>         <td>No Connect</td></tr>
+                        <tr><td>20</td>             <td>SPS</td>        <td>Spread-Spectrum Enable. Connect logic-high to enable spread spectrum of internal oscillator, or logic-low to disable spread spectrum. This pin has a 1MΩ internal pulldown.</td></tr>
+                        <tr><td>7,10</td>           <td>PGND</td>       <td>Power Ground.</td></tr>
+                        
+                        
+                        <tr><td>13</td>             <td>AGND</td>       <td>Analog Ground. Connect it to PGND with a short and thick trace.</td></tr>
+                        <tr><td>14</td>             <td>OUT</td>        <td>Buck Regulator Output-Voltage-Sense Input. Bypass OUT to PGND with ceramic capacitors.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP</td>                            <td>-0.3V to +42V</td></tr>
+                        <tr><td>EN</td>                             <td>-0.3V to +42V</td></tr>
+                        <tr><td>BST to LX</td>                      <td>+6V</td></tr>
+                        <tr><td>BST</td>                            <td>-0.3V to +47V</td></tr>
+                        <tr><td>FB</td>                             <td>-0.3V to VBIAS + 0.3V</td></tr>
+                        <tr><td>SYNC</td>                           <td>-0.3V to VBIAS + 0.3V</td></tr>
+                        <tr><td>SPS</td>                            <td>-0.3V to VBIAS + 0.3V</td></tr>
+                        <tr><td>OUT</td>                            <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>PGOOD</td>                          <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>PGND to AGND</td>                   <td>-0.3V to 0.3V</td></tr>
+                        <tr><td>BIAS</td>                           <td>-0.3V to +6.0V</td></tr>
+                        <tr><td>OUT Short-Circuit Duration</td>     <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">ESD Protection</td></tr>
+                        <tr><td>Human Body Model</td>               <td>±2kV</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>20-L SW TQFN (Derate 30.3 mW/°C above +70°C)</td>       <td>2424.20mW</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>Operating Ambient Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Operating Junction Temperature</td>                 <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (Soldering 10s)</td>               <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (Reflow)</td>                 <td>+260ºC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        
+    </main>
+
+    <script src="../script/header.js"></script>
+    <script src="../script/navigation.js"></script>
+    <script src="../script/iconNavigation.js"></script>
+
+</body>
+</html>
