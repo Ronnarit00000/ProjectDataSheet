@@ -2,8 +2,8 @@
 @font-face {
     font-family: 'Roboto';
     src:
-    url(./../../../font/Roboto-VariableFont_wdth\,wght.ttf) 
-    url(./../../../font/Roboto-Italic-VariableFont_wdth\,wght.ttf);
+    url(./../../font/Roboto-VariableFont_wdth\,wght.ttf) 
+    url(./../../font/Roboto-Italic-VariableFont_wdth\,wght.ttf);
 }
 
 body{
