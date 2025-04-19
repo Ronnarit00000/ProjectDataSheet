@@ -10,7 +10,7 @@
     
     <header class="header--wrapper header--default" compoment = "header">
         <div class="header--inner">
-            <h2>AE01</h2>
+            <h2>AP59</h2>
             <div class="group-btn" header-compoment = "group-btn"></div>
         </div>
     </header>
@@ -42,9 +42,9 @@
     
             <!-- image product -->
             <section class="image-product">
-                <h3>Template</h3>
+                <h3>MAX20414</h3>
                 <div class="img">
-                    <img src="imageproduct/AE08_AFF.png" alt="product ">
+                    <img src="Pin_AP59_20414.png" alt="product ">
                 </div>
             </section>
 
@@ -56,24 +56,25 @@
                         <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
+                        <tr><td>1</td>                          <td>GND</td>        <td>Ground. Connect all PGND and GND pins together.</td></tr>
+                        <tr><td>2</td>                          <td>RESET2</td>     <td>Open-Drain RESET Output for OUT2. To obtain a logic signal, pull up RESET2 with an external resistor.</td></tr>
+                        <tr><td>3</td>                          <td>RESET1</td>     <td>Open-Drain RESET Output for OUT1. To obtain a logic signal, pull up RESET1 with an external resistor.</td></tr>
+                        <tr><td>4</td>                          <td>EN1</td>        <td>Active-High Enable Input for OUT1. Drive EN1 high for normal operation.</td></tr>
+                        <tr><td>5</td>                          <td>EN2</td>        <td>Active-High Enable Input for OUT2. Drive EN2 high for normal operation.</td></tr>
+                        <tr><td>6,17,19,<br>20,22,23,24</td>    <td>GND</td>        <td>Ground. Connect all PGND and GND pins together.</td></tr>
+                        <tr><td>7</td>                          <td>OUT2</td>       <td>OUT2 Voltage-Sense Input/Feedback Pin.</td></tr>
+                        <tr><td>8</td>                          <td>PGND2</td>      <td>Power Ground for OUT2. Connect all PGND and GND pins together.</td></tr>
+                        <tr><td>9</td>                          <td>LX2</td>        <td>Inductor Connection. Connect LX2 to the switched side of the inductor.</td></tr>
+                        <tr><td>10</td>                         <td>PV2</td>        <td>Power Input Supply for OUT2. Connect a 4.7μF ceramic capacitor from PV2 to PGND2.</td></tr>
+                        <tr><td>11</td>                         <td>SYNC</td>       <td>SYNC I/O. When configured as an input, connect SYNC to GND or leave unconnected to enable skip-mode operation under light loads. Connect SYNC to PV or an external clock to enable fixed-frequency forced-PWM-mode operation. When configured as an output (factory-configured), connect SYNC to other device’s SYNC inputs.</td></tr>
+                        <tr><td>12</td>                         <td>GND</td>        <td>Unused. Connect to ground.</td></tr>
+                        <tr><td>13</td>                         <td>PGND1</td>      <td>Power Ground for OUT1. Connect all PGND and GND pins together.</td></tr>
+                        <tr><td>14</td>                         <td>LX1</td>        <td>Inductor Connection. Connect LX1 to the switched side of the inductor.</td></tr>
+                        <tr><td>15</td>                         <td>OUT1</td>       <td>OUT1 Voltage Output.</td></tr>
+                        <tr><td>16</td>                         <td>REG1</td>       <td>Open Supply for OUT1. Connect a 0.33μF ceramic capacitor from REG1 to OUT1.</td></tr>
+                        <tr><td>18</td>                         <td>PV</td>         <td>Analog Input Supply. Connect a 1μF or larger ceramic capacitor from PV to GND.</td></tr>
+                        <tr><td>21</td>                         <td>PV</td>         <td>Input Supply. Connect to PV (pin 18) or PV2 (pin 10) through PCB trace.</td></tr>
+                        <tr><td>-</td>                          <td>EP</td>         <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to PGND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
                     </tbody>
                 </table>
             </section>
@@ -83,34 +84,35 @@
                 <h3>Absolute Maximum Ratings</h3>
                 <table>
                     <tbody>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
+                        <tr><td>PV2 to PGND_</td>                   <td>-0.3V to +6V</td></tr>
+                        <tr><td>PV to GND</td>                      <td>-0.3V to +6V</td></tr>
+                        <tr><td>REG1 to GND</td>                    <td>-0.3V to OUT1 + 0.3V</td></tr>
+                        <tr><td>EN1, EN2, SYNC to GND</td>          <td>-0.3V to VPV + 0.3V</td></tr>
+                        <tr><td>RESET1, RESET2, GND</td>            <td>-0.3V to +6V</td></tr>
+                        <tr><td>OUT1 to PGND1</td>                  <td>-0.3V to +10V</td></tr>
+                        <tr><td>OUT2 to PGND2</td>                  <td>-0.3V to VPV2 + 0.3V</td></tr>
+                        <tr><td>LX1 to PGND1</td>                   <td>-0.3V to VOUT1 + 0.3V</td></tr>
+                        <tr><td>LX2 to PGND2</td>                   <td>-0.3V to VPV2 + 0.3V</td></tr>
+                        <tr><td>GND to PGND</td>                    <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>LX1 Continuous RMS Current </td>    <td>2A</td></tr>
+                        <tr><td>LX2 Continuous RMS Current </td>    <td>3A</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>  <td>Continuous</td></tr>
                     </tbody>
                 </table>
 
                 <table>
                     <tbody>
-                        <tr><td colspan="2">Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>24-Pin TQFN-EP (derate 30.3 mW/°C > +70°C)</td>     <td>2222mW</td></tr>
                     </tbody>
                 </table>
                 
                 <table>
                     <tbody>
-                        <tr><td>template</td>            <td>template</td></tr>
-                        <tr><td>template</td>            <td>template</td></tr>
-                        <tr><td>template</td>            <td>template</td></tr>
-                        <tr><td>template</td>            <td>template</td></tr>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
                     </tbody>
                 </table>
             </section>
@@ -118,12 +120,12 @@
 
         <!-- conpoment product -->
         <section class="product product--default" productPage="page2" stateProductList="hide">
-    
+
             <!-- image product -->
             <section class="image-product">
-                <h3>MAX25239EAFN/MAX25240EAFN</h3>
+                <h3>MAX20416</h3>
                 <div class="img">
-                    <img src="imageproduct/AE08_EAFN.png" alt="product ">
+                    <img src="Pin_AP59_20416.png" alt="product ">
                 </div>
             </section>
 
@@ -132,27 +134,27 @@
                 <h3>Pin Description</h3>
                 <table>
                     <thead>
-                        <tr><th>PIN</th>    <th>NAME</th>   <th>FUNCTION</th></tr>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td> <td>Template</td></tr>
+                        <tr><td>1</td>                          <td>RESET2</td>     <td>Open-Drain RESET Output for OUT2. To obtain a logic signal, pull up RESET2 with an external resistor.</td></tr>
+                        <tr><td>2</td>                          <td>RESET1</td>     <td>Open-Drain RESET Output for OUT1. To obtain a logic signal, pull up RESET1 with an external resistor.</td></tr>
+                        <tr><td>3,4,12,14,<br>15,16,19,20</td>  <td>GND</td>        <td>Ground. Connect all PGND and GND pins together.</td></tr>
+                        <tr><td>5</td>                          <td>EN1</td>        <td>Active-High Enable Input for OUT1. Drive EN1 high for normal operation.</td></tr>
+                        <tr><td>6</td>                          <td>EN2</td>        <td>Active-High Enable Input for OUT2. Drive EN2 high for normal operation.</td></tr>
+                        <tr><td>7</td>                          <td>OUT1</td>       <td>OUT1 Voltage-Sense Input/Feedback Pin.</td></tr>
+                        <tr><td>8</td>                          <td>PGND1</td>      <td>Power Ground for OUT1. Connect all PGND and GND pins together.</td></tr>
+                        <tr><td>9</td>                          <td>LX1</td>        <td>Inductor Connection. Connect LX1 to the switched side of the inductor.</td></tr>
+                        <tr><td>10</td>                         <td>PV1</td>        <td>Power Input Supply for OUT1. Connect a 4.7μF ceramic capacitor from PV1 to PGND1.</td></tr>
+                        <tr><td>11</td>                         <td>SYNC</td>       <td>SYNC I/O. When configured as an input, connect SYNC to GND or leave unconnected to enable skip-mode operation under light loads. Connect SYNC to PV or an external clock to enable fixed-frequency forced-PWM-mode operation. When configured as an output (factory-configured), connect SYNC to other device’s SYNC inputs.</td></tr>
+                        <tr><td>13</td>                         <td>PGND</td>       <td>Power Ground. Connect all GND and PGND pins together.</td></tr>
+                        <tr><td>17</td>                         <td>GND</td>        <td>Analog Ground. Connect all GND and PGND pins together.</td></tr>
+                        <tr><td>18</td>                         <td>PV</td>         <td>Analog Input Supply. Connect a 1μF or larger ceramic capacitor from PV to GND with a 10Ω resistor in series to the supply voltage.</td></tr>
+                        <tr><td>21</td>                         <td>PV2</td>        <td>Power Input Supply for OUT2. Connect a 4.7μF ceramic capacitor from PV2 to PGND2.</td></tr>
+                        <tr><td>22</td>                         <td>LX2</td>        <td>Inductor Connection. Connect LX2 to the switched side of the inductor.</td></tr>
+                        <tr><td>23</td>                         <td>PGND2</td>      <td>Power Ground for OUT2. Connect all GND and PGND pins together.</td></tr>
+                        <tr><td>24</td>                         <td>OUT2</td>       <td>OUT2 Voltage-Sense Input/Feedback</td></tr>
+                        <tr><td>-</td>                          <td>EP</td>         <td>Exposed Pad. Connect the exposed pad to ground. Connecting the exposed pad to ground does not remove the requirement for proper ground connections to PGND. The exposed pad is attached with epoxy to the substrate of the die, making it an excellent path to remove heat from the IC.</td></tr>
                     </tbody>
                 </table>
             </section>
@@ -162,41 +164,37 @@
                 <h3>Absolute Maximum Ratings</h3>
                 <table>
                     <tbody>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
+                        <tr><td>PV1, PV2 to PGND_</td>              <td>-0.3V to +6V</td></tr>
+                        <tr><td>PV to GND</td>                      <td>-0.3V to +6V</td></tr>
+                        <tr><td>GND to PGND_ </td>                  <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>EN1, EN2, SYNC to GND </td>         <td>-0.3V to VPV + 0.3V</td></tr>
+                        <tr><td>RESET1, RESET2, GND</td>            <td>-0.3V to +6V</td></tr>
+                        <tr><td>OUT1 to PGND1</td>                  <td>-0.3V to VPV1 + 0.3V</td></tr>
+                        <tr><td>OUT2 to PGND2</td>                  <td>-0.3V to VPV2 + 0.3V</td></tr>
+                        <tr><td>LX1 to PGND1</td>                   <td>-0.3V to VPV1 + 0.3V</td></tr>
+                        <tr><td>LX2 to PGND2</td>                   <td>-0.3V to VPV2 + 0.3V</td></tr>
+                        <tr><td>LX1, LX2 Continuous RMS Current</td>    <td>3A</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>      <td>Continuous</td></tr>
                     </tbody>
                 </table>
 
                 <table>
                     <tbody>
-                        <tr><td colspan="2">Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
-                        <tr><td>Template</td> <td>Template</td></tr>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>24-Pin TQFN-EP (derate 30.3 mW/°C > +70°C)</td>     <td>2222mW</td></tr>
                     </tbody>
                 </table>
                 
                 <table>
                     <tbody>
-                        <tr><td>Continuous Power Dissipation<br> 
-                            (TA = +70°C, derate 30mW/°C
-                            above +70°C)</td>            <td>template</td></tr>
-                        <tr><td>template</td>            <td>template</td></tr>
-                        <tr><td>template</td>            <td>template</td></tr>
-                        <tr><td>template</td>            <td>template</td></tr>
-                        <tr><td>template</td>            <td>template</td></tr>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
                     </tbody>
                 </table>
             </section>
-        </section>
+        </section>         
     </main>
 
     <script src="../../script/header.js"></script>

@@ -1,8 +1,4 @@
-// call function
-const navigation = createNavigation();
-      navigation.createProductWrapper();
-      navigation.createCloseIcon();
-      navigation.createProductList([
+const allProductList = [
             "AE01", "AE02", "AE04", "AE05", "AE06",
             "AE08", "AE13", "AE18", "AE21", "AE26",
             "AE27", "AE28", "AE29", "AE31", "AE32",
@@ -11,8 +7,14 @@ const navigation = createNavigation();
             "AP27", "AP30", "AP32", "AP35", "AP36",
             "AP37", "AP41", "AP54", "AP55", "AP57", 
             "AP58", "AP59", "AP61", "AP66", "AP75", 
-            "AP76", "AP77", "AP87", "AP89", "DE03"
-        ]);
+            "AP76", "AP77", "AP87", "AP89", "AQ04",
+            "AQ06", "AQ11", "AQ13", "AQ18", "DE03"
+        ];
+
+const navigation = createNavigation();
+      navigation.createProductWrapper();
+      navigation.createCloseIcon();
+      navigation.createProductList(allProductList);
 
 search();
 

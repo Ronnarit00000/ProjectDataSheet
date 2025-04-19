@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQ11 Data-sheet</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AQ11</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20011C/MAX20011D</h3>
+                <div class="img">
+                    <img src="Pin_AQ11_20011C&D.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>EN</td>         <td>Active-High Enable Input. Drive EN high for normal operation. On the rising edge, the device enters soft-start. On the falling edge, the device enters soft-shutdown.</td></tr>
+                        <tr><td>2</td>          <td>BST</td>        <td>Boost Supply</td></tr>
+                        <tr><td>3,9</td>        <td>PV</td>         <td>Power Input Supply. Connect two 10μF or larger ceramic capacitor from PV to PGND. Connect all PV pins together</td></tr>
+                        <tr><td>4,5,7,8</td>    <td>PGND</td>       <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>6</td>          <td>LX</td>         <td>Inductor Connection. Connect LX to the switched side of the inductor. Connect all LX pins together.</td></tr>
+                        <tr><td>10</td>         <td>RS-</td>        <td>Buck regulator remote voltage sense negative input. The common-mode range of this input is ±0.3V.</td></tr>
+                        <tr><td>11</td>         <td>RS+</td>        <td>Buck regulator remote voltage sense positive input. The resistance from RS+ to the remote sense connection should be kept to 2Ω or less to prevent the input current from affecting the output accuracy. The input current is +100μA (typ).</td></tr>
+                        <tr><td>12</td>         <td>SYNC</td>       <td>SYNC I/O. Connect SYNC to AV/GND or an external clock to enable fixed-frequency forced-PWM- mode operation. When configured as an output (CONFIG.SO[1:0] = 2’b10), connect SYNC to other devices SYNC inputs.</td></tr>
+                        <tr><td>13</td>         <td>RESET</td>      <td>Open–Drain RESET Output. This output remains low for the programmed hold time after the output has reached its regulation level (see the Electrical Characteristics table). To obtain a logic signal, pullup RESET with an external resistor.</td></tr>
+                        <tr><td>14</td>         <td>GND</td>        <td>Analog Ground</td></tr>
+                        <tr><td>15</td>         <td>AV</td>         <td>Analog Input Supply</td></tr>
+                        <tr><td>16</td>         <td>SDA</td>        <td>I<sup>2</sup>C Data I/O</td></tr>
+                        <tr><td>17</td>         <td>SCL</td>        <td>I<sup>2</sup>C Clock Input</td></tr>
+                        <tr><td>-</td>          <td>SCL</td>        <td>Internally connected to PV</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>PV, AV, EN, RESET to GND</td>           <td>-0.3V to +6V</td></tr>
+                        <tr><td>SYNC, RS+, RS- to GND</td>              <td>-0.3V to AV+0.3V</td></tr>
+                        <tr><td>SDA, SCL to GND</td>                    <td>-0.3V to +6V</td></tr>
+                        <tr><td>GND to PGND</td>                        <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BST to LX</td>                          <td>-0.3V to +6V</td></tr>
+                        <tr><td>LX to PGND</td>                         <td>-0.3V to PV+0.3V</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>      <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>17-FC2QFN (derate 28.26mW/°C > +70°C)</td> <td>2260.5mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Junction Temperature </td>                <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>              <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>                 <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20499C/MAX20499D</h3>
+                <div class="img">
+                    <img src="Pin_AQ11_20499C&D.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>EN</td>         <td>Active-High Enable Input. Drive EN high for normal operation. On the rising edge, the device enters soft-start. On the falling edge, the device enters soft-shutdown.</td></tr>
+                        <tr><td>2</td>          <td>BST</td>        <td>Boost Supply</td></tr>
+                        <tr><td>3,9</td>        <td>PV</td>         <td>Power Input Supply. Connect two 10μF or larger ceramic capacitor from PV to PGND. Connect all PV pins together</td></tr>
+                        <tr><td>4,5,7,8</td>    <td>PGND</td>       <td>Power Ground. Connect all PGND pins together.</td></tr>
+                        <tr><td>6</td>          <td>LX</td>         <td>Inductor Connection. Connect LX to the switched side of the inductor. Connect all LX pins together.</td></tr>
+                        <tr><td>10</td>         <td>RS-</td>        <td>Buck regulator remote voltage sense negative input. The common-mode range of this input is ±0.3V.</td></tr>
+                        <tr><td>11</td>         <td>RS+</td>        <td>Buck regulator remote voltage sense positive input. The resistance from RS+ to the remote sense connection should be kept to 2Ω or less to prevent the input current from affecting the output accuracy. The input current is +100μA (typ).</td></tr>
+                        <tr><td>12</td>         <td>SYNC</td>       <td>SYNC I/O. Connect SYNC to AV/GND or an external clock to enable fixed-frequency forced-PWM- mode operation. When configured as an output (CONFIG.SO[1:0] = 2’b10), connect SYNC to other devices SYNC inputs.</td></tr>
+                        <tr><td>13</td>         <td>RESET</td>      <td>Open–Drain RESET Output. This output remains low for the programmed hold time after the output has reached its regulation level (see the Electrical Characteristics table). To obtain a logic signal, pullup RESET with an external resistor.</td></tr>
+                        <tr><td>14</td>         <td>GND</td>        <td>Analog Ground</td></tr>
+                        <tr><td>15</td>         <td>AV</td>         <td>Analog Input Supply</td></tr>
+                        <tr><td>16</td>         <td>SDA</td>        <td>I<sup>2</sup>C Data I/O</td></tr>
+                        <tr><td>17</td>         <td>SCL</td>        <td>I<sup>2</sup>C Clock Input</td></tr>
+                        <tr><td>-</td>          <td>SCL</td>        <td>Internally connected to PV</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>PV, AV, EN, RESET to GND</td>           <td>-0.3V to +6V</td></tr>
+                        <tr><td>SYNC, RS+, RS- to GND</td>              <td>-0.3V to AV+0.3V</td></tr>
+                        <tr><td>SDA, SCL to GND</td>                    <td>-0.3V to +6V</td></tr>
+                        <tr><td>GND to PGND</td>                        <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BST to LX</td>                          <td>-0.3V to +6V</td></tr>
+                        <tr><td>LX to PGND</td>                         <td>-0.3V to PV+0.3V</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>      <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>17-FC2QFN (derate 28.26mW/°C > +70°C)</td> <td>2260.5mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Junction Temperature </td>                <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                      <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>              <td>+300°C</td></tr>
+                        <tr><td>Soldering Temperature (reflow)</td>                 <td>+260°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>         
+    </main>
+
+    <script src="../../script/header.js"></script>
+    <script src="../../script/navigation.js"></script>
+    <script src="../../script/iconNavigation.js"></script>
+
+</body>
+</html>

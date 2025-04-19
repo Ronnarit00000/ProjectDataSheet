@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQ06 Data-sheet</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AQ06</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25249/MAX25249B</h3>
+                <div class="img">
+                    <img src="Pin_AQ06_25249.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>PGND2</td>      <td>Power Ground for OUT2. Connect all PGND pins together</td></tr>
+                        <tr><td>2</td>      <td>PGND3</td>      <td>Power Ground for OUT3. Connect all PGND pins together</td></tr>
+                        <tr><td>3</td>      <td>LX3</td>        <td>Inductor Connection for BUCK3</td></tr>
+                        <tr><td>4</td>      <td>PV3</td>        <td>Input Voltage for BUCK3</td></tr>
+                        <tr><td>5</td>      <td>OUTS3</td>      <td>BUCK3 Output Voltage-Sense Input</td></tr>
+                        <tr><td>6</td>      <td>PV4</td>        <td>Input Voltage for LDO4</td></tr>
+                        <tr><td>7</td>      <td>OUT4</td>       <td>LDO4 Ouput. Place a 4.7μF or larger X7R ceramic capacitor as close as possible from OUT4 to PGND.</td></tr>
+                        <tr><td>8</td>      <td>RESET</td>      <td>Push-Pull or Open-Drain RESET Output, depending on the part number. This output remains low for the 18ms hold time (factory OTP) after all outputs have reached their regulation level (See the Electrical Characteristics table).</td></tr>
+                        <tr><td>9</td>      <td>EN4</td>        <td>Low-Voltage-Compatible Enable Input for LDO4. Pull low to turn off LDO4. Pull high to turn on LDO4.</td></tr>
+                        <tr><td>10</td>     <td>EN23</td>       <td>Low-Voltage-Compatible Enable Input for BUCK2 and BUCK3. Pull low to turn off both bucks. Pull high to turn on both bucks. Delay between BUCK2 and BUCK3 is factory-programmed (0ms, 1ms, 3ms, 10ms).</td></tr>
+                        <tr><td>11</td>     <td>BIAS</td>       <td>5V Regulator Output. Bypass to AGND with a 2.2μF or larger X7R ceramic capacitor.</td></tr>
+                        <tr><td>12</td>     <td>AGND</td>       <td>Analog Ground. Connect to the ground plane near the exposed pad.</td></tr>
+                        <tr><td>13</td>     <td>OUTS1</td>      <td>BUCK1 Output Voltage-Sense Input</td></tr>
+                        <tr><td>14</td>     <td>SUP1</td>       <td>IC Supply-Voltage Input and High-Side Connection for BUCK1. Connect a 4.7μF or larger X7R ceramic capacitor from SUP1 to PGND1.</td></tr>
+                        <tr><td>15</td>     <td>PGND1</td>      <td>Power Ground for BUCK1. Connect all PGND pins together.</td></tr>
+                        <tr><td>16</td>     <td>LX1</td>        <td>TemInductor Connection for BUCK1.</td></tr>
+                        <tr><td>17</td>     <td>BST1</td>       <td>Bootstrap Capacitor Connection for BUCK1. Connect a 0.1μF X7R ceramic capacitor between BST and LX1.</td></tr>
+                        <tr><td>18</td>     <td>OUTS2</td>      <td>BUCK2 Output Voltage-Sense Input</td></tr>
+                        <tr><td>19</td>     <td>PV2</td>        <td>Voltage Input for BUCK2</td></tr>
+                        <tr><td>20</td>     <td>LX2</td>        <td>Inductor Connection for BUCK2</td></tr>
+                        <tr><td>-</td>      <td>EP</td>         <td>Exposed Pad. Internally connected to GND. Connect to a large ground plane to maximize thermal performance. Not intended as an electrical connection point.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP1, LX1 to PGND_</td>                         <td>-0.3V to +40V</td></tr>
+                        <tr><td>BST1 to LX1</td>                                <td>-0.3V to 6V</td></tr>
+                        <tr><td>EN23, EN4 to AGND</td>                          <td>-0.3V to 6V</td></tr>
+                        <tr><td>PV2, PV3, PV4 to PGND_</td>                     <td>-0.3V to 6V</td></tr>
+                        <tr><td>BIAS to AGND</td>                               <td>-0.3V to 6V</td></tr>
+                        <tr><td>RESETB to AGND (MAX25249) (Open Drain)</td>     <td>-0.3V to 6V</td></tr>
+                        <tr><td>RESETB to AGND (MAX25249B) (Push-Pull)</td>     <td>-0.3V to OUT3+0.3V</td></tr>
+                        <tr><td>OUTS1, OUTS2, OUTS3 to AGND</td>                <td>-0.3V to 6V</td></tr>
+                        <tr><td>OUTS4 to PGND</td>                              <td>-0.3V to PV4+0.3V</td></tr>
+                        <tr><td>LX1 to PGND1</td>                               <td>-0.3V to V<sub>SUP1</sub>+0.3V</td></tr>
+                        <tr><td>LX2 to PGND2</td>                               <td>-0.3V to PV2+0.3V</td></tr>
+                        <tr><td>LX3 to PGND3</td>                               <td>-0.3V to PV3+0.3V</td></tr>
+                        <tr><td>AGND to PGND_</td>                              <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>LX1 Short-Circuit Duration</td>                 <td>Continuous</td></tr>
+                        <tr><td>LX2 Short-Circuit Duration</td>                 <td>Continuous</td></tr>
+                        <tr><td>LX3 Short-Circuit Duration</td>                 <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>20-TQFN-EP (derate 23.8 mW/°C > 70°C)</td>      <td>1904mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature</td>                  <td>-40ºC to +125ºC</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>+150ºC</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65ºC to +150ºC</td></tr>
+                        <tr><td>Lead Temperature Range</td>                 <td>+300ºC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25250</h3>
+                <div class="img">
+                    <img src="Pin_AQ06_25250.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>PGND2</td>      <td>Power Ground for OUT2. Connect all PGND pins together</td></tr>
+                        <tr><td>2</td>      <td>PGND3</td>      <td>Power Ground for OUT3. Connect all PGND pins together</td></tr>
+                        <tr><td>3</td>      <td>LX3</td>        <td>Inductor Connection for BUCK3</td></tr>
+                        <tr><td>4</td>      <td>PV3</td>        <td>Input Voltage for BUCK3</td></tr>
+                        <tr><td>5</td>      <td>OUTS3</td>      <td>BUCK3 Output Voltage-Sense Input</td></tr>
+                        <tr><td>6</td>      <td>PV4</td>        <td>Input Voltage for LDO4</td></tr>
+                        <tr><td>7</td>      <td>OUT4</td>       <td>LDO4 Ouput. Place a 4.7μF or larger X7R ceramic capacitor as close as possible from OUT4 to PGND.</td></tr>
+                        <tr><td>8</td>      <td>RESET</td>      <td>Push-Pull or Open-Drain RESET Output, depending on the part number. This output remains low for the 18ms hold time (factory OTP) after all outputs have reached their regulation level (See the Electrical Characteristics table).</td></tr>
+                        <tr><td>9</td>      <td>EN4</td>        <td>Low-Voltage-Compatible Enable Input for LDO4. Pull low to turn off LDO4. Pull high to turn on LDO4.</td></tr>
+                        <tr><td>10</td>     <td>EN23</td>       <td>Low-Voltage-Compatible Enable Input for BUCK2 and BUCK3. Pull low to turn off both bucks. Pull high to turn on both bucks. Delay between BUCK2 and BUCK3 is factory-programmed (0ms, 1ms, 3ms, 10ms).</td></tr>
+                        <tr><td>11</td>     <td>BIAS</td>       <td>5V Regulator Output. Bypass to AGND with a 2.2μF or larger X7R ceramic capacitor.</td></tr>
+                        <tr><td>12</td>     <td>AGND</td>       <td>Analog Ground. Connect to the ground plane near the exposed pad.</td></tr>
+                        <tr><td>13</td>     <td>OUTS1</td>      <td>BUCK1 Output Voltage-Sense Input</td></tr>
+                        <tr><td>14</td>     <td>SUP1</td>       <td>IC Supply-Voltage Input and High-Side Connection for BUCK1. Connect a 4.7μF or larger X7R ceramic capacitor from SUP1 to PGND1.</td></tr>
+                        <tr><td>15</td>     <td>PGND1</td>      <td>Power Ground for BUCK1. Connect all PGND pins together.</td></tr>
+                        <tr><td>16</td>     <td>LX1</td>        <td>TemInductor Connection for BUCK1.</td></tr>
+                        <tr><td>17</td>     <td>BST1</td>       <td>Bootstrap Capacitor Connection for BUCK1. Connect a 0.1μF X7R ceramic capacitor between BST and LX1.</td></tr>
+                        <tr><td>18</td>     <td>OUTS2</td>      <td>BUCK2 Output Voltage-Sense Input</td></tr>
+                        <tr><td>19</td>     <td>PV2</td>        <td>Voltage Input for BUCK2</td></tr>
+                        <tr><td>20</td>     <td>LX2</td>        <td>Inductor Connection for BUCK2</td></tr>
+                        <tr><td>-</td>      <td>EP</td>         <td>Exposed Pad. Internally connected to GND. Connect to a large ground plane to maximize thermal performance. Not intended as an electrical connection point.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP1, LX1 to PGND_</td>                         <td>-0.3V to +40V</td></tr>
+                        <tr><td>BST1 to LX1</td>                                <td>-0.3V to 6V</td></tr>
+                        <tr><td>EN23, EN4 to AGND</td>                          <td>-0.3V to 6V</td></tr>
+                        <tr><td>PV2, PV3, PV4 to PGND_</td>                     <td>-0.3V to 6V</td></tr>
+                        <tr><td>BIAS to AGND</td>                               <td>-0.3V to 6V</td></tr>
+                        <tr><td>RESETB to AGND (MAX25249) (Open Drain)</td>     <td>-0.3V to 6V</td></tr>
+                        <tr><td>RESETB to AGND (MAX25249B) (Push-Pull)</td>     <td>-0.3V to OUT3+0.3V</td></tr>
+                        <tr><td>OUTS1, OUTS2, OUTS3 to AGND</td>                <td>-0.3V to 6V</td></tr>
+                        <tr><td>OUTS4 to PGND</td>                              <td>-0.3V to PV4+0.3V</td></tr>
+                        <tr><td>LX1 to PGND1</td>                               <td>-0.3V to V<sub>SUP1</sub>+0.3V</td></tr>
+                        <tr><td>LX2 to PGND2</td>                               <td>-0.3V to PV2+0.3V</td></tr>
+                        <tr><td>LX3 to PGND3</td>                               <td>-0.3V to PV3+0.3V</td></tr>
+                        <tr><td>AGND to PGND_</td>                              <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>LX1 Short-Circuit Duration</td>                 <td>Continuous</td></tr>
+                        <tr><td>LX2 Short-Circuit Duration</td>                 <td>Continuous</td></tr>
+                        <tr><td>LX3 Short-Circuit Duration</td>                 <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>20-TQFN-EP (derate 23.8 mW/°C > 70°C)</td>      <td>1904mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature</td>                  <td>-40ºC to +125ºC</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>+150ºC</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65ºC to +150ºC</td></tr>
+                        <tr><td>Lead Temperature Range</td>                 <td>+300ºC</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../../script/header.js"></script>
+    <script src="../../script/navigation.js"></script>
+    <script src="../../script/iconNavigation.js"></script>
+
+</body>
+</html>

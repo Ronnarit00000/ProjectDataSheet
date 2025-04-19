@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQ18 Data-sheet</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AQ18</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20402 / MAX20403</h3>
+                <div class="img">
+                    <img src="Pin_AQ18_20402&3.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>EN</td>         <td>High-Voltage-Tolerant, Active-High Digital Enable Input. Drive EN high to enable buck converter.</td></tr>
+                        <tr><td>2,8</td>        <td>NC</td>         <td>Not Connected</td></tr>
+                        <tr><td>3,7</td>        <td>SUP</td>        <td>Internal High-Side Supply Input. SUP provides power to the internal switch and LDO. Bypass SUP to PGND with 0.1μF and 2.2μF ceramic capacitors. Place the 0.1μF capacitor as close to the SUP and PGND pins as possible, followed by the 2.2μF capacitor.</td></tr>
+                        <tr><td>4,6</td>        <td>PGND</td>       <td>Power Ground.</td></tr>
+                        <tr><td>5</td>          <td>LX</td>         <td>Inductor Connection. Connect LX to the switched side of the inductor.</td></tr>
+                        <tr><td>9</td>          <td>BST</td>        <td>Boost Flying Capacitor Connection for High-Side FET Gate Voltage. Connect a 0.1μF ceramic capacitor between BST and LX.</td></tr>
+                        <tr><td>10</td>         <td>GND</td>        <td>Quiet Analog Ground.</td></tr>
+                        <tr><td>11</td>         <td>BIAS</td>       <td>1.8V Internal BIAS Supply. Connect a minimum of 2.2μF ceramic capacitor from BIAS to PGND.</td></tr>
+                        <tr><td>12</td>         <td>SPS</td>        <td>Spread-Spectrum Enable. Connect logic-high to enable spread spectrum of the internal oscillator or logic-low to disable spread spectrum.</td></tr>
+                        <tr><td>13</td>         <td>FB/OUT</td>     <td>Feedback/Output Sense Input. For the adjustable-output-voltage IC, it acts as an output voltage feedback input (FB). Connect an external resistor-divider between OUT, FB, and AGND to set the output voltage.<br> For the fixed-output-voltage IC, it acts as an output voltage sense pin (OUT). Connect OUT to the buck output to sense the output voltage.</td></tr>
+                        <tr><td>13</td>         <td>OUT</td>        <td>Output Sense Input. Connect OUT to the buck output to sense the output voltage.</td></tr>
+                        <tr><td>14</td>         <td>PGOOD</td>      <td>Open-Drain, Power-Good Output. Connect PGOOD to BIAS or an external positive power supply with a pullup resistor.</td></tr>
+                        <tr><td>15</td>         <td>SYNC</td>       <td>External Clock Synchronization Input. Connect an external clock in the given frequency range to enable external clock synchronization. Connect SYNC to low to enable skip mode. Connect SYNC to high to enable FPWM mode.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP</td>                                <td>-0.3V to +42V</td></tr>
+                        <tr><td>EN</td>                                 <td>-0.3V to +42V</td></tr>
+                        <tr><td>BST to LX</td>                          <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>BST</td>                                <td>-0.3V to +44V</td></tr>
+                        <tr><td>LX</td>                                 <td>-0.3V to SUP+0.3V</td></tr>
+                        <tr><td>SYNC</td>                               <td>-0.3V to +6V</td></tr>
+                        <tr><td>FB/OUT</td>                             <td>-0.3V to +16V</td></tr>
+                        <tr><td>PGOOD</td>                              <td>-0.3V to +6V</td></tr>
+                        <tr><td>BIAS</td>                               <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>SPS</td>                                <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>PGND to AGND</td>                       <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>ESD Protection Human Body Model</td>    <td>±2kV</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation</td></tr>
+                        <tr><td>(Multilayer Board) (TA = +70°C,derate 25mW/°C above +70°C.)</td>    <td>2000mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Junction Temperature Range</td>               <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                          <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (Soldering 10s)</td>              <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page2" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX26402 / MAX26403</h3>
+                <div class="img">
+                    <img src="Pin_AQ18_26402&3.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>EN</td>         <td>High-Voltage-Tolerant, Active-High Digital Enable Input. Drive EN high to enable buck converter.</td></tr>
+                        <tr><td>2,8</td>        <td>NC</td>         <td>Not Connected</td></tr>
+                        <tr><td>3,7</td>        <td>SUP</td>        <td>Internal High-Side Supply Input. SUP provides power to the internal switch and LDO. Bypass SUP to PGND with 0.1μF and 2.2μF ceramic capacitors. Place the 0.1μF capacitor as close to the SUP and PGND pins as possible, followed by the 2.2μF capacitor.</td></tr>
+                        <tr><td>4,6</td>        <td>PGND</td>       <td>Power Ground.</td></tr>
+                        <tr><td>5</td>          <td>LX</td>         <td>Inductor Connection. Connect LX to the switched side of the inductor.</td></tr>
+                        <tr><td>9</td>          <td>BST</td>        <td>Boost Flying Capacitor Connection for High-Side FET Gate Voltage. Connect a 0.1μF ceramic capacitor between BST and LX.</td></tr>
+                        <tr><td>10</td>         <td>GND</td>        <td>Quiet Analog Ground.</td></tr>
+                        <tr><td>11</td>         <td>BIAS</td>       <td>1.8V Internal BIAS Supply. Connect a minimum of 2.2μF ceramic capacitor from BIAS to PGND.</td></tr>
+                        <tr><td>12</td>         <td>SPS</td>        <td>Spread-Spectrum Enable. Connect logic-high to enable spread spectrum of the internal oscillator or logic-low to disable spread spectrum.</td></tr>
+                        <tr><td>13</td>         <td>FB/OUT</td>     <td>Feedback/Output Sense Input. For the adjustable-output-voltage IC, it acts as an output voltage feedback input (FB). Connect an external resistor-divider between OUT, FB, and AGND to set the output voltage.<br> For the fixed-output-voltage IC, it acts as an output voltage sense pin (OUT). Connect OUT to the buck output to sense the output voltage.</td></tr>
+                        <tr><td>13</td>         <td>OUT</td>        <td>Output Sense Input. Connect OUT to the buck output to sense the output voltage.</td></tr>
+                        <tr><td>14</td>         <td>PGOOD</td>      <td>Open-Drain, Power-Good Output. Connect PGOOD to BIAS or an external positive power supply with a pullup resistor.</td></tr>
+                        <tr><td>15</td>         <td>SYNC</td>       <td>External Clock Synchronization Input. Connect an external clock in the given frequency range to enable external clock synchronization. Connect SYNC to low to enable skip mode. Connect SYNC to high to enable FPWM mode.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP</td>                                <td>-0.3V to +42V</td></tr>
+                        <tr><td>EN</td>                                 <td>-0.3V to +42V</td></tr>
+                        <tr><td>BST to LX</td>                          <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>BST</td>                                <td>-0.3V to +44V</td></tr>
+                        <tr><td>LX</td>                                 <td>-0.3V to SUP+0.3V</td></tr>
+                        <tr><td>SYNC</td>                               <td>-0.3V to +6V</td></tr>
+                        <tr><td>FB/OUT</td>                             <td>-0.3V to +16V</td></tr>
+                        <tr><td>PGOOD</td>                              <td>-0.3V to +6V</td></tr>
+                        <tr><td>BIAS</td>                               <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>SPS</td>                                <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>PGND to AGND</td>                       <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>ESD Protection Human Body Model</td>    <td>±2kV</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation</td></tr>
+                        <tr><td>(Multilayer Board) (TA = +70°C,derate 25mW/°C above +70°C.)</td>    <td>2000mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Junction Temperature Range</td>               <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                          <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (Soldering 10s)</td>              <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page3" stateProductList="hide">
+
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX42402 / MAX42403</h3>
+                <div class="img">
+                    <img src="Pin_AQ18_26402&3.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>          <td>EN</td>         <td>High-Voltage-Tolerant, Active-High Digital Enable Input. Drive EN high to enable buck converter.</td></tr>
+                        <tr><td>2,8</td>        <td>NC</td>         <td>Not Connected</td></tr>
+                        <tr><td>3,7</td>        <td>SUP</td>        <td>Internal High-Side Supply Input. SUP provides power to the internal switch and LDO. Bypass SUP to PGND with 0.1μF and 2.2μF ceramic capacitors. Place the 0.1μF capacitor as close to the SUP and PGND pins as possible, followed by the 2.2μF capacitor.</td></tr>
+                        <tr><td>4,6</td>        <td>PGND</td>       <td>Power Ground.</td></tr>
+                        <tr><td>5</td>          <td>LX</td>         <td>Inductor Connection. Connect LX to the switched side of the inductor.</td></tr>
+                        <tr><td>9</td>          <td>BST</td>        <td>Boost Flying Capacitor Connection for High-Side FET Gate Voltage. Connect a 0.1μF ceramic capacitor between BST and LX.</td></tr>
+                        <tr><td>10</td>         <td>GND</td>        <td>Quiet Analog Ground.</td></tr>
+                        <tr><td>11</td>         <td>BIAS</td>       <td>1.8V Internal BIAS Supply. Connect a minimum of 2.2μF ceramic capacitor from BIAS to PGND.</td></tr>
+                        <tr><td>12</td>         <td>SPS</td>        <td>Spread-Spectrum Enable. Connect logic-high to enable spread spectrum of the internal oscillator or logic-low to disable spread spectrum.</td></tr>
+                        <tr><td>13</td>         <td>FB</td>         <td>Feedback/Output Sense Input. For the adjustable-output-voltage IC, it acts as an output voltage feedback input (FB). Connect an external resistor-divider between OUT, FB, and AGND to set the output voltage.<br> For the fixed-output-voltage IC, it acts as an output voltage sense pin (OUT). Connect OUT to the buck output to sense the output voltage.</td></tr>
+                        <tr><td>14</td>         <td>PGOOD</td>      <td>Open-Drain, Power-Good Output. Connect PGOOD to BIAS or an external positive power supply with a pullup resistor.</td></tr>
+                        <tr><td>15</td>         <td>SYNC</td>       <td>External Clock Synchronization Input. Connect an external clock in the given frequency range to enable external clock synchronization. Connect SYNC to low to enable skip mode. Connect SYNC to high to enable FPWM mode.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP</td>                                <td>-0.3V to +42V</td></tr>
+                        <tr><td>EN</td>                                 <td>-0.3V to +42V</td></tr>
+                        <tr><td>BST to LX</td>                          <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>BST</td>                                <td>-0.3V to +44V</td></tr>
+                        <tr><td>LX</td>                                 <td>-0.3V to SUP+0.3V</td></tr>
+                        <tr><td>SYNC</td>                               <td>-0.3V to +6V</td></tr>
+                        <tr><td>FB/OUT</td>                             <td>-0.3V to +16V</td></tr>
+                        <tr><td>PGOOD</td>                              <td>-0.3V to +6V</td></tr>
+                        <tr><td>BIAS</td>                               <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>SPS</td>                                <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>PGND to AGND</td>                       <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>ESD Protection Human Body Model</td>    <td>±2kV</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation</td></tr>
+                        <tr><td>(Multilayer Board) (TA = +70°C,derate 25mW/°C above +70°C.)</td>    <td>2000mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Junction Temperature Range</td>               <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>                          <td>-65°C to +150°C</td></tr>
+                        <tr><td>Soldering Temperature (Soldering 10s)</td>              <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <script src="../../script/header.js"></script>
+    <script src="../../script/navigation.js"></script>
+    <script src="../../script/iconNavigation.js"></script>
+
+</body>
+</html>

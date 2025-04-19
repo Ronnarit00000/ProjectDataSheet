@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQ04 Data-sheet</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AQ04</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX20430</h3>
+                <div class="img">
+                    <img src="AQ04_20430.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>SYNC</td>               <td>SYNC Input. Connect SYNC to BIAS for a 2.1MHz switching frequency. Connect SYNC to an external clock if a different switching frequency is required.</td></tr>
+                        <tr><td>2</td>      <td>PGND1</td>              <td>Power Ground for OUT1. Connect all PGND pins together.</td></tr>
+                        <tr><td>3</td>      <td>PGND2</td>              <td>Power Ground for OUT2. Connect all PGND pins together.</td></tr>
+                        <tr><td>4</td>      <td>LX2</td>                <td>Inductor Connection for Channel 2. Connect LX2 to the switched side of the inductor.</td></tr>
+                        <tr><td>5</td>      <td>PV2</td>                <td>OUT2 Power Supply Input. This must be connected to OUT1 and bypassed with a 4.7μF ceramic capacitor.</td></tr>
+                        <tr><td>6</td>      <td>OUT2</td>               <td>OUT2 Voltage Sense Input</td></tr>
+                        <tr><td>7</td>      <td>SCL</td>                <td>I<sup>2</sup>C Clock Input</td></tr>
+                        <tr><td>8</td>      <td>SDA</td>                <td>I<sup>2</sup>C Data I/O</td></tr>
+                        <tr><td>9</td>      <td>IN6</td>                <td>Voltage Monitor Input 6. Connect an external supply that is to be monitored to this input. The OV6/UV6 violation can be mapped to the RESET pin.</td></tr>
+                        <tr><td>10</td>     <td>IN5</td>                <td>Voltage Monitor Input 5. Connect an external supply that is to be monitored to this input. The OV5/UV5 violation can be mapped to the RESET pin.</td></tr>
+                        <tr><td>11</td>     <td>PV4</td>                <td>OUT4 Power Supply Input. This must be connected to OUT1 and bypassed with a 4.7μF ceramic capacitor.</td></tr>
+                        <tr><td>12</td>     <td>LX4</td>                <td>Inductor Connection for Channel 4. Connect LX4 to the switched side of the inductor.</td></tr>
+                        <tr><td>13</td>     <td>PGND4</td>              <td>Power Ground for OUT4. Connect all PGND pins together.</td></tr>
+                        <tr><td>14</td>     <td>PGND3</td>              <td>Power Ground for OUT3. Connect all PGND pins together</td></tr>
+                        <tr><td>15</td>     <td>LX3</td>                <td>Inductor Connection for Channel 3. Connect LX3 to the switched side of the inductor.</td></tr>
+                        <tr><td>16</td>     <td>OUT3</td>               <td>OUT3 Voltage Output</td></tr>
+                        <tr><td>17</td>     <td>OUT4</td>               <td>OUT4 Voltage-Sense Input</td></tr>
+                        <tr><td>18</td>     <td>GND</td>                <td>Ground</td></tr>
+                        <tr><td>19</td>     <td>BIAS</td>               <td>High voltage LDO output, regulates at 5V. Connect a 2.2uF ceramic capacitor from BIAS to GND.</td></tr>
+                        <tr><td>20</td>     <td>BIASP</td>              <td>Noisy high voltage LDO output, regulates at 5V. Connect a 2.2μF ceramic capacitor from BIASP to GND. After boost converter finishes softstart, this pin connects to OUT3.</td></tr>
+                        <tr><td>21</td>     <td>OUT1</td>               <td>OUT1 Voltage Sense Input</td></tr>
+                        <tr><td>22</td>     <td>MD2</td>                <td>Mount ID Input 2</td></tr>
+                        <tr><td>23</td>     <td>MD1</td>                <td>Mount ID Input 1</td></tr>
+                        <tr><td>24</td>     <td>BST</td>                <td>Bootstrap Capacitor Connection. Connect a 0.1μF ceramic capacitor from BST to LX1.</td></tr>
+                        <tr><td>25</td>     <td>EN</td>                 <td>Active-High Enable Input. Drive EN HIGH for normal operation. The IC will power sequence all outputs as factory programmed.</td></tr>
+                        <tr><td>26</td>     <td>V<sub>SUP</sub></td>    <td>IC Supply Input. Connect a 4.7μF or larger ceramic capacitor from VSUP to PGND1.</td></tr>
+                        <tr><td>27</td>     <td>LX1</td>                <td>Inductor Connection for Channel 1. Connect LX1 to the switched side of the inductor.</td></tr>
+                        <tr><td>28</td>     <td>RESET</td>              <td>Open-Drain Reset Output. This output remains low for the programmed hold time after all mapped outputs have reached their regulation level (see the Electrical Characteristics table). To obtain a logic signal, pull up RESET with an external resistor.</td></tr>
+                        <tr><td>-</td>      <td>EP</td>                 <td>Connect the exposed pad to the ground plane. This is the main path for thermal transfer.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>VSUP, EN to GND</td>                <td>-0.3V to +40V</td></tr>
+                        <tr><td>BST to LX1</td>                     <td>-0.3V to +6V</td></tr>
+                        <tr><td>PV2, PV4 to PGND_</td>              <td>-0.3V to +6V</td></tr>
+                        <tr><td>BIAS, BIASP to GND</td>             <td>-0.3V to +6V</td></tr>
+                        <tr><td>IN5, IN6 to GND</td>                <td>-0.3V to BIAS + 0.3V</td></tr>
+                        <tr><td>MD1, MD2 to GND</td>                <td>-0.3V to +40V</td></tr>
+                        <tr><td>SCL, SDA, SYNC, RESET to GND</td>   <td>-0.3V to +6V</td></tr>
+                        <tr><td>OUT1 to GND</td>                    <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>OUT2 to GND</td>                    <td>-0.3V to PV2 + 0.3V</td></tr>
+                        <tr><td>OUT4 to GND</td>                    <td>-0.3V to PV4 + 0.3V</td></tr>
+                        <tr><td>OUT3 to GND</td>                    <td>-0.3V to +6V</td></tr>
+                        <tr><td>LX1 to PGND1</td>                   <td>-0.3V to VSUP + 0.3V</td></tr>
+                        <tr><td>LX2 to PGND2</td>                   <td>-0.3V to PV2 + 0.3V</td></tr>
+                        <tr><td>LX3 to PGND3</td>                   <td>-0.3V to OUT3 + 0.3V</td></tr>
+                        <tr><td>LX4 to PGND4</td>                   <td>-0.3V to PV4 + 0.3V</td></tr>
+                        <tr><td>GND to PGND_</td>                   <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>Output Short-Circuit Duration</td>  <td>Continuous</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td colspan="2">Continuous Power Dissipation (TA = +70°C)</td></tr>
+                        <tr><td>28-TQFN-EP (Single-Layer Board) (derate 65mW/°C > 70°C)</td>    <td>1702.1mW</td></tr>
+                        <tr><td>28-TQFN-EP (Multilayer Board) (derate 34.5mW/°C > 70°C.)</td>   <td>2758mW</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <tbody>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to 125°C</td></tr>
+                        <tr><td>Junction Temperature</td>                   <td>+150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature Range</td>                 <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+
+    <script src="../../script/header.js"></script>
+    <script src="../../script/navigation.js"></script>
+    <script src="../../script/iconNavigation.js"></script>
+
+</body>
+</html>

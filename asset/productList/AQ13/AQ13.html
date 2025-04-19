@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQ13 Data-sheet</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body class="grid-container">
+    
+    <header class="header--wrapper header--default" compoment = "header">
+        <div class="header--inner">
+            <h2>AQ13</h2>
+            <div class="group-btn" header-compoment = "group-btn"></div>
+        </div>
+    </header>
+
+    <!-- conpoment icon navigation -->
+    <section 
+        class="icon-navigation icon-navigation--default"
+        compoment="icon-navigation"
+        imgPath="../../image/"
+        >
+    </section>
+
+   <!-- conpoment navigation -->
+   <section 
+       class="navigation navigation--default navigation--product-page" 
+       compoment="navigation"
+       homePath="../../../"   
+       imgPath="../../image/" 
+       linkHrefPath="../"
+       location="product-page"
+       state = 'hide'
+       >
+   </section> 
+    
+    <main class="product--wrapper" >
+
+        <!-- conpoment product -->
+        <section class="product product--default" productPage="page1" stateProductList="hide">
+    
+            <!-- image product -->
+            <section class="image-product">
+                <h3>MAX25254 / MAX25255</h3>
+                <div class="img">
+                    <img src="Pin_AQ13_25254&5.png" alt="product ">
+                </div>
+            </section>
+
+            <!-- pin descrtion -->
+            <section class="pin-description">
+                <h3>Pin Description</h3>
+                <table>
+                    <thead>
+                        <tr><th>PIN</th> <th>NAME</th> <th>FUNCTION</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td>      <td>SYNC</td>       <td>Synchronization Input. Connect SYNC to AGND to enable skip mode. Connect SYNC to high to enable FPWM mode. It can also be used to synchronize to an external clock.</td></tr>
+                        <tr><td>2</td>      <td>EN2</td>        <td>Enable Input for Buck2. Drive EN2 high/low to enable/disable Buck2. EN2 can be connected directly to the battery for always-ON applications.</td></tr>
+                        <tr><td>3</td>      <td>BST2</td>       <td>Integrated High-Side MOSFET Gate Drive Supply. Connect a 0.1μF ceramic capacitor between BST2 and LX2 for proper operation.</td></tr>
+                        <tr><td>4</td>      <td>LX2</td>        <td>Buck2 Inductor Connection. Connect an inductor from LX2 to Buck2 output. LX2 is high impedance when Buck2 is disabled.</td></tr>
+                        <tr><td>5</td>      <td>NC</td>         <td>Not Connected</td></tr>
+                        <tr><td>6</td>      <td>PGND2</td>      <td>Buck2 Power Ground. Make sure that PGND2 is connected to the ground plane with enough vias for optimum thermal performance.</td></tr>
+                        <tr><td>7</td>      <td>SUP2</td>       <td>Buck2 High-Side MOSFET Supply. Bypass SUP2 to PGND2 with 0.1μF and 4.7μF ceramic capacitors as close as possible.</td></tr>
+                        <tr><td>8</td>      <td>SUP1</td>       <td>Buck1 High-Side MOSFET and BIAS LDO Supply. Bypass SUP1 to PGND1 with 0.1μF and 4.7μF ceramic capacitors as close as possible.</td></tr>
+                        <tr><td>9</td>      <td>PGND1</td>      <td>Buck1 Power Ground. Make sure that PGND1 is connected to the ground plane with enough vias for optimum thermal performance.</td></tr>
+                        <tr><td>10</td>     <td>NC</td>         <td>Not Connected</td></tr>
+                        <tr><td>11</td>     <td>LX1</td>        <td>Buck1 Inductor Connection. Connect an inductor from LX1 to the Buck1 output. LX1 is high impedance when Buck1 is disabled.</td></tr>
+                        <tr><td>12</td>     <td>BST1</td>       <td>Integrated High-Side MOSFET Gate Drive Supply. Connect a 0.1μF ceramic capacitor between BST2 and LX2 for proper operation.</td></tr>
+                        <tr><td>13</td>     <td>EN1</td>        <td>Enable Input for Buck1. Drive EN1 high/low to enable/disable Buck1. EN1 can be connected directly to the battery for always-ON applications.</td></tr>
+                        <tr><td>14</td>     <td>SYNCOUT</td>    <td>90° Out-of-Phase Clock Output. Connect SYNCOUT of the primary IC to SYNC of the secondary IC for quad-phase operation. Multiphase operation is designed for PWM mode. No clock is present on SYNCOUT in skip mode or with external clock synchronization.</td></tr>
+                        <tr><td>15</td>     <td>PGOOD1</td>     <td>Buck1 Open-Drain Power-Good Output. Connect PGOOD1 to BIAS or an external voltage rail with a pull-up resistor. PGOOD1 is pulled to ground during startup, Buck1 output undervoltage, or overvoltage.</td></tr>
+                        <tr><td>16</td>     <td>OUT1/FB1</td>   <td>Buck1 Output Sense/Feedback Input. In the fixed output version, connect OUT1 to the Buck1 output to set the fixed output voltage. In the adjustable output version, connect FB1 to a resistor-divider between the Buck1 output and AGND to program the output voltage between 0.8V and 14V. FB1 is regulated to 0.8V (typ) in the adjustable version.</td></tr>
+                        <tr><td>17</td>     <td>TEMP</td>       <td>Die Temperature Monitoring Node. The voltage at TEMP is proportional to the IC die temperature.</td></tr>
+                        <tr><td>18</td>     <td>VEA</td>        <td>Error Amplifier Output for Multiphase Operation. When two MAX25255 ICs are used in parallel for 4-phase operation, tie both VEA nodes together for phase balancing. Leave VEA open in single-IC operation.</td></tr>
+                        <tr><td>19</td>     <td>AGND</td>       <td>Analog Ground. All of the sensitive analog signals are internally referenced to analog ground. Care must be taken during layout to ensure that AGND is routed in the quiet section of the PCB.</td></tr>
+                        <tr><td>20</td>     <td>BIAS</td>       <td>Internal Linear Regulator Output. Bypass BIAS with a 4.7μF (min) capacitor to AGND. BIAS supplies the internal gate drive circuitry and is not for external use.</td></tr>
+                        <tr><td>21</td>     <td>EXTVCC</td>     <td>Switchover Input. When valid voltage is present at EXTVCC, EXTVCC supplies the internal BIAS LDO after soft-start is complete. If the EXTVCC voltage is not valid, or it is tied to ground, the BIAS LDO is supplied by SUP1. Bypass EXTVCC with a 2.2μF ceramic capacitor.</td></tr>
+                        <tr><td>22</td>     <td>OUT2/FB2</td>   <td>Buck2 Output Sense/Feedback Input. In the fixed output version, connect OUT2 to the Buck2 output to set the fixed output voltage. In the adjustable output version, connect FB2 to a resistor-divider between the Buck2 output and AGND to program the output voltage between 0.8V and 14V. FB2 is regulated to 0.8V (typ) in the adjustable output version</td></tr>
+                        <tr><td>23</td>     <td>PGOOD2</td>     <td>Buck2 Open-Drain Power-Good Output. Connect PGOOD2 to BIAS or an external voltage rail with a pull-up resistor. PGOOD2 is pulled to ground during startup, Buck2 output undervoltage, or overvoltage.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--  absolute maximum ratings  -->
+            <section class="ratings">
+                <h3>Absolute Maximum Ratings</h3>
+                <table>
+                    <tbody>
+                        <tr><td>SUP_, EN_ to PGND_</td>             <td>-0.3V to +42V</td></tr>
+                        <tr><td>BST_ to LX_</td>                    <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>BST_ to PGND_</td>                  <td>-0.3V to +44V</td></tr>
+                        <tr><td>LX_ to PGND_</td>                   <td>-0.3V to SUP_+0.3V</td></tr>
+                        <tr><td>SYNCOUT, SYNC to AGND</td>          <td>-0.3V to +6V</td></tr>
+                        <tr><td>PGOOD1, PGOOD2 to AGND</td>         <td>-0.3V to +6V</td></tr>
+                        <tr><td>OUT1/FB1, OUT2/FB2 to AGND</td>     <td>-0.3V to +6V</td></tr>
+                        <tr><td>VEA, TEMP to AGND</td>              <td>-0.3V to BIAS+0.3V</td></tr>
+                        <tr><td>EXTVCC to AGND</td>                 <td>-0.3V to +16V</td></tr>
+                        <tr><td>PGND_ to AGND</td>                  <td>-0.3V to +0.3V</td></tr>
+                        <tr><td>BIAS, SPS to AGND</td>              <td>-0.3V to +2.2V</td></tr>
+                        <tr><td>LX_ Continuous RMS Current</td>     <td>10A</td></tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tbody>
+                        <tr><td>ESD Protection (Human Body Model)</td>      <td>±2kV</td></tr>
+                        <tr><td>Operating Temperature Range</td>            <td>-40°C to +150°C</td></tr>
+                        <tr><td>Storage Temperature Range</td>              <td>-65°C to +150°C</td></tr>
+                        <tr><td>Lead Temperature (soldering, 10s)</td>      <td>+300°C</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </section> 
+    </main>
+
+    <script src="../../script/header.js"></script>
+    <script src="../../script/navigation.js"></script>
+    <script src="../../script/iconNavigation.js"></script>
+
+</body>
+</html>
